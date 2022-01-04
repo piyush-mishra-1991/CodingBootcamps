@@ -1,4 +1,4 @@
-# CodingBootcamps
+# My Coding Bootcamp Experiences:
 
 This repository hosts my undergoing coding bootcamp experiences at:
 1. Coding Ninjas Career Camp (https://www.codingninjas.com/careercamp/) : Covers DS & Algorithms, Full Stack Development, System Design and associated deployed projects.
