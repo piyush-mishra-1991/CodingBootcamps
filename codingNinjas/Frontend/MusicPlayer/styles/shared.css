@@ -1,0 +1,52 @@
+/* IMPORTING Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:wght@400;700&display=swap');
+
+:root {
+
+    /* DEFINING CSS-VARIABLES: */
+
+    /* COLORS */
+    --color-dark-300: hsla(46, 81, 6, 1); /* bgColor */
+    --color-grey-300: hsla(39, 1, 61, 1); 
+    --color-white-300: hsla(47, 77, 96, 1); /* Text color */
+    --color-accent-1-300: hsla(46, 81, 61, 1);
+    --color-accent-2-300: hsla(16, 81, 61, 1);
+
+    /* FONTS */
+    /* FONTs STYLES */
+    --font-family-logo: 'Lobster', cursive;
+    --font-family-text: 'Lobster Two', cursive;
+    /* FONTs SIZES */
+    --font-size-600: 1.35rem;
+    --font-size-500: 1.25rem;
+    --font-size-400: 1.15rem;
+    --font-size-300: 1rem;
+    --font-size-200: .85rem;
+    --font-size-100: .75rem;
+
+    /* End of DEFINING CSS-VARIABLES */
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* Default Font props */
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-300);
+    color: var(--color-white-300);
+}
+
+header{
+    display: grid;
+    
+}
+
+.logo{
+    font-family: var(--font-family-logo);
+    font-size: var(--font-size-600);
+    background: var(--color-accent-2-300);
+}
+
