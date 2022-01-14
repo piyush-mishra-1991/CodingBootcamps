@@ -19,6 +19,7 @@
         <!-- JS imports -->
         <script src="scripts/html-templates.js" defer></script>
         <script src="scripts/html-injector-indexPage.js" defer></script>
+        <script src="scripts/nav.js" defer></script>
     </head>
     <body>
         <!-- Start of HEADER -->
@@ -26,12 +27,30 @@
             <!-- Code injected here using 'html-injector-indexPage.js' -->
             <div>
                 <div class="logo">Raaga</div>
-                <div class="search-bar"></div>
+                <div class="search-bar">
+                    <input
+                        type="text"
+                        size="15"
+                        placeholder="Search song, artist etc."
+                    />
+                    <button><i class="fas fa-search"></i></button>
+                </div>
                 <nav>
-                    <ul class="nav-list">
-                        <li>Mode</li>
-                        <li>Favorites</li>
-                        <li>LogIn</li>
+                    <!-- Hamburger menu icon: <i class="fas fa-bars"></i> -->
+                    <!-- Close menu icon: <i class="fas fa-times"></i> -->
+                    <!-- Search icon:  -->
+                    <!-- Screen Reader friendly Hamburger menu button for mobile view-->
+                    <button
+                        class="nav-toggle-mobile"
+                        aria-controls="nav-list"
+                        aria-expanded="false"
+                    >
+                        <span class="sr-only">Menu</span>
+                    </button>
+                    <ul id="nav-list" class="nav-list" data-visibility="false">
+                        <li><a class="link" href="">Mode</a></li>
+                        <li><a class="link" href="">Favorites</a></li>
+                        <li><a class="link" href="">LogIn</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,9 +58,7 @@
         <!-- End of HEADER -->
 
         <!-- Start of ASIDE-SECTION-->
-        <aside>
-
-        </aside>
+        <aside></aside>
         <!-- End of ASIDE-SECTION-->
 
         <!-- Start of MAIN-BODY -->
@@ -65,9 +82,7 @@
                 <i class="fab fa-instagram fa-2x share-icon"></i>
             </div>
             <div class="quick-links-container-heading">
-                <p>
-                    Quick links :
-                </p>
+                <p>Quick links :</p>
             </div>
             <div class="quick-links-container">
                 <ul class="quick-links-list">

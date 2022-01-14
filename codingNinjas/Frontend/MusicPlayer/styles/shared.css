@@ -19,6 +19,7 @@
     /* COLORS */
     /* Background Color Related */
     --color-dark-400: hsla(46, 81%, 2%, 1); 
+    --color-dark-400-transparent: hsla(46, 81%, 2%, .95);
     --color-dark-300: hsla(46, 81%, 6%, 1); 
     --color-dark-200: hsla(46, 81%, 10%, 1); 
     /* Background Color Related */
@@ -27,7 +28,11 @@
     --color-grey-200: hsla(39, 1%, 75%, 1); 
     --color-white-300: hsla(47, 77%, 96%, 1); /* Text color */
     --color-accent-1-300: hsla(46, 81%, 61%, 1);
-    --color-accent-2-300: hsla(16, 81%, 61%, 1);
+    
+    --color-accent-2-500: hsla(16, 81%, 40%, 1);
+    --color-accent-2-400: hsla(16, 81%, 50%, 1);
+    --color-accent-2-300: hsla(16, 81%, 60%, 1);
+    --color-accent-2-200: hsla(16, 81%, 70%, 1);
 
 
     /* FONTS */
@@ -46,6 +51,11 @@
     --font-weight-bold:bold;
     --font-weight-bolder:bolder;
     --font-weight-lighter:lighter;
+
+    /* BORDER-RADII */
+    --border-radius-400:.5rem;
+    --border-radius-300:.25rem;
+    --border-radius-200:.125rem;
 
     /* GLOBAL Settings*/
     margin: 0;
@@ -86,6 +96,12 @@ ul{
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+/* Stops animation while window is resized */ 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
 }
 
 /*===================================================
@@ -165,12 +181,103 @@ footer{
     4.1 Header Components: 
 */
 
+header > div{
+    background-color: var(--color-dark-400);
+    display: flex;
+    height: 3rem;
+    padding: 1rem;
+    gap:1rem;
+    align-items:center;
+    justify-content: space-between;
+}
+
 .logo{
     font-family: var(--font-family-logo);
     font-size: var(--font-size-600);
-    background: var(--color-accent-2-300);
+    background-color: var(--color-accent-2-400);
+    padding: 0.25rem;
+    border-radius: var(--border-radius-300);
+}
+.search-bar{
+    gap:.125rem;
+    display: block;
+}
+.nav-list{
+    display: flex;
+    flex: 1 1 auto;
+    gap:.5rem;
+}
+.nav-toggle-mobile{
+    display: none;
+}
+.link{
+    text-decoration: none;
+    color: var(--color-white-300);
+    padding: .5rem;
+}
+.link:hover{
+    background-color: var(--color-accent-2-500);
+    border-radius: var(--border-radius-200);
+}
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
+/* Mobile view Nav bar with Hamburger Menu */
+@media only screen and (max-width:500px) {
+    .nav-list{
+        position: fixed;
+        z-index: 100;
+        inset: 0 0 0 40%;
+        background-color: var(--color-dark-400-transparent);
+        flex-direction: column;
+        padding: min(20vh, 5rem) 2em;
+        transform: translate(100%);
+        transition: transform 300ms ease-in-out;
+    }
+    /* To hide any overflow related to sliding in animation and transform of mobile nav menu. */
+    body{
+    overflow-x: hidden;
+    }
+
+    /* nav.js uses this css behavior to make nav menu appear or dissappear for mobile screens. */
+    .nav-list[data-visibility="true"]{
+        transform: translate(0%);
+    }
+
+    .nav-toggle-mobile{
+        display: block;
+        position: absolute;
+        z-index: 900;
+        background-color: transparent;
+        background-image: url("../assets/icons/icon-hamburger.svg");
+        background-repeat: no-repeat;
+        border:0;
+        width: 2rem;
+        aspect-ratio: 1;
+        top:1rem;
+        right:1rem;
+    }
+    
+    .nav-toggle-mobile[aria-expanded="true"]{
+        background-image: url("../assets/icons/icon-close.svg");
+    }
+}
+
+@media only screen and (max-width:350px) {
+    /* On very narrow screens, search bar disappears */
+    .search-bar{
+        display: none;
+    }
+}
 /*
     4.2 Footer Components:
 */
@@ -191,7 +298,7 @@ footer{
     padding: .5rem;
 }
 .share-icon:hover{
-    color: var(--color-accent-2-300);
+    color: var(--color-accent-2-500);
 }
 
 .quick-links-container-heading{
