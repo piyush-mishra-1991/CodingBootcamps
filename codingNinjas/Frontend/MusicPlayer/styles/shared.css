@@ -176,6 +176,9 @@ footer{
         4.2 Footer Components
         4.3 Main Body:
             4.3.1 Carousel Section.
+            4.3.2 Favourites Section.
+        4.4 Utility Components:
+            4.4.1 Items
 
 =====================================================*/
 
@@ -341,4 +344,48 @@ footer{
     height: 300px;
     min-width: 100%;
     background-color: red;
+}
+
+/* 
+    4.3 Main Body:
+        4.3.2 Favourites Section.
+*/
+.favorites-container-content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    --bgColor-local:var(--color-accent-2-300);
+}
+.favorites-sub-container{
+    --bgColor-local:var(--color-accent-2-400);
+}
+.favorites-item{
+    display: flex;
+    --bgColor-local:var(--color-dark-400);
+}
+.favorite-item-img{
+    height:50px;
+    width:50px;
+    object-fit: cover;
+}
+.favorite-item-text{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: var(--font-size-100);
+    font-style: italic;
+}
+/* 
+    4.4 Utility Components:
+            4.4.1 Items
+*/
+.item-with-bg{
+    background-color: var(--bgColor-local,var(--color-dark-400));
+    border-radius: var(--border-radius-local,var(--border-radius-300));
+    margin:var(--margin-local,.25rem);
+    padding:var(--padding-local,0.25rem);
+    overflow: hidden;
+}
+.scrollable-container{
+    overflow-y: scroll;
+    max-height: var(--max-height-local,350px);
 }
