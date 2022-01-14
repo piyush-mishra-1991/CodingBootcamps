@@ -1,52 +1,188 @@
-/* IMPORTING Google Fonts */
+/* CONTENTS:
+    1. Imports
+    2. Global Settings
+    3. Layout
+    4. Components
+*/
+
+/*===================================================
+    1.IMPORTING : Google Fonts
+=====================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:wght@400;700&display=swap');
 
+/*===================================================
+    2.GLOBAL-SETTINGS : CSS-Variables and Global Settings
+=====================================================*/
+
 :root {
-
     /* DEFINING CSS-VARIABLES: */
-
     /* COLORS */
-    --color-dark-300: hsla(46, 81, 6, 1); /* bgColor */
-    --color-grey-300: hsla(39, 1, 61, 1); 
-    --color-white-300: hsla(47, 77, 96, 1); /* Text color */
-    --color-accent-1-300: hsla(46, 81, 61, 1);
-    --color-accent-2-300: hsla(16, 81, 61, 1);
+    /* Background Color Related */
+    --color-dark-400: hsla(46, 81%, 2%, 1); 
+    --color-dark-300: hsla(46, 81%, 6%, 1); 
+    --color-dark-200: hsla(46, 81%, 10%, 1); 
+    /* Background Color Related */
+    --color-grey-400: hsla(39, 1%, 45%, 1); 
+    --color-grey-300: hsla(39, 1%, 60%, 1); 
+    --color-grey-200: hsla(39, 1%, 75%, 1); 
+    --color-white-300: hsla(47, 77%, 96%, 1); /* Text color */
+    --color-accent-1-300: hsla(46, 81%, 61%, 1);
+    --color-accent-2-300: hsla(16, 81%, 61%, 1);
+
 
     /* FONTS */
-    /* FONTs STYLES */
+    /* FONT STYLES */
     --font-family-logo: 'Lobster', cursive;
     --font-family-text: 'Lobster Two', cursive;
-    /* FONTs SIZES */
+    /* FONT SIZES */
     --font-size-600: 1.35rem;
     --font-size-500: 1.25rem;
     --font-size-400: 1.15rem;
     --font-size-300: 1rem;
     --font-size-200: .85rem;
     --font-size-100: .75rem;
+    /* FONT WEIGHTS */
+    --font-weight-normal:normal;
+    --font-weight-bold:bold;
+    --font-weight-bolder:bolder;
+    --font-weight-lighter:lighter;
 
-    /* End of DEFINING CSS-VARIABLES */
-}
-
-html{
+    /* GLOBAL Settings*/
     margin: 0;
     padding: 0;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
 body{
-    /* Default Font props */
+    /* Default Font properties */
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
     font-family: var(--font-family-text);
     font-size: var(--font-size-300);
     color: var(--color-white-300);
+    background-color: var(--color-dark-300);
 }
 
-header{
+/*===================================================
+    3.LAYOUT:
+=====================================================*/
+body{
+    min-height: 100vh;
     display: grid;
+    gap: 1rem;
+    /*grid-auto-columns: 1fr;*/
+    grid-template-columns: 1rem 3fr 1fr 1rem ;
     
+    grid-template-areas:
+    "header     header             header   header"
+    "......     carousel           aside    ......."
+    "......     favorites          aside    ......."
+    "......     latest-releases    aside    ......."
+    "......     artists            ......   ......."
+    "......     genres             ......   ......."
+    "......     radios             ......   ......."
+    "footer     footer             footer   footer";
+}
+header{
+    grid-area: header;
 }
 
+.carousel-container{
+    grid-area: carousel;
+}
+.favorites-container{
+    grid-area: favorites;
+}
+.latest-releases-container{
+    grid-area: latest-releases;
+}
+.artists-container{
+    grid-area: artists;
+}
+.genres-container{
+    grid-area: genres;
+}
+.radios-container{
+    grid-area: radios;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: var(--color-dark-400);
+}
+
+/*===================================================
+    4.COMPONENTS:
+=====================================================*/
+
+
+.share-icons-container{
+    text-align: center;
+    margin: var(--font-size-600);
+}
+
+.share-icon{
+    cursor: pointer;
+}
+.share-icon:hover{
+    color: var(--color-accent-2-300);
+}
 .logo{
     font-family: var(--font-family-logo);
     font-size: var(--font-size-600);
     background: var(--color-accent-2-300);
 }
 
+.quick-links-container-heading{
+    text-align: center;
+}
+
+.quick-links-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.quick-link-list-heading{
+    font-size: var(--font-size-300);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-grey-400);
+}
+.quick-links-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: var(--font-size-200);
+    color: var(--color-grey-300);
+}
+.quick-links-list-item:hover{
+    cursor: pointer;
+    color: var(--color-grey-200);
+}
