@@ -81,25 +81,32 @@ body{
     background-color: var(--color-dark-300);
 }
 
+/* Default List style*/
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*===================================================
-    3.LAYOUT:
+    3.LAYOUT: Mobile first layout
 =====================================================*/
 body{
     min-height: 100vh;
     display: grid;
     gap: 1rem;
-    /*grid-auto-columns: 1fr;*/
-    grid-template-columns: 1rem 3fr 1fr 1rem ;
-    
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1rem 1fr 1rem ;
     grid-template-areas:
-    "header     header             header   header"
-    "......     carousel           aside    ......."
-    "......     favorites          aside    ......."
-    "......     latest-releases    aside    ......."
-    "......     artists            ......   ......."
-    "......     genres             ......   ......."
-    "......     radios             ......   ......."
-    "footer     footer             footer   footer";
+        "header     header          header"
+        "......     carousel        ......."
+        "......     aside           ......."
+        "......     favorites       ......."
+        "......     latest-releases ......."
+        "......     artists         ......."
+        "......     genres          ......."
+        "......     radios          ......."
+        "footer     footer          footer";
 }
 header{
     grid-area: header;
@@ -130,18 +137,49 @@ aside{
 
 footer{
     grid-area: footer;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    background-color: var(--color-dark-400);
+}
+
+@media only screen and (min-width: 800px)  {
+    body{
+        grid-template-columns: 1rem 3fr 1fr 1rem ;
+        grid-template-areas:
+            "header     header             header   header"
+            "......     carousel           aside    ......."
+            "......     favorites          aside    ......."
+            "......     latest-releases    aside    ......."
+            "......     artists            ......   ......."
+            "......     genres             ......   ......."
+            "......     radios             ......   ......."
+            "footer     footer             footer   footer";
+    }
 }
 
 /*===================================================
     4.COMPONENTS:
+        4.1 Header Components
+        4.2 Footer Components
+
 =====================================================*/
 
+/* 
+    4.1 Header Components: 
+*/
+
+.logo{
+    font-family: var(--font-family-logo);
+    font-size: var(--font-size-600);
+    background: var(--color-accent-2-300);
+}
+
+/*
+    4.2 Footer Components:
+*/
+footer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--color-dark-400);
+}
 
 .share-icons-container{
     text-align: center;
@@ -150,24 +188,22 @@ footer{
 
 .share-icon{
     cursor: pointer;
+    padding: .5rem;
 }
 .share-icon:hover{
     color: var(--color-accent-2-300);
 }
-.logo{
-    font-family: var(--font-family-logo);
-    font-size: var(--font-size-600);
-    background: var(--color-accent-2-300);
-}
 
 .quick-links-container-heading{
     text-align: center;
+    font-size: var(--font-size-400);
 }
 
 .quick-links-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .quick-link-list-heading{
@@ -178,7 +214,8 @@ footer{
 .quick-links-list{
     display: flex;
     flex-direction: column;
-    list-style: none;
+    align-self: left;
+    padding: .5rem;
     font-size: var(--font-size-200);
     color: var(--color-grey-300);
 }
