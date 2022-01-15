@@ -13,3 +13,6 @@ latestReleasesElement.innerHTML += templateCodeLatestRelease;
 
 const popularArtistsElement = document.getElementById('artists-container');
 popularArtistsElement.innerHTML += templateCodePopularArtists;
+
+const genresElement = document.getElementById('genres-container');
+genresElement.innerHTML += templateCodeGenres;

@@ -19,7 +19,8 @@
     /* COLORS */
     /* Background Color Related */
     --color-dark-400: hsla(46, 81%, 2%, 1); 
-    --color-dark-400-transparent: hsla(46, 81%, 2%, .95);
+    --color-dark-400-transparent-10: hsla(46, 81%, 2%, .95);
+    --color-dark-400-transparent-9: hsla(46, 81%, 2%, .80);
     --color-dark-300: hsla(46, 81%, 6%, 1); 
     --color-dark-200: hsla(46, 81%, 10%, 1); 
     /* Background Color Related */
@@ -244,7 +245,7 @@ header > div{
         position: fixed;
         z-index: 100;
         inset: 0 0 0 40%;
-        background-color: var(--color-dark-400-transparent);
+        background-color: var(--color-dark-400-transparent-10);
         flex-direction: column;
         padding: min(20vh, 5rem) 2em;
         transform: translate(100%);
@@ -468,4 +469,30 @@ footer{
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+}
+/*
+    4.3 Main Body:
+        4.3.5 Popular-Artists Section.
+*/
+.genre-item{
+    width:200px;
+    height:150px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+.genre-imgcontainer{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.genre-item .text-title{
+    position: absolute;
+    text-align: center;
+    padding: .5rem 0;
+    top: 50%;
+    left: 50%;
+    width:100%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-dark-400-transparent-9);
 }

@@ -289,3 +289,77 @@ const templateCodePopularArtists =
                 </ul>
             </div>
 `;
+
+const templateCodeGenres = `
+            <div class="container-heading">Popular Genres</div>
+            <div class="container-content item-with-bg">
+                <ul class="list-in-container">
+                    <li>
+                        <div class="genre-item item-with-bg">
+                            <img
+                                class="genre-imgcontainer"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Electronic</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="genre-item item-with-bg">
+                            <img
+                                class="genre-imgcontainer"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Electronic</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="genre-item item-with-bg">
+                            <img
+                                class="genre-imgcontainer"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Electronic</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="genre-item item-with-bg">
+                            <img
+                                class="genre-imgcontainer"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Electronic</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="genre-item item-with-bg">
+                            <img
+                                class="genre-imgcontainer"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Electronic</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="genre-item item-with-bg">
+                            <img
+                                class="genre-imgcontainer"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Electronic</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+`;
