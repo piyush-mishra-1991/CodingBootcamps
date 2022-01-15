@@ -214,3 +214,78 @@ const templateCodeLatestRelease = `
                 </ul>
             </div>
 `;
+
+const templateCodePopularArtists = 
+`
+            <div class="container-heading">Popular Artists</div>
+            <div class="container-content item-with-bg">
+                <ul class="list-in-container">
+                    <li>
+                        <div class="popular-artists-item item-with-bg">
+                            <img
+                                class="popular-artist-imgcontainer"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                            />
+                            <div class="text-title">
+                                Artist Name
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="popular-artists-item item-with-bg">
+                            <img
+                                class="popular-artist-imgcontainer"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                            />
+                            <div class="text-title">
+                                Artist Name
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="popular-artists-item item-with-bg">
+                            <img
+                                class="popular-artist-imgcontainer"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                            />
+                            <div class="text-title">
+                                Artist Name
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="popular-artists-item item-with-bg">
+                            <img
+                                class="popular-artist-imgcontainer"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                            />
+                            <div class="text-title">
+                                Artist Name
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="popular-artists-item item-with-bg">
+                            <img
+                                class="popular-artist-imgcontainer"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                            />
+                            <div class="text-title">
+                                Artist Name
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="popular-artists-item item-with-bg">
+                            <img
+                                class="popular-artist-imgcontainer"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                            />
+                            <div class="text-title">
+                                Artist Name
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+`;

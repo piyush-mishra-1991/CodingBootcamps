@@ -10,3 +10,6 @@ favoritesElement.innerHTML += templateCodeFavorites;
 
 const latestReleasesElement = document.getElementById('latest-releases-container');
 latestReleasesElement.innerHTML += templateCodeLatestRelease;
+
+const popularArtistsElement = document.getElementById('artists-container');
+popularArtistsElement.innerHTML += templateCodePopularArtists;

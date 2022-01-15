@@ -449,3 +449,23 @@ footer{
 .bottom-line{
     align-self: flex-start;
 }
+/*
+    4.3 Main Body:
+        4.3.5 Popular-Artists Section.
+*/
+.popular-artists-item{
+    height: 130px;
+    width: 100px;
+    --bgColor-local:var(--color-dark-400);
+    --border-radius-local:var(--border-radius-400);
+}
+.popular-artists-item .text-title{
+    text-align: center;
+}
+.popular-artist-imgcontainer{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
