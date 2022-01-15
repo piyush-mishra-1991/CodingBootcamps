@@ -157,7 +157,7 @@ footer{
     grid-area: footer;
 }
 
-@media only screen and (min-width: 800px)  {
+@media only screen and (min-width: 950px)  {
     body{
         grid-template-columns: 1rem 3fr 1fr 1rem ;
         grid-template-areas:
@@ -181,7 +181,12 @@ footer{
             4.3.2 Utilities
                 4.3.2.1 Items
             4.3.3 Carousel Section.
-            4.3.4 Favourites Section.            
+            4.3.4 Favorites Section.
+            4.3.5 Releases Section.
+            4.3.6 Artists Section.
+            4.3.7 Genres Section.
+            4.3.8 Radio Section.
+            4.3.9 Aside Section.
 
 =====================================================*/
 
@@ -452,7 +457,7 @@ footer{
 }
 /*
     4.3 Main Body:
-        4.3.5 Popular-Artists Section.
+        4.3.6 Popular-Artists Section.
 */
 .popular-artists-item{
     height: 130px;
@@ -472,7 +477,7 @@ footer{
 }
 /*
     4.3 Main Body:
-        4.3.5 Popular-Artists Section.
+        4.3.7 Genres Section.
 */
 .genre-item{
     width:200px;
@@ -498,7 +503,7 @@ footer{
 }
 /*
     4.3 Main Body:
-        4.3.5 Popular-Radios Section.
+        4.3.8 Popular-Radios Section.
 */
 .radio-item{
     width:120px;
@@ -522,3 +527,69 @@ footer{
     transform: translate(-50%, -50%);
     background-color:var(--color-dark-400-transparent-9);
 }
+/*
+    4.3 Main Body:
+        4.3.9 Aside Section.
+*/
+aside{
+    background-color: red;
+}
+.aside-header{
+    display: flex;
+    --bgColor-local:var(--color-accent-2-500);
+    --border-radius-local:var(--border-radius-000);
+    justify-content: space-between;
+}
+aside ul{
+    width: 100%;
+}
+.playlist-ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-height: 100vh;
+    overflow: scroll;
+}
+@media only screen and (max-width: 950px) {
+    .playlist-ul{
+        grid-template-columns: repeat(3,1fr);
+        max-height: 30vh;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .playlist-ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width: 500px) {
+    .playlist-ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/*.playlist-li-in-container{
+    width: 100%;
+}*/
+.playlist-item{
+    display: flex;
+    justify-content: space-between;
+    --bgColor-local:var(--color-accent-2-500);
+}
+.playlist-imgcontainer{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.playlist-item .left-half{
+    display: flex;
+    justify-content: flex-start;
+}
+.playlist-item .right-half{
+    align-self: flex-start;
+}
+.playlist-item .left-half > div{
+    margin:0.5rem;
+}
+/*
+.aside-header + .container-content.list-in-container li {
+    width: 100%;
+}*/
