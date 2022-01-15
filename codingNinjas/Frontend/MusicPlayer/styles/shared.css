@@ -45,7 +45,7 @@
     --font-size-400: 1.15rem;
     --font-size-300: 1rem;
     --font-size-200: .85rem;
-    --font-size-100: .75rem;
+    --font-size-100: .70rem;
     /* FONT WEIGHTS */
     --font-weight-normal:normal;
     --font-weight-bold:bold;
@@ -56,6 +56,7 @@
     --border-radius-400:.5rem;
     --border-radius-300:.25rem;
     --border-radius-200:.125rem;
+    --border-radius-000:0;
 
     /* GLOBAL Settings*/
     margin: 0;
@@ -175,10 +176,11 @@ footer{
         4.1 Header Components
         4.2 Footer Components
         4.3 Main Body:
-            4.3.1 Carousel Section.
-            4.3.2 Favourites Section.
-        4.4 Utility Components:
-            4.4.1 Items
+            4.3.1 Common 
+            4.3.2 Utilities
+                4.3.2.1 Items
+            4.3.3 Carousel Section.
+            4.3.4 Favourites Section.            
 
 =====================================================*/
 
@@ -338,7 +340,53 @@ footer{
 
 /* 
     4.3 Main Body:
-        4.3.1 Carousel Section.
+        4.3.1 Common:
+*/
+.container-heading{
+    font-size: var(--font-size-400);
+}
+.container-content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    --bgColor-local:var(--color-accent-2-300);
+}
+.list-in-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+/* Song Name, Artist name in respective sections use this*/
+.text-title{
+    font-size: var(--font-size-200);
+    font-weight: var(--font-weight-bold);
+}
+.text-subtitle, .num-text{
+    font-size: var(--font-size-100);
+}
+
+/* 
+    4.3 Main Body:
+        4.3.2 Utilities:
+            4.3.2.1 Items:
+*/
+.item-with-bg{
+    background-color: var(--bgColor-local,var(--color-dark-400));
+    border-radius: var(--border-radius-local,var(--border-radius-300));
+    margin:var(--margin-local,.25rem);
+    padding:var(--padding-local,0.25rem);
+    overflow: hidden;
+}
+.scrollable-container{
+    overflow-y: scroll;
+    max-height: var(--max-height-local,350px);
+}
+
+/* 
+    4.3 Main Body:
+        4.3.3 Carousel Section.
 */
 .carousel-container{
     height: 300px;
@@ -348,14 +396,8 @@ footer{
 
 /* 
     4.3 Main Body:
-        4.3.2 Favourites Section.
+        4.3.4 Favourites Section.
 */
-.favorites-container-content{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    --bgColor-local:var(--color-accent-2-300);
-}
 .favorites-sub-container{
     --bgColor-local:var(--color-accent-2-400);
 }
@@ -374,18 +416,36 @@ footer{
     font-size: var(--font-size-100);
     font-style: italic;
 }
-/* 
-    4.4 Utility Components:
-            4.4.1 Items
+
+/*
+    4.3 Main Body:
+        4.3.5 Latest-Releases Section.
+
 */
-.item-with-bg{
-    background-color: var(--bgColor-local,var(--color-dark-400));
-    border-radius: var(--border-radius-local,var(--border-radius-300));
-    margin:var(--margin-local,.25rem);
-    padding:var(--padding-local,0.25rem);
+.latest-release-item{
+    display: flex;
+    justify-content: space-between;
+    --bgColor-local:var(--color-dark-400);
+    --border-radius-local:var(--border-radius-000);
+}
+.latest-release-imgcontainer{
+    max-width: 75px;
     overflow: hidden;
 }
-.scrollable-container{
-    overflow-y: scroll;
-    max-height: var(--max-height-local,350px);
+.latest-release-textcontainer{
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.top-line{
+    align-self: flex-end;
+}
+.mid-line{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-line{
+    align-self: flex-start;
 }

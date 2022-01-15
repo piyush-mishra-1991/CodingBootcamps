@@ -65,8 +65,8 @@ const templateCodeFooter = `
 
 // Favorites Section Code
 const templateCodeFavorites = `
-<div class="favorites-container-heading">Favorites</div>
-            <div class="favorites-container-content item-with-bg">
+<div class="container-heading">Favorites</div>
+            <div class="container-content item-with-bg">
                 <div class="favorites-sub-container item-with-bg">
                     <div class="favourite-item-heading">Songs</div>
                     <ul class="favorite-list">
@@ -126,5 +126,91 @@ const templateCodeFavorites = `
                         </li>
                     </ul>
                 </div>
+            </div>
+`;
+
+const templateCodeLatestRelease = `
+            <div class="container-heading">Latest Releases</div>
+            <div class="container-content item-with-bg">
+                <ul class="list-in-container">
+                    <li>
+                        <div class="latest-release-item item-with-bg">
+                            <img
+                                class="latest-release-imgcontainer"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                            />
+                            <div class="latest-release-textcontainer">
+                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
+                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
+                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="latest-release-item item-with-bg">
+                            <img
+                                class="latest-release-imgcontainer"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                            />
+                            <div class="latest-release-textcontainer">
+                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
+                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
+                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="latest-release-item item-with-bg">
+                            <img
+                                class="latest-release-imgcontainer"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                            />
+                            <div class="latest-release-textcontainer">
+                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
+                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
+                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="latest-release-item item-with-bg">
+                            <img
+                                class="latest-release-imgcontainer"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                            />
+                            <div class="latest-release-textcontainer">
+                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
+                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
+                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="latest-release-item item-with-bg">
+                            <img
+                                class="latest-release-imgcontainer"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                            />
+                            <div class="latest-release-textcontainer">
+                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
+                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
+                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="latest-release-item item-with-bg">
+                            <img
+                                class="latest-release-imgcontainer"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                            />
+                            <div class="latest-release-textcontainer">
+                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
+                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
+                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
 `;

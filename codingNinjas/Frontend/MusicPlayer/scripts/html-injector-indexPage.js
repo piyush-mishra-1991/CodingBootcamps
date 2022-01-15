@@ -7,3 +7,6 @@ footerElement[0].innerHTML += templateCodeFooter;
 
 const favoritesElement = document.getElementById('favorites-container');
 favoritesElement.innerHTML += templateCodeFavorites;
+
+const latestReleasesElement = document.getElementById('latest-releases-container');
+latestReleasesElement.innerHTML += templateCodeLatestRelease;
