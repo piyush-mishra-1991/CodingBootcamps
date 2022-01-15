@@ -363,3 +363,77 @@ const templateCodeGenres = `
                 </ul>
             </div>
 `;
+
+const templateRadioStations = `
+            <div class="container-heading">Popular Radio Stations</div>
+            <div class="container-content item-with-bg">
+                <ul class="list-in-container">
+                    <li>
+                        <div class="radio-item item-with-bg">
+                            <img
+                                class="radio-imgcontainer"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Radio-PM</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio-item item-with-bg">
+                            <img
+                                class="radio-imgcontainer"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Radio-PM</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio-item item-with-bg">
+                            <img
+                                class="radio-imgcontainer"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Radio-PM</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio-item item-with-bg">
+                            <img
+                                class="radio-imgcontainer"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Radio-PM</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio-item item-with-bg">
+                            <img
+                                class="radio-imgcontainer"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Radio-PM</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="radio-item item-with-bg">
+                            <img
+                                class="radio-imgcontainer"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                            />
+                            <div class="text-title">
+                                <p>Radio-PM</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+`;

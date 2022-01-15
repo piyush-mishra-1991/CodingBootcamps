@@ -16,3 +16,6 @@ popularArtistsElement.innerHTML += templateCodePopularArtists;
 
 const genresElement = document.getElementById('genres-container');
 genresElement.innerHTML += templateCodeGenres;
+
+const radioStations = document.getElementById('radios-container');
+radioStations.innerHTML += templateRadioStations;

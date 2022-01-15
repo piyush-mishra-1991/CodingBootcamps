@@ -496,3 +496,29 @@ footer{
     transform: translate(-50%, -50%);
     background-color: var(--color-dark-400-transparent-9);
 }
+/*
+    4.3 Main Body:
+        4.3.5 Popular-Radios Section.
+*/
+.radio-item{
+    width:120px;
+    height:120px;
+    position: relative;
+}
+.radio-imgcontainer{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.radio-item .text-title{
+    position: absolute;
+    text-align: center;
+    padding: 0.5rem;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    background-color:var(--color-dark-400-transparent-9);
+}
