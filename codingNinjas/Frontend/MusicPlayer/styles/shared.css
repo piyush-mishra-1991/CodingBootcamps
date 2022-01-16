@@ -389,7 +389,17 @@ footer{
     overflow-y: scroll;
     max-height: var(--max-height-local,350px);
 }
-
+.flex-row{
+    display: flex;
+    justify-content: var(--flex-justify-content-local,space-between);
+    flex-wrap: var(--flex-wrap-local,nowrap);
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--flex-justify-content-local,space-between);
+    flex-wrap: var(--flex-wrap-local,nowrap);
+}
 /* 
     4.3 Main Body:
         4.3.3 Carousel Section.

@@ -64,3 +64,45 @@ footer{
 .right-half i{
     margin-left: 1rem;
 }
+.artist-cover{
+    --bgColor-local:var(--color-accent-2-400);
+    --border-radius-local:var(--border-radius-000);
+    --margin-local:0;
+    --padding-local:0;
+    max-height: 30vh;
+    overflow: hidden;
+}
+.artist-cover .flex-col{
+    margin: 1rem 2rem;
+    --flex-justify-content-local:space-around;
+}
+.artist-cover .flex-row{
+    --flex-justify-content-local:space-between;
+}
+.artist-cover .buttons{
+    --flex-justify-content-local:flex-start;
+    --flex-wrap-local:wrap;
+}
+.artist-cover .buttons .link{
+    flex: 1 1 auto;
+    padding: 0 1 rem;
+    margin-right: 1rem;
+}
+.artist-imgcontainer{
+    flex: 1 2 400px;
+}
+.artist-textcontent-container{
+    flex: 2 1 400px;
+}
+.artist-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+@media only screen and (max-width:600px) {
+    .artist-cover{
+        flex-wrap: wrap;
+        max-height: min-content;
+    }
+}
