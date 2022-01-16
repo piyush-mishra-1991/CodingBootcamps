@@ -549,6 +549,7 @@ aside{
     --bgColor-local:var(--color-accent-2-500);
     --border-radius-local:var(--border-radius-000);
     justify-content: space-between;
+    align-items: center;
 }
 aside ul{
     width: 100%;
@@ -598,6 +599,33 @@ aside ul{
 }
 .playlist-item .left-half > div{
     margin:0.5rem;
+}
+
+/* Custom Select Dropdown Menu on aside */
+select{
+    padding: .125rem .25rem .125rem 0;
+    background-color: var(--color-dark-300);
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    border:0;
+}
+.dropdown{
+    position: relative;
+    margin: 0;
+    padding:0;
+}
+.dropdown-arrow{
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    display: block;
+    background-color: blue;
+    width: 1.5rem;
+    text-align: center;
+    /* Ignore registering clicks on this arrow and let it pass to select menu underneath*/
+    pointer-events: none; 
 }
 /*
 .aside-header + .container-content.list-in-container li {
