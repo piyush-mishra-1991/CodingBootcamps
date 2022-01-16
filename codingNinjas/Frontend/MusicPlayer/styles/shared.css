@@ -362,7 +362,7 @@ footer{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    
+
 }
 /* Song Name, Artist name in respective sections use this*/
 .text-title{
@@ -547,7 +547,7 @@ aside ul{
     display: grid;
     grid-template-columns: 1fr;
     max-height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 @media only screen and (max-width: 950px) {
     .playlist-ul{

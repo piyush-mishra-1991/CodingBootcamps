@@ -1,0 +1,66 @@
+/*===================================================
+    3.LAYOUT: Mobile first layout
+=====================================================*/
+body{
+    min-height: 100vh;
+    display: grid;
+    gap: 1rem;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1rem 1fr 1rem ;
+    grid-template-areas:
+        "header     header              header"
+        "......     artist-cover        ......."
+        "......     artist-songs        ......."
+        "......     aside               ......."
+        "footer     footer              footer";
+}
+header{
+    grid-area: header;
+}
+.artist-cover{
+    grid-area: artist-cover;
+    min-height: 50vh;
+}
+.artist-songs{
+    grid-area: artist-songs;
+    min-height: 100vh;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+
+@media only screen and (min-width: 950px)  {
+    body{
+        grid-template-columns: 1rem 3fr 1fr 1rem ;
+        grid-template-areas:
+                
+            "header     header                 header   header"
+            "......     artist-cover           aside    ......."
+            "......     artist-songs           aside    ......."
+            "......     artist-songs           .....    ......."
+            "footer     footer                 footer   footer";
+    }
+}
+
+
+.playlist-ul{/*rename this to aside ul in all css*/
+    max-height: 50vh;
+}
+@media only screen and (max-width: 950px) {
+    .playlist-ul{
+        max-height: 30vh;
+    }
+}
+
+.span-100-ul{
+    width: 100%;
+}
+.container-content .span-100-ul .right-half{
+    align-self: center;
+}
+.right-half i{
+    margin-left: 1rem;
+}
