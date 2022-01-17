@@ -74,7 +74,7 @@ const templateCodeFavorites = `
                             <div class="favorites-item item-with-bg">
                                 <img
                                     class="favorite-item-img"
-                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?cs=srgb&dl=pexels-juan-pablo-serrano-arenas-1246437.jpg&fm=jpg"
+                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&h=130"
                                 />
                                 <p class="favorite-item-text">Song Name</p>
                             </div>
@@ -89,7 +89,7 @@ const templateCodeFavorites = `
                             <div class="favorites-item item-with-bg">
                                 <img
                                     class="favorite-item-img"
-                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?cs=srgb&dl=pexels-juan-pablo-serrano-arenas-1246437.jpg&fm=jpg"
+                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&h=130"
                                 />
                                 <p class="favorite-item-text">Artist Name</p>
                             </div>
@@ -104,7 +104,7 @@ const templateCodeFavorites = `
                             <div class="favorites-item item-with-bg">
                                 <img
                                     class="favorite-item-img"
-                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?cs=srgb&dl=pexels-juan-pablo-serrano-arenas-1246437.jpg&fm=jpg"
+                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&h=130"
                                 />
                                 <p class="favorite-item-text">Genre Name</p>
                             </div>
@@ -119,7 +119,7 @@ const templateCodeFavorites = `
                             <div class="favorites-item item-with-bg">
                                 <img
                                     class="favorite-item-img"
-                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?cs=srgb&dl=pexels-juan-pablo-serrano-arenas-1246437.jpg&fm=jpg"
+                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&h=130"
                                 />
                                 <p class="favorite-item-text">Radio Name</p>
                             </div>
@@ -137,7 +137,7 @@ const templateCodeLatestRelease = `
                         <div class="latest-release-item item-with-bg">
                             <img
                                 class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="latest-release-textcontainer">
                                 <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
@@ -150,7 +150,7 @@ const templateCodeLatestRelease = `
                         <div class="latest-release-item item-with-bg">
                             <img
                                 class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="latest-release-textcontainer">
                                 <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
@@ -163,7 +163,7 @@ const templateCodeLatestRelease = `
                         <div class="latest-release-item item-with-bg">
                             <img
                                 class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="latest-release-textcontainer">
                                 <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
@@ -176,7 +176,7 @@ const templateCodeLatestRelease = `
                         <div class="latest-release-item item-with-bg">
                             <img
                                 class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="latest-release-textcontainer">
                                 <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
@@ -189,7 +189,7 @@ const templateCodeLatestRelease = `
                         <div class="latest-release-item item-with-bg">
                             <img
                                 class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="latest-release-textcontainer">
                                 <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
@@ -202,7 +202,7 @@ const templateCodeLatestRelease = `
                         <div class="latest-release-item item-with-bg">
                             <img
                                 class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="latest-release-textcontainer">
                                 <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
@@ -224,7 +224,7 @@ const templateCodePopularArtists =
                         <div class="popular-artists-item item-with-bg">
                             <img
                                 class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 Artist Name
@@ -235,7 +235,7 @@ const templateCodePopularArtists =
                         <div class="popular-artists-item item-with-bg">
                             <img
                                 class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 Artist Name
@@ -246,7 +246,7 @@ const templateCodePopularArtists =
                         <div class="popular-artists-item item-with-bg">
                             <img
                                 class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 Artist Name
@@ -257,7 +257,7 @@ const templateCodePopularArtists =
                         <div class="popular-artists-item item-with-bg">
                             <img
                                 class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 Artist Name
@@ -268,7 +268,7 @@ const templateCodePopularArtists =
                         <div class="popular-artists-item item-with-bg">
                             <img
                                 class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 Artist Name
@@ -279,7 +279,7 @@ const templateCodePopularArtists =
                         <div class="popular-artists-item item-with-bg">
                             <img
                                 class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg"
+                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 Artist Name
@@ -298,7 +298,7 @@ const templateCodeGenres = `
                         <div class="genre-item item-with-bg">
                             <img
                                 class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Electronic</p>
@@ -309,7 +309,7 @@ const templateCodeGenres = `
                         <div class="genre-item item-with-bg">
                             <img
                                 class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Electronic</p>
@@ -320,7 +320,7 @@ const templateCodeGenres = `
                         <div class="genre-item item-with-bg">
                             <img
                                 class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Electronic</p>
@@ -331,7 +331,7 @@ const templateCodeGenres = `
                         <div class="genre-item item-with-bg">
                             <img
                                 class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Electronic</p>
@@ -342,7 +342,7 @@ const templateCodeGenres = `
                         <div class="genre-item item-with-bg">
                             <img
                                 class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Electronic</p>
@@ -353,7 +353,7 @@ const templateCodeGenres = `
                         <div class="genre-item item-with-bg">
                             <img
                                 class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg"
+                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Electronic</p>
@@ -372,7 +372,7 @@ const templateRadioStations = `
                         <div class="radio-item item-with-bg">
                             <img
                                 class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Radio-PM</p>
@@ -383,7 +383,7 @@ const templateRadioStations = `
                         <div class="radio-item item-with-bg">
                             <img
                                 class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Radio-PM</p>
@@ -394,7 +394,7 @@ const templateRadioStations = `
                         <div class="radio-item item-with-bg">
                             <img
                                 class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Radio-PM</p>
@@ -405,7 +405,7 @@ const templateRadioStations = `
                         <div class="radio-item item-with-bg">
                             <img
                                 class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Radio-PM</p>
@@ -416,7 +416,7 @@ const templateRadioStations = `
                         <div class="radio-item item-with-bg">
                             <img
                                 class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Radio-PM</p>
@@ -427,7 +427,7 @@ const templateRadioStations = `
                         <div class="radio-item item-with-bg">
                             <img
                                 class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg"
+                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
                             />
                             <div class="text-title">
                                 <p>Radio-PM</p>
