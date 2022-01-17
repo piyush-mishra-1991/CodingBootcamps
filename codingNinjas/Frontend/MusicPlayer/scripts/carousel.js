@@ -1,40 +1,54 @@
-const track = document.querySelector('.carousel_track'); // Unordered list of slides which contains images.
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel_button-next');
-const prevButton = document.querySelector('.carousel_button-prev');
+// Fetching DOM variables:
+const carouselTrack = document.querySelector('.carousel_track');
+const carouselSlides = Array.from(carouselTrack.children);
+const btnNext = document.querySelector('.carousel_button-next');
+const btnPrev = document.querySelector('.carousel_button-prev');
 
-const slideWidth = slides[0].getBoundingClientRect().width;
+// This is the quantum of distance that every slide will shift, when carousel buttons are pressed.
+// GetBoundiingRect also ensures that responsive width is obtained on different screen sizes, and hence
+// our shifting of carousel images will be adjusted responsively on basis of current screen size.
+const slideLength = carouselSlides[0].getBoundingClientRect().width;
+
+// Setting the horizontal position of each slides initially by laying them out horizontally
+// on fixed multiples of slideLength (determined using slideLength * index);
 const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px';
+    slide.style.left = slideLength * index + 'px';
 };
-slides.forEach(setSlidePosition);
+carouselSlides.forEach(setSlidePosition);
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+// Utility functions to move slides when clicks on carousel registered:
+const moveToSlide = (currentSlide, targetSlide) => {
+    carouselTrack.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 };
-
+// Updating the visibility of carousel navigation arrows (depending upon whether beginning or end reached).
 const updateArrowBtnVisibility = currentSlide => {
-    const targetIndex = slides.findIndex(slide => slide === currentSlide);
-    if (targetIndex == slides.length - 1) nextButton.classList.add('is-hidden');
-    else if (targetIndex == 0) prevButton.classList.add('is-hidden');
+    const targetIndex = carouselSlides.findIndex(slide => slide === currentSlide);
+
+    // If current slide is at end:
+    if (targetIndex == carouselSlides.length - 1)
+        btnNext.classList.add('is-hidden');
+    // If current slide is at beginning:
+    else if (targetIndex == 0) btnPrev.classList.add('is-hidden');
+    // If current slide is somewhere between, so both nav-arrow shown
     else {
-        nextButton.classList.remove('is-hidden');
-        prevButton.classList.remove('is-hidden');
+        btnNext.classList.remove('is-hidden');
+        btnPrev.classList.remove('is-hidden');
     }
 };
 
-nextButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
+// Registering event callbacks to carousel-nav buttons:
+btnNext.addEventListener('click', e => {
+    const currentSlide = carouselTrack.querySelector('.current-slide');
     const nextSlide = currentSlide.nextElementSibling;
-    moveToSlide(track, currentSlide, nextSlide);
+    moveToSlide(currentSlide, nextSlide);
     updateArrowBtnVisibility(nextSlide);
 });
-prevButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
+btnPrev.addEventListener('click', e => {
+    const currentSlide = carouselTrack.querySelector('.current-slide');
     const prevSlide = currentSlide.previousElementSibling;
     console.log(prevSlide);
-    moveToSlide(track, currentSlide, prevSlide);
+    moveToSlide(currentSlide, prevSlide);
     updateArrowBtnVisibility(prevSlide);
 });

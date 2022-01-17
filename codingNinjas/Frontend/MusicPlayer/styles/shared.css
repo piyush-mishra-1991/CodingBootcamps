@@ -644,15 +644,13 @@ select{
 }
 .carousel{
     position: relative;
-    height: 400px;
+    height: 100%;
     max-width:200px;
     margin: 0 auto;
 }
 .carousel_track-container{
-    /*background-color: lightblue;*/
     height: 100%;
     position: relative;
-    /*overflow: hidden;*/
 }
 .carousel_track{
     position: relative;
@@ -661,7 +659,7 @@ select{
 }
 .carousel-slide{
     position: absolute;
-    top: 30px;;
+    top: 30px;
     bottom: 30px;
     width: 100%;
     margin: 0 1rem;    
