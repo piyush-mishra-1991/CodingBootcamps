@@ -21,3 +21,6 @@ if (genresElement) genresElement.innerHTML += templateCodeGenres;
 
 const radioStations = document.getElementById('radios-container');
 if (radioStations) radioStations.innerHTML += templateRadioStations;
+
+const playlistList = document.getElementById('playlist-songs');
+if (playlistList) playlistList.innerHTML += templatePlaylistData;

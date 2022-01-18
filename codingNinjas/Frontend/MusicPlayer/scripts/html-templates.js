@@ -1,4 +1,4 @@
-// HEADER CODE:
+// HEADER Section:
 const templateCodeHeader = `
             <div>
                 <div class="logo">Raaga</div>
@@ -28,7 +28,7 @@ const templateCodeHeader = `
             </div>
 `;
 
-// FOOTER CODE:
+// FOOTER Section:
 const templateCodeFooter = `
             <div class="share-icons-container">
                 <p>Share Raaga on:</p>
@@ -63,377 +63,244 @@ const templateCodeFooter = `
             </div>
 `;
 
-// Favorites Section Code
+// FAVORITES Section:
+const generatefavoriteSongsList = () => {
+    let favoriteSongsListHTML = '';
+    sharedData.favoritesData.songs.forEach(favSong => {
+        favoriteSongsListHTML +=`<li>
+                                    <div class="favorites-item item-with-bg">
+                                        <img
+                                            class="favorite-item-img"
+                                            src=${favSong.imgUrl}
+                                        />
+                                        <p class="favorite-item-text">${favSong.songName}</p>
+                                    </div>
+                                </li>`;
+    });
+    return favoriteSongsListHTML;
+};
+
+const generatefavoriteArtistsList = () => {
+    let favoriteArtistsListHTML = '';
+    sharedData.favoritesData.artists.forEach(favArtist => {
+        favoriteArtistsListHTML += `<li>
+                                        <div class="favorites-item item-with-bg">
+                                            <img
+                                                class="favorite-item-img"
+                                                src=${favArtist.imgUrl}
+                                            />
+                                            <p class="favorite-item-text">${favArtist.artistName}</p>
+                                        </div>
+                                    </li>`;
+    });
+    return favoriteArtistsListHTML;
+};
+
+const generatefavoriteGenresList = () => {
+    let favoriteGenresListHTML = '';
+    sharedData.favoritesData.genres.forEach(favGenre => {
+        favoriteGenresListHTML += `<li>
+                                        <div class="favorites-item item-with-bg">
+                                            <img
+                                                class="favorite-item-img"
+                                                src=${favGenre.imgUrl}
+                                            />
+                                            <p class="favorite-item-text">${favGenre.genreName}</p>
+                                        </div>
+                                    </li>`;
+    });
+    return favoriteGenresListHTML;
+};
+
+const generatefavoriteRadiosList = () => {
+    let favoriteRadiosListHTML = '';
+    sharedData.favoritesData.radios.forEach(favRadio => {
+        favoriteRadiosListHTML += `<li>
+                                        <div class="favorites-item item-with-bg">
+                                            <img
+                                                class="favorite-item-img"
+                                                src=${favRadio.imgUrl}
+                                            />
+                                            <p class="favorite-item-text">${favRadio.radioName}</p>
+                                        </div>
+                                    </li>`;
+    });
+    return favoriteRadiosListHTML;
+};
+
 const templateCodeFavorites = `
 <div class="container-heading">Favorites</div>
             <div class="container-content item-with-bg">
                 <div class="favorites-sub-container item-with-bg">
                     <div class="favourite-item-heading">Songs</div>
                     <ul class="favorite-list">
-                        <li>
-                            <div class="favorites-item item-with-bg">
-                                <img
-                                    class="favorite-item-img"
-                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&h=130"
-                                />
-                                <p class="favorite-item-text">Song Name</p>
-                            </div>
-                        </li>
+                    ${generatefavoriteSongsList()}
                     </ul>
                 </div>
 
                 <div class="favorites-sub-container item-with-bg">
                     <div class="favourite-item-heading">Artists</div>
                     <ul class="favorite-list">
-                        <li>
-                            <div class="favorites-item item-with-bg">
-                                <img
-                                    class="favorite-item-img"
-                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&h=130"
-                                />
-                                <p class="favorite-item-text">Artist Name</p>
-                            </div>
-                        </li>
+                    ${generatefavoriteArtistsList()}
                     </ul>
                 </div>
 
                 <div class="favorites-sub-container item-with-bg">
                     <div class="favourite-item-heading">Genres</div>
                     <ul class="favorite-list">
-                        <li>
-                            <div class="favorites-item item-with-bg">
-                                <img
-                                    class="favorite-item-img"
-                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&h=130"
-                                />
-                                <p class="favorite-item-text">Genre Name</p>
-                            </div>
-                        </li>
+                        ${generatefavoriteGenresList()}
                     </ul>
                 </div>
 
                 <div class="favorites-sub-container item-with-bg">
                     <div class="favourite-item-heading">Radios</div>
                     <ul class="favorite-list">
-                        <li>
-                            <div class="favorites-item item-with-bg">
-                                <img
-                                    class="favorite-item-img"
-                                    src="https://images.pexels.com/photos/1246437/pexels-photo-1246437.jpeg?auto=compress&cs=tinysrgb&h=130"
-                                />
-                                <p class="favorite-item-text">Radio Name</p>
-                            </div>
-                        </li>
+                        ${generatefavoriteRadiosList()}
                     </ul>
                 </div>
             </div>
 `;
 
+// LATEST-RELEASES Items:
+const generateLatestReleasesList = () => {
+    let latestReleasesListHTML = '';
+    sharedData.latestReleasesData.forEach(latestRelease => {
+        latestReleasesListHTML += ` <li>
+                                        <div class="latest-release-item item-with-bg">
+                                            <img
+                                                class="latest-release-imgcontainer"
+                                                src=${latestRelease.imgUrl}
+                                            />
+                                            <div class="latest-release-textcontainer">
+                                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
+                                                <div class="mid-line"><div class="text-title">${latestRelease.songName}</div> <div class="num-text">${latestRelease.length}</div></div>
+                                                <div class="bottom-line"><p class="text-subtitle">${latestRelease.releaseDate}</p></div>
+                                            </div>
+                                        </div>
+                                    </li>`;
+    });
+    return latestReleasesListHTML;
+};
+
 const templateCodeLatestRelease = `
             <div class="container-heading">Latest Releases</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container">
-                    <li>
-                        <div class="latest-release-item item-with-bg">
-                            <img
-                                class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="latest-release-textcontainer">
-                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
-                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
-                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="latest-release-item item-with-bg">
-                            <img
-                                class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="latest-release-textcontainer">
-                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
-                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
-                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="latest-release-item item-with-bg">
-                            <img
-                                class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="latest-release-textcontainer">
-                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
-                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
-                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="latest-release-item item-with-bg">
-                            <img
-                                class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="latest-release-textcontainer">
-                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
-                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
-                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="latest-release-item item-with-bg">
-                            <img
-                                class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="latest-release-textcontainer">
-                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
-                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
-                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="latest-release-item item-with-bg">
-                            <img
-                                class="latest-release-imgcontainer"
-                                src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="latest-release-textcontainer">
-                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
-                                <div class="mid-line"><div class="text-title">Song Name</div> <div class="num-text">04:57</div></div>
-                                <div class="bottom-line"><p class="text-subtitle">JUL 5, 2014</p></div>
-                            </div>
-                        </div>
-                    </li>
+                    ${generateLatestReleasesList()}
                 </ul>
             </div>
 `;
 
-const templateCodePopularArtists = 
-`
+// POPULAR-ARTISTS Sections:
+const generatePopularArtistsList = () => {
+    let artistsListHTML = '';
+    sharedData.popularArtistsData.forEach(artistData => {
+        artistsListHTML += `<li>
+                                <div class="popular-artists-item item-with-bg">
+                                    <img
+                                        class="popular-artist-imgcontainer"
+                                        src=${artistData.imgUrl}
+                                    />
+                                    <div class="text-title">
+                                        ${artistData.artistName}
+                                    </div>
+                                </div>
+                            </li>`;
+    });
+    return artistsListHTML;
+};
+
+const templateCodePopularArtists = `
             <div class="container-heading">Popular Artists</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container">
-                    <li>
-                        <div class="popular-artists-item item-with-bg">
-                            <img
-                                class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                Artist Name
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="popular-artists-item item-with-bg">
-                            <img
-                                class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                Artist Name
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="popular-artists-item item-with-bg">
-                            <img
-                                class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                Artist Name
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="popular-artists-item item-with-bg">
-                            <img
-                                class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                Artist Name
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="popular-artists-item item-with-bg">
-                            <img
-                                class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                Artist Name
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="popular-artists-item item-with-bg">
-                            <img
-                                class="popular-artist-imgcontainer"
-                                src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                Artist Name
-                            </div>
-                        </div>
-                    </li>
+                    ${generatePopularArtistsList()}
                 </ul>
             </div>
 `;
 
+// POPULAR GENRES Section:
+const generatePopularGenresList = () => {
+    let genreListHTML = '';
+    sharedData.genresData.forEach(genreData => {
+        genreListHTML += `<li>
+                                <div class="genre-item item-with-bg">
+                                  <img
+                                      class="genre-imgcontainer"
+                                      src=${genreData.imgUrl}
+                                  />
+                                  <div class="text-title">
+                                      <p>${genreData.genreName}</p>
+                                  </div>
+                              </div>
+                            </li>`;
+    });
+    return genreListHTML;
+};
 const templateCodeGenres = `
             <div class="container-heading">Popular Genres</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container">
-                    <li>
-                        <div class="genre-item item-with-bg">
-                            <img
-                                class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Electronic</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="genre-item item-with-bg">
-                            <img
-                                class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Electronic</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="genre-item item-with-bg">
-                            <img
-                                class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Electronic</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="genre-item item-with-bg">
-                            <img
-                                class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Electronic</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="genre-item item-with-bg">
-                            <img
-                                class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Electronic</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="genre-item item-with-bg">
-                            <img
-                                class="genre-imgcontainer"
-                                src="https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Electronic</p>
-                            </div>
-                        </div>
-                    </li>
+                    ${generatePopularGenresList()}
                 </ul>
             </div>
 `;
 
+// POPULAR-RADIOs Section
+const generateRadioList = () => {
+    let radioListHTML = "";
+    sharedData.radiosData.forEach(radioData => {
+        radioListHTML += `  <li>
+                                <div class="radio-item item-with-bg">
+                                    <img
+                                        class="radio-imgcontainer"
+                                        src="${radioData.imgUrl}"
+                                    />
+                                    <div class="text-title">
+                                        <p>${radioData.radioName}</p>
+                                    </div>
+                                </div>
+                            </li>`;
+    });
+    return radioListHTML;
+}
 const templateRadioStations = `
             <div class="container-heading">Popular Radio Stations</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container">
-                    <li>
-                        <div class="radio-item item-with-bg">
-                            <img
-                                class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Radio-PM</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="radio-item item-with-bg">
-                            <img
-                                class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Radio-PM</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="radio-item item-with-bg">
-                            <img
-                                class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Radio-PM</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="radio-item item-with-bg">
-                            <img
-                                class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Radio-PM</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="radio-item item-with-bg">
-                            <img
-                                class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Radio-PM</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="radio-item item-with-bg">
-                            <img
-                                class="radio-imgcontainer"
-                                src="https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130"
-                            />
-                            <div class="text-title">
-                                <p>Radio-PM</p>
-                            </div>
-                        </div>
-                    </li>
+                    ${generateRadioList()}
                 </ul>
             </div>
+`;
+
+// PLAYLIST Section
+const generatePlaylistList = () => {
+    let playlistHTML = '';
+    sharedData.playlistData.forEach( (playlistItem, index) => {
+        playlistHTML += `<li class="playlist-li-in-container">
+                            <div class="playlist-item item-with-bg">
+                                <div class="left-half">
+                                    <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
+                                    <img
+                                        class="playlist-imgcontainer"
+                                        src=${playlistItem.imgUrl}
+                                    />
+                                    <div>
+                                        <div class="text-title">${playlistItem.songName}</div>
+                                        <div class="text-subtitle">
+                                            ${playlistItem.artistName}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-half">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </div>
+                            </div>
+                        </li>`;
+    });
+    return playlistHTML;
+}
+
+const templatePlaylistData = `
+    ${generatePlaylistList().repeat(10)}
 `;
