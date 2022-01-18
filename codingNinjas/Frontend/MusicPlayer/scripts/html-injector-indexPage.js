@@ -19,8 +19,22 @@ if (popularArtistsElement)
 const genresElement = document.getElementById('genres-container');
 if (genresElement) genresElement.innerHTML += templateCodeGenres;
 
-const radioStations = document.getElementById('radios-container');
-if (radioStations) radioStations.innerHTML += templateRadioStations;
+const radioStationsElement = document.getElementById('radios-container');
+if (radioStationsElement) radioStationsElement.innerHTML += templateCodeRadioStations;
 
-const playlistList = document.getElementById('playlist-songs');
-if (playlistList) playlistList.innerHTML += templatePlaylistData;
+const playlistListElement = document.getElementById('playlist-songs');
+if (playlistListElement) playlistListElement.innerHTML += templateCodePlaylistData;
+
+//todo: Needs to get Artist ID somehow, to return the right data.
+const artistId = 1;
+const relatedArtistsElement = document.getElementById('related-artists');
+if (relatedArtistsElement) relatedArtistsElement.innerHTML += generateRelatedArtistsList(artistId);
+
+const relatedSongsElement = document.getElementById('related-songs');
+if (relatedSongsElement) relatedSongsElement.innerHTML += generateRelatedSongsList(artistId);
+
+const artistSongsElement = document.getElementById('artist-songs-ul');
+if (artistSongsElement) artistSongsElement.innerHTML += generateArtistSongsList(artistId);
+
+const artistCoverElement = document.getElementById('artist-cover');
+if (artistCoverElement) artistCoverElement.innerHTML += generateArtistCoverSection(artistId);

@@ -15,36 +15,43 @@ const artistsJSONdata = [
                 songName: 'A Song Name',
                 albumName: 'Album Name',
                 duration: '04:40',
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
             {
                 songName: 'A 2nd Song Name',
                 albumName: 'Album Name',
                 duration: '04:40',
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
             {
                 songName: 'A 3rd Song Name',
                 albumName: 'Album Name',
                 duration: '04:40',
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
         ],
         similarArtists: [
             {
                 name: 'Artist Name',
                 numFollowers: 678,
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
             {
                 name: '2nd Artist Name',
                 numFollowers: 985,
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
             },
         ],
         similarSongs: [
             {
                 songName: 'A Song Name',
                 songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
             },
             {
                 songName: 'A 2nd Song Name',
                 songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
             },
         ],
     },
@@ -64,44 +71,51 @@ const artistsJSONdata = [
                 songName: 'A Song Name',
                 albumName: 'Album Name',
                 duration: '04:40',
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
             {
                 songName: 'A 2nd Song Name',
                 albumName: 'Album Name',
                 duration: '04:40',
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
             {
                 songName: 'A 3rd Song Name',
                 albumName: 'Album Name',
                 duration: '04:40',
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
         ],
         similarArtists: [
             {
                 name: 'Artist Name',
                 numFollowers: 678,
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
             {
                 name: '2nd Artist Name',
                 numFollowers: 985,
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
             },
         ],
         similarSongs: [
             {
                 songName: 'A Song Name',
                 songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
             },
             {
                 songName: 'A 2nd Song Name',
                 songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
             },
         ],
-    }
+    },
 ];
 
 const getArtistDataByID = (artistId) => {
     const foundIndex = artistsJSONdata.findIndex((artistData) => {
         return artistData.artistId == artistId;
     });
-    console.log(artistsJSONdata[foundIndex]);
+    return artistsJSONdata[foundIndex];
 };

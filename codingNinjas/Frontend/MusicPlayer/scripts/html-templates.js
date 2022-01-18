@@ -264,7 +264,7 @@ const generateRadioList = () => {
     });
     return radioListHTML;
 }
-const templateRadioStations = `
+const templateCodeRadioStations = `
             <div class="container-heading">Popular Radio Stations</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container">
@@ -301,6 +301,138 @@ const generatePlaylistList = () => {
     return playlistHTML;
 }
 
-const templatePlaylistData = `
+const templateCodePlaylistData = `
     ${generatePlaylistList().repeat(10)}
 `;
+
+// RELATED ARTISTS Section:
+const generateRelatedArtistsList = (artistId) => {
+    let relatedArtistsHTML = '';
+    const artistData = getArtistDataByID(artistId);
+    artistData.similarArtists.forEach((similarArtist, index) => {
+        relatedArtistsHTML += `
+            <li class="playlist-li-in-container">
+                <div class="playlist-item item-with-bg">
+                    <div class="left-half">
+                        <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
+                        <img
+                            class="playlist-imgcontainer"
+                            src=${similarArtist.imgUrl}
+                        />
+                        <div>
+                            <div class="text-title">${similarArtist.name}</div>
+                            <div class="text-subtitle">${similarArtist.numFollowers} followers</div>
+                        </div>
+                    </div>
+                    <div class="right-half">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+            </li>
+        `;
+    });
+    return relatedArtistsHTML;
+};
+
+const generateRelatedSongsList = (artistId) => {
+    let relatedSongsHTML = '';
+    const artistData = getArtistDataByID(artistId);
+    artistData.similarSongs.forEach((similarSong, index) => {
+        relatedSongsHTML += `
+            <li class="playlist-li-in-container">
+                <div class="playlist-item item-with-bg">
+                    <div class="left-half">
+                        <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
+                        <img
+                            class="playlist-imgcontainer"
+                            src=${similarSong.imgUrl}
+                        />
+                        <div>
+                            <div class="text-title">${similarSong.songName}</div>
+                            <div class="text-subtitle">
+                                ${similarSong.songAlbum}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-half">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+            </li>
+        `;
+    });
+    return relatedSongsHTML;
+};
+
+// Artist's SONG List Section:
+const generateArtistSongsList = (artistId) => {
+    let artistSongsHTML = '';
+    const artistData = getArtistDataByID(artistId);
+    artistData.songs.forEach((song, index) => {
+        artistSongsHTML += `
+                    <li class="playlist-li-in-container">
+                        <div class="playlist-item item-with-bg">
+                            <div class="left-half">
+                                <div class="text-subtitle">${(index + 1).toString().padStart(2, '0')}</div>
+                                <img
+                                    class="playlist-imgcontainer"
+                                    src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                />
+                                <div>
+                                    <div class="text-title">${song.songName}</div>
+                                    <div class="text-subtitle">${song.albumName}</div>
+                                </div>
+                            </div>
+                            <div class="right-half">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                    </li>
+        `;
+    });
+    return artistSongsHTML;
+};
+
+const generateArtistCoverSection = (artistId) => {
+    
+    const artistData = getArtistDataByID(artistId);
+    artistCoverHTML = `
+                    <div class="artist-imgcontainer">
+                    <img
+                        src="${artistData.imgUrl}"
+                    />
+                    </div>
+                    <div class="artist-textcontent-container flex-col">
+                        <div>
+                            <div class="flex-row">
+                                <div>
+                                    <div class="container-heading">${artistData.name}</div>
+                                    <div class="text-subtitle">${artistData.shortDescription}</div>
+                                </div>
+                                <div class="text-subtitle">
+                                    <strong>${artistData.numFollowers}</strong> Followers
+                                </div>
+                            </div>
+                            <div class="text-subtitle">
+                                ${artistData.longDescription}
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex-row buttons">
+                                <a href="" class="link">Play All</a>
+                                <a href="" class="link">Follow</a>
+                            </div>
+                            <div class="text-subtitle">
+                                <strong>${artistData.numTracks}</strong> Tracks |
+                                <strong>${artistData.numAlbums}</strong> Albums
+                            </div>
+                        </div>
+                    </div>
+        `;
+    return artistCoverHTML;
+}
+
+/*
+
+            */
