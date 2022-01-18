@@ -334,6 +334,7 @@ const generateRelatedArtistsList = (artistId) => {
     return relatedArtistsHTML;
 };
 
+// Related Songs for an artist, Section
 const generateRelatedSongsList = (artistId) => {
     let relatedSongsHTML = '';
     const artistData = getArtistDataByID(artistId);
@@ -364,7 +365,7 @@ const generateRelatedSongsList = (artistId) => {
     return relatedSongsHTML;
 };
 
-// Artist's SONG List Section:
+// Artist's (own) SONG List Section:
 const generateArtistSongsList = (artistId) => {
     let artistSongsHTML = '';
     const artistData = getArtistDataByID(artistId);
@@ -394,6 +395,7 @@ const generateArtistSongsList = (artistId) => {
     return artistSongsHTML;
 };
 
+// Artist's Cover Section:
 const generateArtistCoverSection = (artistId) => {
     
     const artistData = getArtistDataByID(artistId);
@@ -432,7 +434,3 @@ const generateArtistCoverSection = (artistId) => {
         `;
     return artistCoverHTML;
 }
-
-/*
-
-            */
