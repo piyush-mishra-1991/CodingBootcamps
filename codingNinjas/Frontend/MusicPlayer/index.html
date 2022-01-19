@@ -17,16 +17,16 @@
         ></script>
 
         <!-- JS imports -->
-            <!-- DATA Model imports-->
-                <script src="assets/data/artists-data.js" defer></script>
-                <script src="assets/data/shared-data.js" defer></script>
-            <!-- Template generation code imports -->
-                <script src="scripts/html-templates.js" defer></script>
-                <script src="scripts/html-injector-indexPage.js" defer></script>
-            <!-- Navigation related -->
-                <script src="scripts/nav.js" defer></script>
-            <!-- Carousel related -->
-                <script src="scripts/carousel.js" defer></script>
+        <!-- DATA Model imports-->
+        <script src="assets/data/artists-data.js" defer></script>
+        <script src="assets/data/shared-data.js" defer></script>
+        <!-- Template generation code imports -->
+        <script src="scripts/html-templates.js" defer></script>
+        <script src="scripts/html-injector-indexPage.js" defer></script>
+        <!-- Navigation related -->
+        <script src="scripts/nav.js" defer></script>
+        <!-- Carousel related -->
+        <script src="scripts/carousel.js" defer></script>
     </head>
     <body>
         <!-- Start of HEADER -->
@@ -68,42 +68,49 @@
 
         <!-- Start of MAIN-BODY -->
 
-        <div id="carousel-container" class="carousel-container">
+        <!-- Start of Carousel Again -->
+        <div class="carousel-container">
             <button class="carousel_button carousel_button-prev is-hidden">
                 &#10094;
             </button>
-            <div class="carousel-div">
+            <div class="carousel">
                 <div class="carousel_track-container">
                     <ul class="carousel_track">
                         <li class="carousel-slide current-slide">
                             <img
-                            src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
-                            class="carousel-slide-img"
+                                src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg"
+                                class="carousel-slide-img"
+                            />
                         </li>
                         <li class="carousel-slide">
                             <img
-                            src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
-                            class="carousel-slide-img"
+                                src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg"
+                                class="carousel-slide-img"
+                            />
                         </li>
                         <li class="carousel-slide">
                             <img
-                            src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
-                            class="carousel-slide-img"
+                                src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg"
+                                class="carousel-slide-img"
+                            />
                         </li>
                         <li class="carousel-slide">
                             <img
-                            src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
-                            class="carousel-slide-img"
+                                src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg"
+                                class="carousel-slide-img"
+                            />
                         </li>
                         <li class="carousel-slide">
                             <img
-                            src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
-                            class="carousel-slide-img"
+                                src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg"
+                                class="carousel-slide-img"
+                            />
                         </li>
                         <li class="carousel-slide">
                             <img
-                            src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
-                            class="carousel-slide-img"
+                                src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg"
+                                class="carousel-slide-img"
+                            />
                         </li>
                     </ul>
                 </div>
@@ -112,6 +119,8 @@
                 &#10095;
             </button>
         </div>
+        <!-- End of Carousel Again -->
+
 
         <div id="favorites-container" class="favorites-container">
             <!-- Code injected here using 'html-injector-indexPage.js' -->
@@ -149,7 +158,9 @@
                 />
             </div>
             <div id="song-title" class="title-text">Song Name big one</div>
-            <div id="song-subtitle" class="subtitle-text">Artist Name big one</div>
+            <div id="song-subtitle" class="subtitle-text">
+                Artist Name big one
+            </div>
             <div id="play-controls-section">
                 <!-- Stop Symbol -->
                 <i class="fas fa-stop-circle"></i>
@@ -168,6 +179,5 @@
             </div>
         </div>
         <!-- End of Play-bar Modal -->
-        
     </body>
 </html>

@@ -24,14 +24,17 @@ const moveToSlide = (currentSlide, targetSlide) => {
 };
 // Updating the visibility of carousel navigation arrows (depending upon whether beginning or end reached).
 const updateArrowBtnVisibility = currentSlide => {
-    const targetIndex = carouselSlides.findIndex(slide => slide === currentSlide);
+    const targetIndex = carouselSlides.findIndex(
+        slide => slide === currentSlide
+    );
 
     // If current slide is at end:
+    // Else If current slide is at beginning:
+    // Else current slide is somewhere between, so both nav-arrow shown
     if (targetIndex == carouselSlides.length - 1)
         btnNext.classList.add('is-hidden');
-    // If current slide is at beginning:
-    else if (targetIndex == 0) btnPrev.classList.add('is-hidden');
-    // If current slide is somewhere between, so both nav-arrow shown
+    else if (targetIndex == 0) 
+        btnPrev.classList.add('is-hidden');
     else {
         btnNext.classList.remove('is-hidden');
         btnPrev.classList.remove('is-hidden');
