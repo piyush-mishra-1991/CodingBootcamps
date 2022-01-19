@@ -55,7 +55,10 @@
                 </div>
 
                 <div class="container-content item-with-bg">
-                    <ul id="playlist-songs" class="list-in-container playlist-ul">
+                    <ul
+                        id="playlist-songs"
+                        class="list-in-container playlist-ul"
+                    >
                         <!-- Code injected here using 'html-injector-indexPage.js' -->
                     </ul>
                 </div>
@@ -66,48 +69,48 @@
         <!-- Start of MAIN-BODY -->
 
         <div id="carousel-container" class="carousel-container">
-                <button class="carousel_button carousel_button-prev is-hidden">
-                    &#10094;
-                </button>
-                <div class="carousel-div">
-                    <div class="carousel_track-container">
-                        <ul class="carousel_track">
-                            <li class="carousel-slide current-slide">
-                                <img
-                                src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
-                                class="carousel-slide-img"
-                            </li>
-                            <li class="carousel-slide">
-                                <img
-                                src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
-                                class="carousel-slide-img"
-                            </li>
-                            <li class="carousel-slide">
-                                <img
-                                src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
-                                class="carousel-slide-img"
-                            </li>
-                            <li class="carousel-slide">
-                                <img
-                                src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
-                                class="carousel-slide-img"
-                            </li>
-                            <li class="carousel-slide">
-                                <img
-                                src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
-                                class="carousel-slide-img"
-                            </li>
-                            <li class="carousel-slide">
-                                <img
-                                src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
-                                class="carousel-slide-img"
-                            </li>
-                        </ul>
-                    </div>
+            <button class="carousel_button carousel_button-prev is-hidden">
+                &#10094;
+            </button>
+            <div class="carousel-div">
+                <div class="carousel_track-container">
+                    <ul class="carousel_track">
+                        <li class="carousel-slide current-slide">
+                            <img
+                            src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
+                            class="carousel-slide-img"
+                        </li>
+                        <li class="carousel-slide">
+                            <img
+                            src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
+                            class="carousel-slide-img"
+                        </li>
+                        <li class="carousel-slide">
+                            <img
+                            src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
+                            class="carousel-slide-img"
+                        </li>
+                        <li class="carousel-slide">
+                            <img
+                            src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
+                            class="carousel-slide-img"
+                        </li>
+                        <li class="carousel-slide">
+                            <img
+                            src="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350"
+                            class="carousel-slide-img"
+                        </li>
+                        <li class="carousel-slide">
+                            <img
+                            src="https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350"
+                            class="carousel-slide-img"
+                        </li>
+                    </ul>
                 </div>
-                <button class="carousel_button carousel_button-next">
-                    &#10095;
-                </button>
+            </div>
+            <button class="carousel_button carousel_button-next">
+                &#10095;
+            </button>
         </div>
 
         <div id="favorites-container" class="favorites-container">
@@ -136,5 +139,35 @@
             <!-- Code injected here using 'html-injector-indexPage.js' -->
         </footer>
         <!-- End of FOOTER -->
+
+        <!-- Start of Play-bar Modal -->
+        <div id="play-modal-container">
+            <div id="seek-bar"></div>
+            <div id="song-info-img">
+                <img
+                    src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
+                />
+            </div>
+            <div id="song-title" class="title-text">Song Name big one</div>
+            <div id="song-subtitle" class="subtitle-text">Artist Name big one</div>
+            <div id="play-controls-section">
+                <!-- Stop Symbol -->
+                <i class="fas fa-stop-circle"></i>
+                <!-- Play Prev Symbol -->
+                <i class="fas fa-backward"></i>
+                <!-- Play Symbol -->
+                <i class="fas fa-play-circle"></i>
+                <!-- Pause Symbol -->
+                <i class="fas fa-pause-circle is-hidden"></i>
+                <!-- Play Next Symbol -->
+                <i class="fas fa-forward"></i>
+                <!-- Volume Symbol -->
+                <i class="fas fa-volume-down"></i>
+                <!-- Volume Mute Symbol -->
+                <i class="fas fa-volume-mute"></i>
+            </div>
+        </div>
+        <!-- End of Play-bar Modal -->
+        
     </body>
 </html>
