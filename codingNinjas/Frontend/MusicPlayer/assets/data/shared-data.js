@@ -193,5 +193,17 @@ const sharedData = {
         {
             imgUrl: 'https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350',
         },
+        {
+            imgUrl: 'https://images.pexels.com/photos/3776557/pexels-photo-3776557.jpeg?auto=compress&cs=tinysrgb&h=350',
+        },
+        {
+            imgUrl: 'https://images.pexels.com/photos/3771823/pexels-photo-3771823.jpeg?auto=compress&cs=tinysrgb&h=350',
+        },
+        {
+            imgUrl: 'https://images.pexels.com/photos/3831187/pexels-photo-3831187.jpeg?auto=compress&cs=tinysrgb&h=350',
+        },
+        {
+            imgUrl: 'https://images.pexels.com/photos/3388899/pexels-photo-3388899.jpeg?auto=compress&cs=tinysrgb&h=350',
+        },
     ],
 };

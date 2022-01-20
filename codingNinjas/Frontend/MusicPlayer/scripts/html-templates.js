@@ -434,3 +434,18 @@ const generateArtistCoverSection = (artistId) => {
         `;
     return artistCoverHTML;
 }
+
+// Carousel Section:
+const generateCarouselSection = () =>{
+    let carouselHTML = '';
+    sharedData.carouselData.forEach(carouselItem => {
+        carouselHTML += `
+                        <li class="carousel-slide current-slide">
+                            <img
+                                src=${carouselItem.imgUrl}
+                                class="carousel-slide-img"
+                            />
+                        </li>`;
+    });
+    return carouselHTML;
+}

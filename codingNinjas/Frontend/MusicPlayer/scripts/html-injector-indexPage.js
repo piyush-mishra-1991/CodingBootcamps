@@ -38,3 +38,6 @@ if (artistSongsElement) artistSongsElement.innerHTML += generateArtistSongsList(
 
 const artistCoverElement = document.getElementById('artist-cover');
 if (artistCoverElement) artistCoverElement.innerHTML += generateArtistCoverSection(artistId);
+
+const carouselElement = document.getElementById('carousel_track');
+if (carouselElement) carouselElement.innerHTML += generateCarouselSection();
