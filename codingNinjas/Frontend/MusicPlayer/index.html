@@ -27,6 +27,7 @@
         <script src="scripts/nav.js" defer></script>
         <!-- Carousel related -->
         <script src="scripts/carousel.js" defer></script>
+        <script src="scripts/music-player.js" defer></script>
     </head>
     <body>
         <!-- Start of HEADER -->
@@ -161,21 +162,26 @@
             <div id="song-subtitle" class="subtitle-text">
                 Artist Name big one
             </div>
+            <div id="progress-text">
+                <div id="current-time">00:00</div> &nbsp;|&nbsp;
+                <div id="total-time">00:00</div>
+            </div>
             <div id="play-controls-section">
-                <!-- Stop Symbol -->
-                <i class="fas fa-stop-circle"></i>
                 <!-- Play Prev Symbol -->
                 <i class="fas fa-backward"></i>
                 <!-- Play Symbol -->
-                <i class="fas fa-play-circle"></i>
+                <i id="btn-play" class="fas fa-play-circle"></i>
+                <audio id="audio-tag" src=""></audio>
                 <!-- Pause Symbol -->
-                <i class="fas fa-pause-circle is-hidden"></i>
+                <i id="btn-pause" class="fas fa-pause-circle"></i>
                 <!-- Play Next Symbol -->
                 <i class="fas fa-forward"></i>
+                <!-- Stop Symbol -->
+                <i id="btn-stop" class="fas fa-stop-circle"></i>
                 <!-- Volume Symbol -->
-                <i class="fas fa-volume-down"></i>
+                <i id="btn-volume" class="fas fa-volume-down"></i>
                 <!-- Volume Mute Symbol -->
-                <i class="fas fa-volume-mute"></i>
+                <i id="btn-mute" class="fas fa-volume-mute"></i>
             </div>
         </div>
         <!-- End of Play-bar Modal -->

@@ -745,6 +745,21 @@ select{
     justify-content: space-around;
     text-align: right;
 }
+#progress-text{
+    grid-area: progress;
+    display: none;
+}
+
+#play-controls-section i{
+    cursor: pointer;
+    padding: .25rem .5rem;
+    background-color: var(--color-dark-400-transparent-9);
+    border-radius: 25%;
+}
+#play-controls-section i:hover{
+    color:var(--color-accent-2-300);
+    background-color: var(--color-dark-400-transparent-10);
+}
 
 #play-controls-section .fa-backward,
 #play-controls-section .fa-forward,
@@ -778,36 +793,39 @@ select{
         display: block;
     }
 
+    #progress-text{
+        display: flex;
+        width: min-content;
+        justify-content: center;
+        background-color: green;
+        border-radius: .25rem;
+        padding: .25rem;
+    }
+
     #play-modal-container{
         padding-bottom: 0;
         column-gap: .125rem;
         grid-template-columns: 
-            0.25rem     var(--play-modal-height)     2fr     1fr     0.25rem;
+            0.25rem  var(--play-modal-height) 2fr                 1fr         1fr            0.25rem;
         grid-template-areas:
-            "seek-bar           seek-bar    seek-bar            seek-bar        seek-bar"
-            "......             img         song-title          play-controls   ......"
-            "......             img         song-subtitle       play-controls   ......";
+            "seek-bar           seek-bar    seek-bar            seek-bar    seek-bar        seek-bar"
+            "......             img         song-title          progress    play-controls   ......"
+            "......             img         song-subtitle       progress    play-controls   ......";
     }
 }
 
 @media only screen and (min-width:700px) {
-
-    #play-controls-section .fa-backward,
-    #play-controls-section .fa-forward,
-    #play-controls-section .fa-volume-mute{
-        display: block;
-    }
 
     #play-modal-container{
         padding-bottom: 0;
         column-gap: 1rem;
         row-gap: .25rem;
         grid-template-columns: 
-            1fr   var(--play-modal-height)   2fr                 3fr             1fr;
+            1fr   var(--play-modal-height)   2fr                 1fr        2fr             1fr;
         grid-template-rows: .5rem   1fr    1fr;
         grid-template-areas:
-            "seek-bar       seek-bar        seek-bar            seek-bar        seek-bar"
-            "......         img             song-title          play-controls   ......."
-            "......         img             song-subtitle       play-controls   .......";
+            "seek-bar       seek-bar        seek-bar            seek-bar    seek-bar        seek-bar"
+            "......         img             song-title          progress    play-controls   ......."
+            "......         img             song-subtitle       progress    play-controls   .......";
     }    
 }
