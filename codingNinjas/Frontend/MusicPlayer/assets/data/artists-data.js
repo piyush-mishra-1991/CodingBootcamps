@@ -41,8 +41,98 @@ const artistsJSONdata = [
                 numFollowers: 985,
                 imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
             },
+            {
+                name: 'Artist Name',
+                numFollowers: 678,
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
+            },
+            {
+                name: '2nd Artist Name',
+                numFollowers: 985,
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                name: 'Artist Name',
+                numFollowers: 678,
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
+            },
+            {
+                name: '2nd Artist Name',
+                numFollowers: 985,
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                name: 'Artist Name',
+                numFollowers: 678,
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
+            },
+            {
+                name: '2nd Artist Name',
+                numFollowers: 985,
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                name: 'Artist Name',
+                numFollowers: 678,
+                imgUrl: 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130',
+            },
+            {
+                name: '2nd Artist Name',
+                numFollowers: 985,
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            }
         ],
         similarSongs: [
+            {
+                songName: 'A Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A 2nd Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A 2nd Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A 2nd Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A 2nd Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
+            {
+                songName: 'A 2nd Song Name',
+                songAlbum: 'Album Name',
+                imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
+            },
             {
                 songName: 'A Song Name',
                 songAlbum: 'Album Name',

@@ -1,8 +1,9 @@
 /* CONTENTS:
     1. Imports
     2. Global Settings
-    3. Layout
-    4. Components
+    3. Utilities
+    4. Layout
+    5. Components
 */
 
 /*===================================================
@@ -19,11 +20,15 @@
     /* COLORS */
     /* Background Color Related */
     --color-dark-400: hsla(46, 81%, 2%, 1); 
-    --color-dark-400-transparent-10: hsla(46, 81%, 2%, .95);
-    --color-dark-400-transparent-9: hsla(46, 81%, 2%, .80);
+    --color-dark-400-transparent-10: hsla(46, 81%, 2%, .90);
+    --color-dark-400-transparent-9: hsla(46, 81%, 2%, .70);
+    --color-dark-400-transparent-8: hsla(46, 81%, 2%, .50);
+    --color-dark-400-transparent-7: hsla(46, 81%, 2%, .10);
     --color-dark-300: hsla(46, 81%, 6%, 1); 
     --color-dark-200: hsla(46, 81%, 10%, 1); 
     /* Background Color Related */
+    --color-grey-500-transparent-10: hsla(39, 1%, 30%, .6);
+    --color-grey-500-transparent-9: hsla(39, 1%, 30%, .4);
     --color-grey-400: hsla(39, 1%, 45%, 1); 
     --color-grey-300: hsla(39, 1%, 60%, 1); 
     --color-grey-200: hsla(39, 1%, 75%, 1); 
@@ -122,7 +127,18 @@ ul{
 }
 
 /*===================================================
-    3.LAYOUT: Mobile first layout
+    3.UTILITIES: Mobile first layout
+=====================================================*/
+.translucent-bg-100{
+    --bgColor-local: var(--color-dark-400-transparent-8);
+}
+
+.translucent-bg-50{
+    --bgColor-local: var(--color-dark-400-transparent-7);
+}
+
+/*===================================================
+    4.LAYOUT: Mobile first layout
 =====================================================*/
 body{
     min-height: 100vh;
@@ -188,27 +204,27 @@ footer{
 }
 
 /*===================================================
-    4.COMPONENTS:
-        4.1 Header Components
-        4.2 Footer Components
-        4.3 Main Body:
-            4.3.1 Common 
-            4.3.2 Utilities
-                4.3.2.1 Items
-            4.3.3 Carousel Section.
-            4.3.4 Favorites Section.
-            4.3.5 Releases Section.
-            4.3.6 Artists Section.
-            4.3.7 Genres Section.
-            4.3.8 Radio Section.
-            4.3.9 Aside Section.
-        4.4 Play Modal Area:
-        4.5 Animated Backgrounds:
+    5.COMPONENTS:
+        5.1 Header Components
+        5.2 Footer Components
+        5.3 Main Body:
+            5.3.1 Common 
+            5.3.2 Utilities
+                5.3.2.1 Items
+            5.3.3 Carousel Section.
+            5.3.4 Favorites Section.
+            5.3.5 Releases Section.
+            5.3.6 Artists Section.
+            5.3.7 Genres Section.
+            5.3.8 Radio Section.
+            5.3.9 Aside Section.
+        5.4 Play Modal Area:
+        5.5 Animated Backgrounds:
 
 =====================================================*/
 
 /* 
-    4.1 Header Components: 
+    5.1 Header Components: 
 */
 
 header > div{
@@ -309,7 +325,7 @@ header > div{
     }
 }
 /*
-    4.2 Footer Components:
+    5.2 Footer Components:
 */
 footer{
     display: flex;
@@ -363,8 +379,8 @@ footer{
 }
 
 /* 
-    4.3 Main Body:
-        4.3.1 Common:
+    5.3 Main Body:
+        5.3.1 Common:
 */
 .container-heading{
     font-size: var(--font-size-400);
@@ -373,7 +389,6 @@ footer{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    --bgColor-local:var(--color-accent-2-300);
 }
 .list-in-container{
     display: flex;
@@ -392,9 +407,9 @@ footer{
 }
 
 /* 
-    4.3 Main Body:
-        4.3.2 Utilities:
-            4.3.2.1 Items:
+    5.3 Main Body:
+        5.3.2 Utilities:
+            5.3.2.1 Items:
 */
 .item-with-bg{
     background-color: var(--bgColor-local,var(--color-dark-400));
@@ -422,13 +437,12 @@ footer{
     display: none;
 }
 /* 
-    4.3 Main Body:
-        4.3.3 Carousel Section.
+    5.3 Main Body:
+        5.3.3 Carousel Section.
 */
 .carousel-container{
     height: 300px;
     min-width: 100%;
-    background-color: black;
     position: relative;
     overflow: hidden;
 }
@@ -488,15 +502,13 @@ ul{
 }
 
 /* 
-    4.3 Main Body:
-        4.3.4 Favourites Section.
+    5.3 Main Body:
+        5.3.4 Favourites Section.
 */
-.favorites-sub-container{
-    --bgColor-local:var(--color-accent-2-400);
-}
 .favorites-item{
     display: flex;
-    --bgColor-local:var(--color-dark-400);
+    /*--bgColor-local:var(--color-dark-400);*/
+    --bgColor-local:var(--color-grey-500-transparent-9);
 }
 .favorite-item-img{
     height:50px;
@@ -511,14 +523,14 @@ ul{
 }
 
 /*
-    4.3 Main Body:
-        4.3.5 Latest-Releases Section.
+    5.3 Main Body:
+        5.3.5 Latest-Releases Section.
 
 */
 .latest-release-item{
     display: flex;
     justify-content: space-between;
-    --bgColor-local:var(--color-dark-400);
+    --bgColor-local:var(--color-grey-500-transparent-9);
     --border-radius-local:var(--border-radius-000);
 }
 .latest-release-imgcontainer{
@@ -543,13 +555,13 @@ ul{
     align-self: flex-start;
 }
 /*
-    4.3 Main Body:
-        4.3.6 Popular-Artists Section.
+    5.3 Main Body:
+        5.3.6 Popular-Artists Section.
 */
 .popular-artists-item{
     height: 130px;
     width: 100px;
-    --bgColor-local:var(--color-dark-400);
+    --bgColor-local:var(--color-grey-500-transparent-9);
     --border-radius-local:var(--border-radius-400);
 }
 .popular-artists-item .text-title{
@@ -563,8 +575,8 @@ ul{
     object-fit: cover;
 }
 /*
-    4.3 Main Body:
-        4.3.7 Genres Section.
+    5.3 Main Body:
+        5.3.7 Genres Section.
 */
 .genre-item{
     width:200px;
@@ -589,13 +601,14 @@ ul{
     background-color: var(--color-dark-400-transparent-9);
 }
 /*
-    4.3 Main Body:
-        4.3.8 Popular-Radios Section.
+    5.3 Main Body:
+        5.3.8 Popular-Radios Section.
 */
 .radio-item{
     width:120px;
     height:120px;
     position: relative;
+    --bgColor-local:transparent;
 }
 .radio-imgcontainer{
     height: 100%;
@@ -615,15 +628,12 @@ ul{
     background-color:var(--color-dark-400-transparent-9);
 }
 /*
-    4.3 Main Body:
-        4.3.9 Aside Section.
+    5.3 Main Body:
+        5.3.9 Aside Section.
 */
-aside{
-    background-color: red;
-}
 .aside-header{
     display: flex;
-    --bgColor-local:var(--color-accent-2-500);
+    --bgColor-local:var(--color-dark-400-transparent-8);
     --border-radius-local:var(--border-radius-000);
     justify-content: space-between;
     align-items: center;
@@ -634,8 +644,8 @@ aside ul{
 .playlist-ul{
     display: grid;
     grid-template-columns: 1fr;
-    max-height: 100vh;
-    overflow-y: scroll;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 @media only screen and (max-width: 950px) {
     .playlist-ul{
@@ -659,7 +669,7 @@ aside ul{
 .playlist-item{
     display: flex;
     justify-content: space-between;
-    --bgColor-local:var(--color-accent-2-500);
+    --bgColor-local:var(--color-grey-500-transparent-9);
 }
 .playlist-imgcontainer{
     height: 50px;
@@ -681,7 +691,7 @@ aside ul{
 /* Custom Select Dropdown Menu on aside */
 select{
     padding: .125rem .25rem .125rem 0;
-    background-color: var(--color-dark-300);
+    background-color: var(--color-grey-500-transparent-9);
     font-size: inherit;
     font-family: inherit;
     color: inherit;
@@ -710,7 +720,7 @@ select{
 }*/
 
 /*
-    4.4 Play Modal Area:
+    5.4 Play Modal Area:
 */
 
 #play-modal-container{
@@ -845,12 +855,12 @@ select{
 }
 
 /*
-    4.5 Animated Backgrounds:
+    5.5 Animated Backgrounds:
 */
 body{
     background-image: var(--gradient);
     background-size: 400%;
-    animation: background-animation 10s infinite alternate;
+    animation: background-animation 20s infinite alternate;
 }
 @keyframes background-animation {
     0% {

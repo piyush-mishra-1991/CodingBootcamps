@@ -161,6 +161,14 @@ const sharedData = {
             genreName: 'Electronic',
             imgUrl: 'https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130',
         },
+        {
+            genreName: 'Electronic',
+            imgUrl: 'https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130',
+        },
+        {
+            genreName: 'Electronic',
+            imgUrl: 'https://images.pexels.com/photos/1540319/pexels-photo-1540319.jpeg?auto=compress&cs=tinysrgb&h=130',
+        }
     ],
 
     radiosData: [
@@ -188,9 +196,6 @@ const sharedData = {
 
     carouselData: [
         {
-            imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
-        },
-        {
             imgUrl: 'https://images.pexels.com/photos/5650956/pexels-photo-5650956.jpeg?auto=compress&cs=tinysrgb&h=350',
         },
         {
@@ -204,6 +209,9 @@ const sharedData = {
         },
         {
             imgUrl: 'https://images.pexels.com/photos/3388899/pexels-photo-3388899.jpeg?auto=compress&cs=tinysrgb&h=350',
+        },
+        {
+            imgUrl: 'https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=350',
         },
     ],
 };

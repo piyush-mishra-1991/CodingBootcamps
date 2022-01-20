@@ -130,29 +130,29 @@ const generatefavoriteRadiosList = () => {
 
 const templateCodeFavorites = `
 <div class="container-heading">Favorites</div>
-            <div class="container-content item-with-bg">
-                <div class="favorites-sub-container item-with-bg">
-                    <div class="favourite-item-heading">Songs</div>
-                    <ul class="favorite-list">
+            <div class="container-content">
+                <div class="translucent-bg-100 item-with-bg">
+                    <div>Songs</div>
+                    <ul>
                     ${generatefavoriteSongsList()}
                     </ul>
                 </div>
 
-                <div class="favorites-sub-container item-with-bg">
+                <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Artists</div>
                     <ul class="favorite-list">
                     ${generatefavoriteArtistsList()}
                     </ul>
                 </div>
 
-                <div class="favorites-sub-container item-with-bg">
+                <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Genres</div>
                     <ul class="favorite-list">
                         ${generatefavoriteGenresList()}
                     </ul>
                 </div>
 
-                <div class="favorites-sub-container item-with-bg">
+                <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Radios</div>
                     <ul class="favorite-list">
                         ${generatefavoriteRadiosList()}
@@ -184,7 +184,7 @@ const generateLatestReleasesList = () => {
 
 const templateCodeLatestRelease = `
             <div class="container-heading">Latest Releases</div>
-            <div class="container-content item-with-bg">
+            <div class="container-content translucent-bg-100  item-with-bg">
                 <ul class="list-in-container">
                     ${generateLatestReleasesList()}
                 </ul>

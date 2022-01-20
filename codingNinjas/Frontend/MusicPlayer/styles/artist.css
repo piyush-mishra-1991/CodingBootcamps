@@ -23,7 +23,6 @@ header{
 }
 .artist-songs{
     grid-area: artist-songs;
-    min-height: 100vh;
 }
 aside{
     grid-area: aside;
@@ -47,7 +46,7 @@ footer{
 
 
 .playlist-ul{/*rename this to aside ul in all css*/
-    max-height: 50vh;
+    height: clamp(0,fit-content,50vh);
 }
 @media only screen and (max-width: 950px) {
     .playlist-ul{
@@ -65,7 +64,6 @@ footer{
     margin-left: 1rem;
 }
 .artist-cover{
-    --bgColor-local:var(--color-accent-2-400);
     --border-radius-local:var(--border-radius-000);
     --margin-local:0;
     --padding-local:0;
