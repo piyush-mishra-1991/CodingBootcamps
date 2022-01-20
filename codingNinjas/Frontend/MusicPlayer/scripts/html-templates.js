@@ -32,9 +32,9 @@ const templateCodeHeader = `
 const templateCodeFooter = `
             <div class="share-icons-container">
                 <p>Share Raaga on:</p>
-                <i class="fab fa-facebook fa-2x share-icon"></i>
-                <i class="fab fa-twitter fa-2x share-icon"></i>
-                <i class="fab fa-instagram fa-2x share-icon"></i>
+                <i class="fab fa-facebook fa-2x share-icon hoverable-icon"></i>
+                <i class="fab fa-twitter fa-2x share-icon hoverable-icon"></i>
+                <i class="fab fa-instagram fa-2x share-icon hoverable-icon"></i>
             </div>
             <div class="quick-links-container-heading">
                 <p>Quick links :</p>
@@ -42,23 +42,23 @@ const templateCodeFooter = `
             <div class="quick-links-container">
                 <ul class="quick-links-list">
                     <span class="quick-link-list-heading">List 1</span>
-                    <li class="quick-links-list-item">List Item 1</li>
-                    <li class="quick-links-list-item">List Item 2</li>
-                    <li class="quick-links-list-item">List Item 3</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 1</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 2</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 3</li>
                 </ul>
 
                 <ul class="quick-links-list">
                     <span class="quick-link-list-heading">List 2</span>
-                    <li class="quick-links-list-item">List Item 1</li>
-                    <li class="quick-links-list-item">List Item 2</li>
-                    <li class="quick-links-list-item">List Item 3</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 1</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 2</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 3</li>
                 </ul>
 
                 <ul class="quick-links-list">
                     <span class="quick-link-list-heading">List 3</span>
-                    <li class="quick-links-list-item">List Item 1</li>
-                    <li class="quick-links-list-item">List Item 2</li>
-                    <li class="quick-links-list-item">List Item 3</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 1</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 2</li>
+                    <li class="quick-links-list-item hoverable-icon">List Item 3</li>
                 </ul>
             </div>
 `;
@@ -172,7 +172,7 @@ const generateLatestReleasesList = () => {
                                                 src=${latestRelease.imgUrl}
                                             />
                                             <div class="latest-release-textcontainer">
-                                                <div class="top-line"><i class="fas fa-ellipsis-h"></i></div>
+                                                <div class="top-line"><i class="fas fa-ellipsis-h hoverable-icon"></i></div>
                                                 <div class="mid-line"><div class="text-title">${latestRelease.songName}</div> <div class="num-text">${latestRelease.length}</div></div>
                                                 <div class="bottom-line"><p class="text-subtitle">${latestRelease.releaseDate}</p></div>
                                             </div>
@@ -293,7 +293,7 @@ const generatePlaylistList = () => {
                                     </div>
                                 </div>
                                 <div class="right-half">
-                                    <i class="fas fa-ellipsis-h"></i>
+                                    <i class="fas fa-ellipsis-h hoverable-icon"></i>
                                 </div>
                             </div>
                         </li>`;
@@ -302,7 +302,7 @@ const generatePlaylistList = () => {
 }
 
 const templateCodePlaylistData = `
-    ${generatePlaylistList().repeat(10)}
+    ${generatePlaylistList()}
 `;
 
 // RELATED ARTISTS Section:
@@ -325,7 +325,7 @@ const generateRelatedArtistsList = (artistId) => {
                         </div>
                     </div>
                     <div class="right-half">
-                        <i class="fas fa-ellipsis-h"></i>
+                        <i class="fas fa-ellipsis-h hoverable-icon"></i>
                     </div>
                 </div>
             </li>
@@ -356,7 +356,7 @@ const generateRelatedSongsList = (artistId) => {
                         </div>
                     </div>
                     <div class="right-half">
-                        <i class="fas fa-ellipsis-h"></i>
+                        <i class="fas fa-ellipsis-h hoverable-icon"></i>
                     </div>
                 </div>
             </li>
@@ -385,8 +385,8 @@ const generateArtistSongsList = (artistId) => {
                                 </div>
                             </div>
                             <div class="right-half">
-                                <i class="fas fa-heart"></i>
-                                <i class="fas fa-ellipsis-h"></i>
+                                <i class="fas fa-heart hoverable-icon"></i>
+                                <i class="fas fa-ellipsis-h hoverable-icon"></i>
                             </div>
                         </div>
                     </li>
@@ -449,3 +449,37 @@ const generateCarouselSection = () =>{
     });
     return carouselHTML;
 }
+
+// Playbar Modal :
+const templateCodePlayBarModal = `
+            <div id="seek-bar"></div>
+            <div id="song-info-img">
+                <img
+                    src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130"
+                />
+            </div>
+            <div id="song-title" class="title-text">Song Name big one</div>
+            <div id="song-subtitle" class="subtitle-text">
+                Artist Name big one
+            </div>
+            <div id="progress-text">
+                <div id="current-time">00:00</div> &nbsp;|&nbsp;
+                <div id="total-time">00:00</div>
+            </div>
+            <div id="play-controls-section">
+                <!-- Play Prev Symbol -->
+                <i class="fas fa-backward hoverable-icon"></i>
+                <!-- Play Symbol -->
+                <i id="btn-play" class="fas fa-play-circle hoverable-icon"></i>
+                <audio id="audio-tag" src=""></audio>
+                <!-- Pause Symbol -->
+                <i id="btn-pause" class="fas fa-pause-circle hoverable-icon"></i>
+                <!-- Play Next Symbol -->
+                <i class="fas fa-forward hoverable-icon"></i>
+                <!-- Stop Symbol -->
+                <i id="btn-stop" class="fas fa-stop-circle hoverable-icon"></i>
+                <!-- Volume Symbol -->
+                <i id="btn-volume" class="fas fa-volume-down hoverable-icon"></i>
+                <!-- Volume Mute Symbol -->
+                <i id="btn-mute" class="fas fa-volume-mute hoverable-icon"></i>
+            </div>`;

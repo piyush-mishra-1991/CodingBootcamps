@@ -29,6 +29,7 @@
     /* Background Color Related */
     --color-grey-500-transparent-10: hsla(39, 1%, 30%, .6);
     --color-grey-500-transparent-9: hsla(39, 1%, 30%, .4);
+    --color-grey-500: hsla(39, 1%, 35%, .4);
     --color-grey-400: hsla(39, 1%, 45%, 1); 
     --color-grey-300: hsla(39, 1%, 60%, 1); 
     --color-grey-200: hsla(39, 1%, 75%, 1); 
@@ -137,6 +138,15 @@ ul{
     --bgColor-local: var(--color-dark-400-transparent-7);
 }
 
+.hoverable-icon{
+    cursor: var(--pointer-type-local, pointer);
+    color:var(--color-unhover-local,var(--color-white-300));
+    background-color: var(--bgColor-unhover-local,transparent);
+}
+.hoverable-icon:hover{
+    color:var(--color-hover-local,var(--color-accent-2-500));
+    background-color: var(--bgColor-hover-local,transparent);
+}
 /*===================================================
     4.LAYOUT: Mobile first layout
 =====================================================*/
@@ -182,6 +192,7 @@ header{
 
 aside{
     grid-area: aside;
+    height: fit-content;
 }
 
 footer{
@@ -332,7 +343,7 @@ footer{
     width: 100%;
     flex-direction: column;
     background-color: var(--color-dark-400);
-    margin-bottom: var(--play-modal-height);
+    padding-bottom: var(--play-modal-height);
 }
 
 .share-icons-container{
@@ -341,11 +352,8 @@ footer{
 }
 
 .share-icon{
-    cursor: pointer;
     padding: .5rem;
-}
-.share-icon:hover{
-    color: var(--color-accent-2-500);
+    --color-hover-local:var(--color-accent-2-500);
 }
 
 .quick-links-container-heading{
@@ -371,11 +379,9 @@ footer{
     align-self: left;
     padding: .5rem;
     font-size: var(--font-size-200);
-    color: var(--color-grey-300);
-}
-.quick-links-list-item:hover{
-    cursor: pointer;
-    color: var(--color-grey-200);
+    --color-unhover-local: var(--color-grey-300);
+    --color-hover-local:var(--color-grey-200);
+    
 }
 
 /* 
@@ -644,8 +650,11 @@ aside ul{
 .playlist-ul{
     display: grid;
     grid-template-columns: 1fr;
-    max-height: 60vh;
+    max-height: 70vh;
     overflow-y: auto;
+}
+#playlist-songs .playlist-ul{
+    max-height: 100vh;
 }
 @media only screen and (max-width: 950px) {
     .playlist-ul{
@@ -696,6 +705,7 @@ select{
     font-family: inherit;
     color: inherit;
     border:0;
+    cursor: pointer;
 }
 .dropdown{
     position: relative;
@@ -728,7 +738,7 @@ select{
     z-index: 1;
     bottom: 0;
     width: 100%;
-    background-color: rgb(182, 22, 22);
+    background-color: var(--color-dark-400-transparent-10);
 
     height: var(--play-modal-height);
     text-align: left;
@@ -777,12 +787,10 @@ select{
 #play-controls-section i{
     cursor: pointer;
     padding: .25rem .5rem;
-    background-color: var(--color-dark-400-transparent-9);
     border-radius: 25%;
-}
-#play-controls-section i:hover{
-    color:var(--color-accent-2-300);
-    background-color: var(--color-dark-400-transparent-10);
+    --bgColor-unhover-local: var(--color-grey-500);
+    --color-hover-local:var(--color-accent-2-300);
+    --bgColor-hover-local:var(--color-dark-200);
 }
 
 #play-controls-section .fa-backward,
@@ -821,7 +829,7 @@ select{
         display: flex;
         width: min-content;
         justify-content: center;
-        background-color: green;
+        background-color: var(--color-grey-500);
         border-radius: .25rem;
         padding: .25rem;
     }

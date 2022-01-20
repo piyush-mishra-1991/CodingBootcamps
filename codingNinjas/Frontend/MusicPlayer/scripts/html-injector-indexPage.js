@@ -41,3 +41,6 @@ if (artistCoverElement) artistCoverElement.innerHTML += generateArtistCoverSecti
 
 const carouselElement = document.getElementById('carousel_track');
 if (carouselElement) carouselElement.innerHTML += generateCarouselSection();
+
+const plybarModalElement = document.getElementById('play-modal-container');
+if(plybarModalElement) plybarModalElement.innerHTML += templateCodePlayBarModal;

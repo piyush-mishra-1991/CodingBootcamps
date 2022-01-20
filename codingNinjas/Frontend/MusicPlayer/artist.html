@@ -26,6 +26,8 @@
                 <script src="scripts/html-injector-indexPage.js" defer></script>
             <!-- Navigation related -->
                 <script src="scripts/nav.js" defer></script>
+            <!-- Carousel related -->
+                <script src="scripts/music-player.js" defer></script>
 
     </head>
     <body>
@@ -40,7 +42,7 @@
             <div>
                 <div class="aside-header translucent-bg-100 item-with-bg">
                     <div class="container-heading">Related Artists</div>
-                    <div class="dropdown">Btn</div>
+                    <div class="dropdown">all</div>
                 </div>
 
                 <div class="container-content translucent-bg-100 item-with-bg">
@@ -52,7 +54,7 @@
             <div>
                 <div class="aside-header item-with-bg">
                     <div class="container-heading">Related Songs</div>
-                    <div class="dropdown">Btn</div>
+                    <div class="dropdown">all</div>
                 </div>
 
                 <div class="container-content translucent-bg-100 item-with-bg">
@@ -70,7 +72,7 @@
             <!-- Code injected here using 'html-injector-indexPage.js' -->
         </div>
 
-        <div id="artist-songs" class="artist-songs">
+        <div id="artist-songs" class="artist-songs translucent-bg-100 item-with-bg">
             <div class="container-heading">Artist's Songs</div>
             <div class="container-content translucent-bg-100 item-with-bg">
                 <ul id="artist-songs-ul"class="span-100-ul">
@@ -86,5 +88,12 @@
             <!-- Code injected here using 'html-injector-indexPage.js' -->
         </footer>
         <!-- End of FOOTER -->
+
+        <!-- Start of Play-bar Modal -->
+        <div id="play-modal-container">
+            <!-- Code injected here using 'html-injector-indexPage.js' -->
+        </div>
+        <!-- End of Play-bar Modal -->
+
     </body>
 </html>

@@ -23,6 +23,7 @@ header{
 }
 .artist-songs{
     grid-area: artist-songs;
+    height: fit-content;
 }
 aside{
     grid-area: aside;
@@ -45,15 +46,16 @@ footer{
 }
 
 
-.playlist-ul{/*rename this to aside ul in all css*/
-    height: clamp(0,fit-content,50vh);
-}
 @media only screen and (max-width: 950px) {
     .playlist-ul{
         max-height: 30vh;
     }
 }
 
+#artist-songs-ul{
+    overflow: auto;
+    max-height: 100vh;
+}
 .span-100-ul{
     width: 100%;
 }
