@@ -1,7 +1,7 @@
 // HEADER Section:
 const templateCodeHeader = `
             <div>
-                <div class="logo">Raaga</div>
+                <div class="logo"><a href="index.html">Raaga</a></div>
                 <div class="search-bar">
                     <input
                         type="text"
@@ -84,12 +84,14 @@ const generatefavoriteArtistsList = () => {
     let favoriteArtistsListHTML = '';
     sharedData.favoritesData.artists.forEach(favArtist => {
         favoriteArtistsListHTML += `<li>
-                                        <div class="favorites-item item-with-bg">
-                                            <img
-                                                class="favorite-item-img"
-                                                src=${favArtist.imgUrl}
-                                            />
-                                            <p class="favorite-item-text">${favArtist.artistName}</p>
+                                        <div class="favorites-item item-with-bg opens-artist" data-artist-id=${favArtist.artistId}>
+                                            <a href="artist.html">
+                                                <img
+                                                    class="favorite-item-img"
+                                                    src=${favArtist.imgUrl}
+                                                />
+                                                <p class="favorite-item-text">${favArtist.artistName}</p>
+                                            </a>
                                         </div>
                                     </li>`;
     });
@@ -140,7 +142,7 @@ const templateCodeFavorites = `
 
                 <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Artists</div>
-                    <ul class="favorite-list">
+                    <ul class="favorite-list artist-listener">
                     ${generatefavoriteArtistsList()}
                     </ul>
                 </div>
@@ -196,14 +198,16 @@ const generatePopularArtistsList = () => {
     let artistsListHTML = '';
     sharedData.popularArtistsData.forEach(artistData => {
         artistsListHTML += `<li>
-                                <div class="popular-artists-item item-with-bg">
-                                    <img
-                                        class="popular-artist-imgcontainer"
-                                        src=${artistData.imgUrl}
-                                    />
-                                    <div class="text-title">
-                                        ${artistData.artistName}
-                                    </div>
+                                <div class="popular-artists-item item-with-bg opens-artist" data-artist-id=${artistData.artistId}>
+                                    <a href="artist.html">
+                                        <img
+                                            class="popular-artist-imgcontainer"
+                                            src=${artistData.imgUrl}
+                                        />
+                                        <div class="text-title">
+                                            ${artistData.artistName}
+                                        </div>
+                                    </a>
                                 </div>
                             </li>`;
     });
@@ -312,7 +316,7 @@ const generateRelatedArtistsList = (artistId) => {
     artistData.similarArtists.forEach((similarArtist, index) => {
         relatedArtistsHTML += `
             <li class="playlist-li-in-container">
-                <div class="playlist-item item-with-bg">
+                <div class="playlist-item item-with-bg opens-artist" data-artist-id=${similarArtist.artistId}>
                     <div class="left-half">
                         <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
                         <img

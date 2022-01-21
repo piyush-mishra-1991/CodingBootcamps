@@ -7,7 +7,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '2 playlist song',
@@ -15,7 +16,8 @@ const sharedData = {
             length: '06:42',
             releaseDate: 'JUL 9, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/menuloopsid.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/menuloopsid.ogg',
         },
         {
             songName: '1 playlist song',
@@ -23,7 +25,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
         {
             songName: '1 playlist song',
@@ -31,7 +34,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '2 playlist song',
@@ -39,7 +43,8 @@ const sharedData = {
             length: '06:42',
             releaseDate: 'JUL 9, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/menuloopsid.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/menuloopsid.ogg',
         },
         {
             songName: '1 playlist song',
@@ -47,7 +52,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
         {
             songName: '1 playlist song',
@@ -55,7 +61,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '2 playlist song',
@@ -63,7 +70,8 @@ const sharedData = {
             length: '06:42',
             releaseDate: 'JUL 9, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/menuloopsid.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/menuloopsid.ogg',
         },
         {
             songName: '1 playlist song',
@@ -71,7 +79,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
         {
             songName: '1 playlist song',
@@ -79,7 +88,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '2 playlist song',
@@ -87,7 +97,8 @@ const sharedData = {
             length: '06:42',
             releaseDate: 'JUL 9, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/menuloopsid.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/menuloopsid.ogg',
         },
         {
             songName: '1 playlist song',
@@ -95,7 +106,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
         {
             songName: '1 playlist song',
@@ -103,7 +115,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '2 playlist song',
@@ -111,7 +124,8 @@ const sharedData = {
             length: '06:42',
             releaseDate: 'JUL 9, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/menuloopsid.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/menuloopsid.ogg',
         },
         {
             songName: '1 playlist song',
@@ -119,7 +133,8 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-            audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
+            audioUrl:
+                'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
     ],
     /*
@@ -213,34 +228,42 @@ const sharedData = {
             {
                 artistName: 'Fav Artist 1',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                artistId: 1,
             },
             {
                 artistName: 'Fav Artist 2',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                artistId: 2,
             },
             {
                 artistName: 'Fav Artist 1',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                artistId: 1,
             },
             {
                 artistName: 'Fav Artist 2',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                artistId: 2,
             },
             {
                 artistName: 'Fav Artist 1',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                artistId: 1,
             },
             {
                 artistName: 'Fav Artist 2',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                artistId: 2,
             },
             {
                 artistName: 'Fav Artist 1',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                artistId: 1,
             },
             {
                 artistName: 'Fav Artist 2',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                artistId: 2,
             },
         ],
         genres: [
@@ -376,34 +399,42 @@ const sharedData = {
         {
             artistName: 'Artist 1 Name',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            artistId: 1,
         },
         {
             artistName: 'Artist 2 Name',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            artistId: 2,
         },
         {
             artistName: 'Artist 1 Name',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            artistId: 1,
         },
         {
             artistName: 'Artist 2 Name',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            artistId: 2,
         },
         {
             artistName: 'Artist 1 Name',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            artistId: 1,
         },
         {
             artistName: 'Artist 2 Name',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            artistId: 2,
         },
         {
             artistName: 'Artist 1 Name',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            artistId: 1,
         },
         {
             artistName: 'Artist 2 Name',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            artistId: 2,
         },
     ],
     genresData: [

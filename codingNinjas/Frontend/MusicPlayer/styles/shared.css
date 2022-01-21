@@ -127,6 +127,11 @@ ul{
   transition: none !important;
 }
 
+a:-webkit-any-link{
+    text-decoration: none;
+    color: inherit;
+}
+
 /*===================================================
     3.UTILITIES: Mobile first layout
 =====================================================*/
