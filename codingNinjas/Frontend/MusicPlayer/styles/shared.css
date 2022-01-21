@@ -133,7 +133,7 @@ a:-webkit-any-link{
 }
 
 /*===================================================
-    3.UTILITIES: Mobile first layout
+    3.UTILITIES:
 =====================================================*/
 .translucent-bg-100{
     --bgColor-local: var(--color-dark-400-transparent-8);
@@ -151,6 +151,29 @@ a:-webkit-any-link{
 .hoverable-icon:hover{
     color:var(--color-hover-local,var(--color-accent-2-500));
     background-color: var(--bgColor-hover-local,transparent);
+}
+/*  Play Icon on song images */
+.play-icon-overlay {
+	 position: relative;
+     display: inline;
+	 cursor: pointer;
+}
+ .play-icon-overlay:before {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 -webkit-transform: translate(-50%, -50%);
+	 content: "\f01d";
+     font-family: FontAwesome;
+     font-size: 200%;
+	 color: grey;
+	 opacity: 0.3;
+	 text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+ .play-icon-overlay:hover:before {
+	 color: red;
+     opacity: 0.8;
 }
 /*===================================================
     4.LAYOUT: Mobile first layout
@@ -525,6 +548,7 @@ ul{
     height:50px;
     width:50px;
     object-fit: cover;
+    object-position: center;
 }
 .favorite-item-text{
     padding-left: 1rem;
@@ -545,8 +569,11 @@ ul{
     --border-radius-local:var(--border-radius-000);
 }
 .latest-release-imgcontainer{
+    height: 100%;
     max-width: 75px;
     overflow: hidden;
+    object-fit: cover;
+    object-position: center;
 }
 .latest-release-textcontainer{
     display: flex;
@@ -686,10 +713,11 @@ aside ul{
     --bgColor-local:var(--color-grey-500-transparent-9);
 }
 .playlist-imgcontainer{
-    height: 50px;
+    height: 100%;
     width: 50px;
     overflow: hidden;
     object-fit: cover;
+    object-position: center;
 }
 .playlist-item .left-half{
     display: flex;

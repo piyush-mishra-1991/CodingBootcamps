@@ -67,12 +67,14 @@ const templateCodeFooter = `
 const generatefavoriteSongsList = () => {
     let favoriteSongsListHTML = '';
     sharedData.favoritesData.songs.forEach(favSong => {
-        favoriteSongsListHTML +=`<li>
+        favoriteSongsListHTML += `<li>
                                     <div class="favorites-item item-with-bg">
-                                        <img
-                                            class="favorite-item-img"
-                                            src=${favSong.imgUrl}
-                                        />
+                                        <div class="play-icon-overlay">
+                                            <img
+                                                class="favorite-item-img"
+                                                src=${favSong.imgUrl}
+                                            />
+                                        </div>
                                         <p class="favorite-item-text">${favSong.songName}</p>
                                     </div>
                                 </li>`;
@@ -84,15 +86,15 @@ const generatefavoriteArtistsList = () => {
     let favoriteArtistsListHTML = '';
     sharedData.favoritesData.artists.forEach(favArtist => {
         favoriteArtistsListHTML += `<li>
-                                        <div class="favorites-item item-with-bg opens-artist" data-artist-id=${favArtist.artistId}>
-                                            <a href="artist.html">
+                                        <a href="artist.html">
+                                            <div class="favorites-item item-with-bg opens-artist" data-artist-id=${favArtist.artistId}>
                                                 <img
                                                     class="favorite-item-img"
                                                     src=${favArtist.imgUrl}
                                                 />
                                                 <p class="favorite-item-text">${favArtist.artistName}</p>
-                                            </a>
-                                        </div>
+                                            </div>
+                                        </a>
                                     </li>`;
     });
     return favoriteArtistsListHTML;
@@ -169,10 +171,12 @@ const generateLatestReleasesList = () => {
     sharedData.latestReleasesData.forEach(latestRelease => {
         latestReleasesListHTML += ` <li>
                                         <div class="latest-release-item item-with-bg">
-                                            <img
-                                                class="latest-release-imgcontainer"
-                                                src=${latestRelease.imgUrl}
-                                            />
+                                            <div class="play-icon-overlay">
+                                                <img
+                                                    class="latest-release-imgcontainer"
+                                                    src=${latestRelease.imgUrl}
+                                                />
+                                            </div>
                                             <div class="latest-release-textcontainer">
                                                 <div class="top-line"><i class="fas fa-ellipsis-h hoverable-icon"></i></div>
                                                 <div class="mid-line"><div class="text-title">${latestRelease.songName}</div> <div class="num-text">${latestRelease.length}</div></div>
@@ -285,10 +289,9 @@ const generatePlaylistList = () => {
                             <div class="playlist-item item-with-bg" data-song-url=${playlistItem.audioUrl}>
                                 <div class="left-half">
                                     <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
-                                    <img
-                                        class="playlist-imgcontainer"
-                                        src=${playlistItem.imgUrl}
-                                    />
+                                    <div class="play-icon-overlay">
+                                        <img class="playlist-imgcontainer" src=${playlistItem.imgUrl}/>
+                                    </div>
                                     <div>
                                         <div class="text-title playbar-title">${playlistItem.songName}</div>
                                         <div class="text-subtitle playbar-subtitle">
@@ -348,10 +351,12 @@ const generateRelatedSongsList = (artistId) => {
                 <div class="playlist-item item-with-bg">
                     <div class="left-half">
                         <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
-                        <img
-                            class="playlist-imgcontainer"
-                            src=${similarSong.imgUrl}
-                        />
+                        <div class="play-icon-overlay">
+                            <img
+                                class="playlist-imgcontainer"
+                                src=${similarSong.imgUrl}
+                            />
+                        </div>
                         <div>
                             <div class="text-title">${similarSong.songName}</div>
                             <div class="text-subtitle">
@@ -379,10 +384,12 @@ const generateArtistSongsList = (artistId) => {
                         <div class="playlist-item item-with-bg" data-song-url=${song.audioUrl}>
                             <div class="left-half">
                                 <div class="text-subtitle">${(index + 1).toString().padStart(2, '0')}</div>
-                                <img
-                                    class="playlist-imgcontainer"
-                                    src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
-                                />
+                                <div class="play-icon-overlay">
+                                    <img
+                                        class="playlist-imgcontainer"
+                                        src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                    />
+                                </div>
                                 <div>
                                     <div class="text-title playbar-title">${song.songName}</div>
                                     <div class="text-subtitle playbar-subtitle">${song.albumName}</div>
