@@ -2,9 +2,9 @@ let defaultImgSrc = 'https://images.pexels.com/photos/5650905/pexels-photo-56509
 let defaultAudioSrc = 'https://opengameart.org/sites/default/files/peaceatlast_piano_0.ogg';
 let defaultAudioTitle = 'Audio Title';
 let defaultAudioSubtitle = 'Audio Subtitle';
-let imgElement = document.querySelector('#play-modal-container #song-info-img img');
-let titleElement = document.querySelector('#play-modal-container #song-title');
-let subtitleElement = document.querySelector('#play-modal-container #song-subtitle');
+const imgElement = document.querySelector('#play-modal-container #song-info-img img');
+const titleElement = document.querySelector('#play-modal-container #song-title');
+const subtitleElement = document.querySelector('#play-modal-container #song-subtitle');
 const loadingElement = document.getElementById('playbar-loading-container');
 const btnPlay = document.getElementById('btn-play');
 const btnPause = document.getElementById('btn-pause');
@@ -21,7 +21,7 @@ window.addEventListener('load', ()=> {
 audioTag.load();
 
 const setPlayBar = (imgUrl,audioUrl,titleText,subtitleText)=>{
-    defaultImgSrc = imgUrl;
+    imgElement.src = imgUrl;
     audioTag.src = audioUrl;
     titleElement.innerText = titleText;
     subtitleElement.innerText = subtitleText;

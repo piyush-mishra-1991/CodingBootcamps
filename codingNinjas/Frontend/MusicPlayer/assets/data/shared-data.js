@@ -137,91 +137,48 @@ const sharedData = {
                 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
     ],
-    /*
-    favoritesData: [
-        {
-            songs: [
-                {
-                    songName: 'Fav Song 1',
-                    imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-                },
-                {
-                    songName: 'Fav Song 2',
-                    imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-                },
-            ],
-        },
-        {
-            artists: [
-                {
-                    artistName: 'Fav Artist 1',
-                    imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-                },
-                {
-                    artistName: 'Fav Artist 2',
-                    imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-                },
-            ],
-        },
-        {
-            genres: [
-                {
-                    genreName: 'Fav Genre 1',
-                    imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-                },
-                {
-                    genreName: 'Fav Genre 2',
-                    imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
-                },
-            ],
-        },
-        {
-            radios: [
-                {
-                    radioName: 'Fav Radio 1',
-                    imgUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&h=130',
-                },
-                {
-                    radioName: 'Fav Radio 1',
-                    imgUrl: 'https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130',
-                },
-            ],
-        },
-    ],
-*/
     favoritesData: {
         songs: [
             {
                 songName: 'Fav Song 1',
                 imgUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&h=130',
+                audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
+
             },
             {
                 songName: 'Fav Song 2',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                audioUrl: 'https://opengameart.org/sites/default/files/menuloopsid.ogg',
             },
             {
                 songName: 'Fav Song 1',
                 imgUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&h=130',
+                audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
             },
             {
                 songName: 'Fav Song 2',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
             },
             {
                 songName: 'Fav Song 1',
                 imgUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&h=130',
+                audioUrl: 'https://opengameart.org/sites/default/files/menuloopsid.ogg',
             },
             {
                 songName: 'Fav Song 2',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
             },
             {
                 songName: 'Fav Song 1',
                 imgUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&h=130',
+                audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
             },
             {
                 songName: 'Fav Song 2',
                 imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+                audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
             },
         ],
         artists: [
@@ -343,6 +300,7 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
         {
             songName: '2 playlist song',
@@ -350,6 +308,7 @@ const sharedData = {
             length: '01:23',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '3 playlist song',
@@ -357,6 +316,7 @@ const sharedData = {
             length: '04:34',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '4 playlist song',
@@ -364,6 +324,7 @@ const sharedData = {
             length: '02:34',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
         {
             songName: '1 playlist song',
@@ -371,6 +332,7 @@ const sharedData = {
             length: '06:78',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '2 playlist song',
@@ -378,6 +340,7 @@ const sharedData = {
             length: '01:23',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
         {
             songName: '3 playlist song',
@@ -385,6 +348,7 @@ const sharedData = {
             length: '04:34',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            audioUrl: 'https://opengameart.org/sites/default/files/clickclack_0.ogg',
         },
         {
             songName: '4 playlist song',
@@ -392,6 +356,7 @@ const sharedData = {
             length: '02:34',
             releaseDate: 'JUL 5, 2014',
             imgUrl: 'https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg?auto=compress&cs=tinysrgb&h=130',
+            audioUrl: 'https://opengameart.org/sites/default/files/Acci%C3%B3n%20%28Merodeador%20Nocturno%29.ogg',
         },
     ],
 

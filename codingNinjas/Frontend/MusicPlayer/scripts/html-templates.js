@@ -68,14 +68,14 @@ const generatefavoriteSongsList = () => {
     let favoriteSongsListHTML = '';
     sharedData.favoritesData.songs.forEach(favSong => {
         favoriteSongsListHTML += `<li>
-                                    <div class="favorites-item item-with-bg">
+                                    <div class="favorites-item item-with-bg playbar-item" data-song-url=${favSong.audioUrl}>
                                         <div class="play-icon-overlay">
                                             <img
-                                                class="favorite-item-img"
+                                                class="favorite-item-img playbar-img"
                                                 src=${favSong.imgUrl}
                                             />
                                         </div>
-                                        <p class="favorite-item-text">${favSong.songName}</p>
+                                        <p class="favorite-item-text playbar-title">${favSong.songName}</p>
                                     </div>
                                 </li>`;
     });
@@ -137,7 +137,7 @@ const templateCodeFavorites = `
             <div class="container-content">
                 <div class="translucent-bg-100 item-with-bg">
                     <div>Songs</div>
-                    <ul>
+                    <ul class="playbar-listener">
                     ${generatefavoriteSongsList()}
                     </ul>
                 </div>
@@ -170,17 +170,17 @@ const generateLatestReleasesList = () => {
     let latestReleasesListHTML = '';
     sharedData.latestReleasesData.forEach(latestRelease => {
         latestReleasesListHTML += ` <li>
-                                        <div class="latest-release-item item-with-bg">
+                                        <div class="latest-release-item item-with-bg playbar-item" data-song-url=${latestRelease.audioUrl}>
                                             <div class="play-icon-overlay">
                                                 <img
-                                                    class="latest-release-imgcontainer"
+                                                    class="latest-release-imgcontainer playbar-img"
                                                     src=${latestRelease.imgUrl}
                                                 />
                                             </div>
                                             <div class="latest-release-textcontainer">
                                                 <div class="top-line"><i class="fas fa-ellipsis-h hoverable-icon"></i></div>
-                                                <div class="mid-line"><div class="text-title">${latestRelease.songName}</div> <div class="num-text">${latestRelease.length}</div></div>
-                                                <div class="bottom-line"><p class="text-subtitle">${latestRelease.releaseDate}</p></div>
+                                                <div class="mid-line"><div class="text-title playbar-title">${latestRelease.songName}</div> <div class="num-text">${latestRelease.length}</div></div>
+                                                <div class="bottom-line"><p class="text-subtitle playbar-subtitle">${latestRelease.releaseDate}</p></div>
                                             </div>
                                         </div>
                                     </li>`;
@@ -286,11 +286,11 @@ const generatePlaylistList = () => {
     let playlistHTML = '';
     sharedData.playlistData.forEach( (playlistItem, index) => {
         playlistHTML += `<li class="playlist-li-in-container">
-                            <div class="playlist-item item-with-bg" data-song-url=${playlistItem.audioUrl}>
+                            <div class="playlist-item item-with-bg playbar-item" data-song-url=${playlistItem.audioUrl}>
                                 <div class="left-half">
                                     <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
                                     <div class="play-icon-overlay">
-                                        <img class="playlist-imgcontainer" src=${playlistItem.imgUrl}/>
+                                        <img class="playlist-imgcontainer playbar-img" src=${playlistItem.imgUrl}/>
                                     </div>
                                     <div>
                                         <div class="text-title playbar-title">${playlistItem.songName}</div>
@@ -348,18 +348,18 @@ const generateRelatedSongsList = (artistId) => {
     artistData.similarSongs.forEach((similarSong, index) => {
         relatedSongsHTML += `
             <li class="playlist-li-in-container">
-                <div class="playlist-item item-with-bg">
+                <div class="playlist-item item-with-bg playbar-item" data-song-url=${similarSong.audioUrl}>
                     <div class="left-half">
                         <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
                         <div class="play-icon-overlay">
                             <img
-                                class="playlist-imgcontainer"
+                                class="playlist-imgcontainer playbar-img"
                                 src=${similarSong.imgUrl}
                             />
                         </div>
                         <div>
-                            <div class="text-title">${similarSong.songName}</div>
-                            <div class="text-subtitle">
+                            <div class="text-title playbar-title">${similarSong.songName}</div>
+                            <div class="text-subtitle playbar-subtitle">
                                 ${similarSong.songAlbum}
                             </div>
                         </div>
@@ -381,12 +381,12 @@ const generateArtistSongsList = (artistId) => {
     artistData.songs.forEach((song, index) => {
         artistSongsHTML += `
                     <li class="playlist-li-in-container">
-                        <div class="playlist-item item-with-bg" data-song-url=${song.audioUrl}>
+                        <div class="playlist-item item-with-bg playbar-item" data-song-url=${song.audioUrl}>
                             <div class="left-half">
                                 <div class="text-subtitle">${(index + 1).toString().padStart(2, '0')}</div>
                                 <div class="play-icon-overlay">
                                     <img
-                                        class="playlist-imgcontainer"
+                                        class="playlist-imgcontainer playbar-img"
                                         src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
                                     />
                                 </div>
