@@ -278,7 +278,7 @@ const generatePlaylistList = () => {
     let playlistHTML = '';
     sharedData.playlistData.forEach( (playlistItem, index) => {
         playlistHTML += `<li class="playlist-li-in-container">
-                            <div class="playlist-item item-with-bg">
+                            <div class="playlist-item item-with-bg" data-song-url=${playlistItem.audioUrl}>
                                 <div class="left-half">
                                     <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
                                     <img
@@ -286,8 +286,8 @@ const generatePlaylistList = () => {
                                         src=${playlistItem.imgUrl}
                                     />
                                     <div>
-                                        <div class="text-title">${playlistItem.songName}</div>
-                                        <div class="text-subtitle">
+                                        <div class="text-title playbar-title">${playlistItem.songName}</div>
+                                        <div class="text-subtitle playbar-subtitle">
                                             ${playlistItem.artistName}
                                         </div>
                                     </div>

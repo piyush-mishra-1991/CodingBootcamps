@@ -1,5 +1,10 @@
-const imgSrc = 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130';
-const audioUrl = 'https://opengameart.org/sites/default/files/peaceatlast_piano_0.ogg';
+let defaultImgSrc = 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130';
+let defaultAudioSrc = 'https://opengameart.org/sites/default/files/peaceatlast_piano_0.ogg';
+let defaultAudioTitle = 'Audio Title';
+let defaultAudioSubtitle = 'Audio Subtitle';
+let imgElement = document.querySelector('#play-modal-container #song-info-img img');
+let titleElement = document.querySelector('#play-modal-container #song-title');
+let subtitleElement = document.querySelector('#play-modal-container #song-subtitle');
 const btnPlay = document.getElementById('btn-play');
 const btnPause = document.getElementById('btn-pause');
 const btnStop = document.getElementById('btn-stop');
@@ -9,10 +14,22 @@ const btnVolume = document.getElementById('btn-volume');
 const btnMute = document.getElementById('btn-mute');
 
 window.addEventListener('load', ()=> {
-    audioTag.src = audioUrl;
-})
+    setPlayBar(defaultImgSrc, defaultAudioSrc, defaultAudioTitle, defaultAudioSubtitle);
+});
 
 audioTag.load();
+
+const setPlayBar = (imgUrl,audioUrl,titleText,subtitleText)=>{
+    defaultImgSrc = imgUrl;
+    audioTag.src = audioUrl;
+    titleElement.innerText = titleText;
+    subtitleElement.innerText = subtitleText;
+}
+
+const setAndPlay=(imgUrl,audioUrl,titleText,subtitleText)=>{
+    setPlayBar(imgUrl, audioUrl, titleText, subtitleText);
+    audioTag.play();
+}
 
 // Play-Pause-Stop button functionality:
 //      Stop and puse button only visible when audio is actually playing, otherwise if paused-state/Stopped state then only Play button visible
