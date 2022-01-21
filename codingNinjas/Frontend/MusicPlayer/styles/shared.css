@@ -733,6 +733,14 @@ select{
     5.4 Play Modal Area:
 */
 
+/*  LOADING Icon : When music is being loaded on network */
+#playbar-loading-container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: red;
+}
 #play-modal-container{
     position: fixed;
     z-index: 1;

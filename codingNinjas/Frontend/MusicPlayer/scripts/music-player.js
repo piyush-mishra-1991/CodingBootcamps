@@ -5,6 +5,7 @@ let defaultAudioSubtitle = 'Audio Subtitle';
 let imgElement = document.querySelector('#play-modal-container #song-info-img img');
 let titleElement = document.querySelector('#play-modal-container #song-title');
 let subtitleElement = document.querySelector('#play-modal-container #song-subtitle');
+const loadingElement = document.getElementById('playbar-loading-container');
 const btnPlay = document.getElementById('btn-play');
 const btnPause = document.getElementById('btn-pause');
 const btnStop = document.getElementById('btn-stop');
@@ -30,6 +31,17 @@ const setAndPlay=(imgUrl,audioUrl,titleText,subtitleText)=>{
     setPlayBar(imgUrl, audioUrl, titleText, subtitleText);
     audioTag.play();
 }
+
+// Show/Hide 'Loading' Label, when audio is loaded:
+audioTag.addEventListener('loadstart', function () {
+    console.log('Loading...'); // Start the loading icon:
+    loadingElement.style.display = 'block';
+});
+audioTag.addEventListener('canplay', function () {
+    console.log('Can start playing now.'); // Remove the loading icon then:
+    loadingElement.style.display = 'none';
+});
+
 
 // Play-Pause-Stop button functionality:
 //      Stop and puse button only visible when audio is actually playing, otherwise if paused-state/Stopped state then only Play button visible

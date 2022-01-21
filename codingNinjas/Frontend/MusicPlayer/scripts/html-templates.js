@@ -372,7 +372,7 @@ const generateArtistSongsList = (artistId) => {
     artistData.songs.forEach((song, index) => {
         artistSongsHTML += `
                     <li class="playlist-li-in-container">
-                        <div class="playlist-item item-with-bg">
+                        <div class="playlist-item item-with-bg" data-song-url=${song.audioUrl}>
                             <div class="left-half">
                                 <div class="text-subtitle">${(index + 1).toString().padStart(2, '0')}</div>
                                 <img
@@ -380,8 +380,8 @@ const generateArtistSongsList = (artistId) => {
                                     src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
                                 />
                                 <div>
-                                    <div class="text-title">${song.songName}</div>
-                                    <div class="text-subtitle">${song.albumName}</div>
+                                    <div class="text-title playbar-title">${song.songName}</div>
+                                    <div class="text-subtitle playbar-subtitle">${song.albumName}</div>
                                 </div>
                             </div>
                             <div class="right-half">
@@ -452,6 +452,7 @@ const generateCarouselSection = () =>{
 
 // Playbar Modal :
 const templateCodePlayBarModal = `
+            <div id="playbar-loading-container">Loading</div>
             <div id="seek-bar"></div>
             <div id="song-info-img">
                 <img
