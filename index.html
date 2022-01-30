@@ -21,7 +21,8 @@
         <script src="assets/data/artists-data.js" defer></script>
         <script src="assets/data/shared-data.js" defer></script>
         <!-- Template generation code imports -->
-        <script src="scripts/html-templates.js" defer></script>
+        <script src="scripts/html-templates-shared.js" defer></script>
+        <script src="scripts/html-templates-indexPage.js" defer></script>
         <script src="scripts/html-injector-indexPage.js" defer></script>
         <!-- Navigation related -->
         <script src="scripts/nav.js" defer></script>
@@ -60,7 +61,28 @@
 
                 <div class="container-content item-with-bg">
                     <ul id="playlist-songs" class="list-in-container playlist-ul playbar-listener">
-                        <!-- Code injected here using 'html-injector-indexPage.js' -->
+                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                        <template id="temp-playlist-songs">
+                            <li class="playlist-li-in-container">
+                                <div class="playlist-item item-with-bg playbar-item" data-song-url='dummySongUrl'>
+                                    <div class="left-half">
+                                        <div class="text-subtitle">dummySongNumber</div>
+                                        <div class="play-icon-overlay">
+                                            <img class="playlist-imgcontainer playbar-img" src='dummyImgUrl'/>
+                                        </div>
+                                        <div>
+                                            <div class="text-title playbar-title">'dummySongTitle'</div>
+                                            <div class="text-subtitle playbar-subtitle">
+                                                'dummySongSub-Title'
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-half">
+                                        <i class="fas fa-ellipsis-h hoverable-icon"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </template>
                     </ul>
                 </div>
             </div>
@@ -90,21 +112,182 @@
 
         <div id="favorites-container" class="favorites-container translucent-bg-100 item-with-bg">
             <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <div class="container-heading">Favorites</div>
+            <div class="container-content">
+                <div class="translucent-bg-100 item-with-bg">
+                    <div>Songs</div>
+                    <ul class="playbar-listener" id="ul-fav-songs">
+                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                        <template id="temp-fav-songs">
+                            <li>
+                                <div class="favorites-item item-with-bg playbar-item" data-song-url='dummySongUrl'>
+                                    <div class="play-icon-overlay">
+                                        <img
+                                            class="favorite-item-img playbar-img"
+                                            src='dummySrc'
+                                        />
+                                    </div>
+                                    <p class="favorite-item-text playbar-title">
+                                        dummyTitle
+                                    </p>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+
+                <div class="translucent-bg-100 item-with-bg">
+                    <div class="favourite-item-heading">Artists</div>
+                    <ul class="favorite-list artist-listener" id="ul-fav-artists">
+                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                        <template id="temp-fav-artists"> 
+                            <li>
+                                <a href="artist.html">
+                                    <div class="favorites-item item-with-bg opens-artist" data-artist-id='dummyArtistId'>
+                                        <img
+                                            class="favorite-item-img"
+                                            src='dummyImgUrl'
+                                        />
+                                        <p class="favorite-item-text">dummyArtistName</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+
+                <div class="translucent-bg-100 item-with-bg">
+                    <div class="favourite-item-heading">Genres</div>
+                    <ul class="favorite-list" id ="ul-fav-genres">
+                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                        <template id ="temp-fav-genres">
+                            <li>
+                                <div class="favorites-item item-with-bg">
+                                    <img
+                                        class="favorite-item-img"
+                                        src='dummyURL'
+                                    />
+                                    <p class="favorite-item-text">dummyGenreTitle</p>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+
+                <div class="translucent-bg-100 item-with-bg">
+                    <div class="favourite-item-heading">Radios</div>
+                    <ul class="favorite-list" id="ul-fav-radios">
+                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                        <template id="temp-fav-radios">
+                            <li>
+                                <div class="favorites-item item-with-bg">
+                                    <img
+                                        class="favorite-item-img"
+                                        src=${favRadio.imgUrl}
+                                    />
+                                    <p class="favorite-item-text">${favRadio.radioName}</p>
+                                </div>
+                            </li>
+                        </template>
+                        <!--${generatefavoriteRadiosList()}-->
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div id="latest-releases-container" class="latest-releases-container translucent-bg-100 item-with-bg playbar-listener">
             <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <div class="container-heading">Latest Releases</div>
+            <div class="container-content translucent-bg-100  item-with-bg">
+                <ul class="list-in-container" id="ul-latestReleases">
+                    <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <template id="temp-latestReleases">
+                        <li>
+                            <div class="latest-release-item item-with-bg playbar-item" data-song-url='dummySongURL'>
+                                <div class="play-icon-overlay">
+                                    <img
+                                        class="latest-release-imgcontainer playbar-img"
+                                        src='dummyImageURL'
+                                    />
+                                </div>
+                                <div class="latest-release-textcontainer">
+                                    <div class="top-line"><i class="fas fa-ellipsis-h hoverable-icon"></i></div>
+                                    <div class="mid-line"><div class="text-title playbar-title">dummySongName</div> <div class="num-text">dummySongLength</div></div>
+                                    <div class="bottom-line"><p class="text-subtitle playbar-subtitle">dummySongSubtitle</p></div>
+                                </div>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </div>
         </div>
 
         <div id="artists-container" class="artists-container translucent-bg-100 item-with-bg artist-listener">
             <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <div class="container-heading">Popular Artists</div>
+            <div class="container-content item-with-bg">
+                <ul class="list-in-container" id="ul-artists">
+                    <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <template id="temp-artists">
+                        <li>
+                            <div class="popular-artists-item item-with-bg opens-artist" data-artist-id='dummy artist id'>
+                                <a href="artist.html">
+                                    <img
+                                        class="popular-artist-imgcontainer"
+                                        src='dummy image url'
+                                    />
+                                    <div class="text-title">
+                                        dummyArtistName
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </div>
         </div>
 
         <div id="genres-container" class="genres-container translucent-bg-100 item-with-bg">
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <div class="container-heading">Popular Genres</div>
+            <div class="container-content item-with-bg">
+                <ul class="list-in-container" id="ul-genres">
+                    <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <template id="temp-genres">
+                        <li>
+                            <div class="genre-item item-with-bg">
+                              <img
+                                  class="genre-imgcontainer"
+                                  src='dummyGenreUrl'
+                              />
+                              <div class="text-title">
+                                  <p>dummyGenreName</p>
+                              </div>
+                          </div>
+                        </li>
+                    </template>
+                </ul>
+            </div>
         </div>
         <div id="radios-container" class="radios-container translucent-bg-100 item-with-bg">
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <div class="container-heading">Popular Radio Stations</div>
+            <div class="container-content item-with-bg">
+                <ul class="list-in-container" id="ul-radios">
+                    <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <template id="temp-radios">
+                            <li>
+                                <div class="radio-item item-with-bg">
+                                    <img
+                                        class="radio-imgcontainer"
+                                        src='dummyImageSrc'
+                                    />
+                                    <div class="text-title">
+                                        <p>dummyRadioName</p>
+                                    </div>
+                                </div>
+                            </li>
+                    </template>
+                </ul>
+            </div>
         </div>
 
         <!-- End of MAIN-BODY -->
