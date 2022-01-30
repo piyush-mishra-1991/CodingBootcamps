@@ -2,6 +2,7 @@
 const generatefavoriteSongsList = () => {
     
     const ul = document.getElementById('ul-fav-songs');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-fav-songs');
     
     sharedData.favoritesData.songs.forEach(favSong => {
@@ -16,6 +17,7 @@ generatefavoriteSongsList();
 
 const generatefavoriteArtistsList = () => {
     const ul = document.getElementById('ul-fav-artists');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-fav-artists');
 
     sharedData.favoritesData.artists.forEach(favArtist => {
@@ -30,6 +32,7 @@ generatefavoriteArtistsList();
 
 const generatefavoriteGenresList = () => {
     const ul = document.getElementById('ul-fav-genres');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-fav-genres');
 
     sharedData.favoritesData.genres.forEach(favGenre => {
@@ -43,6 +46,7 @@ generatefavoriteGenresList();
 
 const generatefavoriteRadiosList = () => {
     const ul = document.getElementById('ul-fav-radios');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-fav-radios');
 
     sharedData.favoritesData.radios.forEach(favRadio => {
@@ -57,6 +61,7 @@ generatefavoriteRadiosList();
 // LATEST-RELEASES Items:
 const generateLatestReleasesList = () => {
     const ul = document.getElementById('ul-latestReleases');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-latestReleases');
 
     sharedData.latestReleasesData.forEach(latestRelease => {
@@ -77,6 +82,7 @@ generateLatestReleasesList();
 const generatePopularArtistsList = () => {
 
     const ul = document.getElementById('ul-artists');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-artists');
 
     sharedData.popularArtistsData.forEach(artistData => {
@@ -95,6 +101,7 @@ generatePopularArtistsList();
 const generatePopularGenresList = () => {
 
     const ul = document.getElementById('ul-genres');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-genres');
 
     sharedData.genresData.forEach(genreData => {
@@ -113,6 +120,7 @@ generatePopularGenresList();
 const generateRadioList = () => {
 
     const ul = document.getElementById('ul-radios');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-radios');
 
     sharedData.radiosData.forEach(radioData => {
@@ -131,6 +139,7 @@ generateRadioList();
 const generatePlaylistList = () => {
 
     const ul = document.getElementById('playlist-songs');
+    ul.innerHTML = '';
     const template = document.getElementById('temp-playlist-songs');
 
     sharedData.playlistData.forEach((playlistItem, index) => {
@@ -149,18 +158,20 @@ const generatePlaylistList = () => {
 
 generatePlaylistList();
 
-
 // Carousel Section:
 const generateCarouselSection = () =>{
-    let carouselHTML = '';
+
+    const ul = document.getElementById('carousel_track');
+    ul.innerHTML = '';
+    const template = document.getElementById('temp-carousel');
+
     sharedData.carouselData.forEach(carouselItem => {
-        carouselHTML += `
-                        <li class="carousel-slide current-slide">
-                            <img
-                                src=${carouselItem.imgUrl}
-                                class="carousel-slide-img"
-                            />
-                        </li>`;
+        const cloned = template.content.cloneNode(true);
+        console.log(cloned.querySelector('.carousel-slide-img'));
+        cloned.querySelector('.carousel-slide-img').src = carouselItem.imgUrl;
+
+        ul.appendChild(cloned);
     });
-    return carouselHTML;
 }
+
+generateCarouselSection();

@@ -23,7 +23,6 @@
         <!-- Template generation code imports -->
         <script src="scripts/html-templates-shared.js" defer></script>
         <script src="scripts/html-templates-indexPage.js" defer></script>
-        <script src="scripts/html-injector-indexPage.js" defer></script>
         <!-- Navigation related -->
         <script src="scripts/nav.js" defer></script>
         <script src="scripts/click-open-artist.js" defer></script>
@@ -36,7 +35,7 @@
     <body>
         <!-- Start of HEADER -->
         <header>
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <!-- Code injected here using 'html-templates-shared.js' -->
         </header>
         <!-- End of HEADER -->
 
@@ -61,8 +60,10 @@
 
                 <div class="container-content item-with-bg">
                     <ul id="playlist-songs" class="list-in-container playlist-ul playbar-listener">
-                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
-                        <template id="temp-playlist-songs">
+                        <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                    </ul>
+                        <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
+                    <template id="temp-playlist-songs">
                             <li class="playlist-li-in-container">
                                 <div class="playlist-item item-with-bg playbar-item" data-song-url='dummySongUrl'>
                                     <div class="left-half">
@@ -83,7 +84,6 @@
                                 </div>
                             </li>
                         </template>
-                    </ul>
                 </div>
             </div>
         </aside>
@@ -99,7 +99,7 @@
             <div class="carousel">
                 <div class="carousel_track-container">
                     <ul id="carousel_track" class="carousel_track">
-                        <!-- Code injected here using 'html-injector-indexPage.js' -->
+                        <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
                     </ul>
                 </div>
             </div>
@@ -107,6 +107,15 @@
                 &#10095;
             </button>
         </div>
+        <!-- Carousel Template code which is injected above by 'html-templates-indexPage.js' -->
+        <template id="temp-carousel">
+            <li class="carousel-slide current-slide">
+                <img
+                    src='dummy-img-url'
+                    class="carousel-slide-img"
+                />
+            </li>
+        </template>
         <!-- End of Carousel Again -->
 
 
@@ -117,7 +126,9 @@
                 <div class="translucent-bg-100 item-with-bg">
                     <div>Songs</div>
                     <ul class="playbar-listener" id="ul-fav-songs">
-                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                        <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                    </ul>
+                        <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                         <template id="temp-fav-songs">
                             <li>
                                 <div class="favorites-item item-with-bg playbar-item" data-song-url='dummySongUrl'>
@@ -133,14 +144,15 @@
                                 </div>
                             </li>
                         </template>
-                    </ul>
                 </div>
 
                 <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Artists</div>
                     <ul class="favorite-list artist-listener" id="ul-fav-artists">
-                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
-                        <template id="temp-fav-artists"> 
+                        <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                    </ul>
+                    <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
+                    <template id="temp-fav-artists"> 
                             <li>
                                 <a href="artist.html">
                                     <div class="favorites-item item-with-bg opens-artist" data-artist-id='dummyArtistId'>
@@ -153,13 +165,14 @@
                                 </a>
                             </li>
                         </template>
-                    </ul>
                 </div>
 
                 <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Genres</div>
                     <ul class="favorite-list" id ="ul-fav-genres">
-                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                        <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                    </ul>
+                    <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                         <template id ="temp-fav-genres">
                             <li>
                                 <div class="favorites-item item-with-bg">
@@ -171,13 +184,14 @@
                                 </div>
                             </li>
                         </template>
-                    </ul>
                 </div>
 
                 <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Radios</div>
                     <ul class="favorite-list" id="ul-fav-radios">
-                        <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                    </ul>
+                    <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                         <template id="temp-fav-radios">
                             <li>
                                 <div class="favorites-item item-with-bg">
@@ -189,8 +203,6 @@
                                 </div>
                             </li>
                         </template>
-                        <!--${generatefavoriteRadiosList()}-->
-                    </ul>
                 </div>
             </div>
         </div>
@@ -200,7 +212,9 @@
             <div class="container-heading">Latest Releases</div>
             <div class="container-content translucent-bg-100  item-with-bg">
                 <ul class="list-in-container" id="ul-latestReleases">
-                    <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                </ul>
+                    <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-latestReleases">
                         <li>
                             <div class="latest-release-item item-with-bg playbar-item" data-song-url='dummySongURL'>
@@ -218,7 +232,6 @@
                             </div>
                         </li>
                     </template>
-                </ul>
             </div>
         </div>
 
@@ -227,7 +240,9 @@
             <div class="container-heading">Popular Artists</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container" id="ul-artists">
-                    <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                </ul>
+                    <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-artists">
                         <li>
                             <div class="popular-artists-item item-with-bg opens-artist" data-artist-id='dummy artist id'>
@@ -243,7 +258,6 @@
                             </div>
                         </li>
                     </template>
-                </ul>
             </div>
         </div>
 
@@ -251,7 +265,9 @@
             <div class="container-heading">Popular Genres</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container" id="ul-genres">
-                    <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                </ul>
+                    <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-genres">
                         <li>
                             <div class="genre-item item-with-bg">
@@ -265,14 +281,15 @@
                           </div>
                         </li>
                     </template>
-                </ul>
             </div>
         </div>
         <div id="radios-container" class="radios-container translucent-bg-100 item-with-bg">
             <div class="container-heading">Popular Radio Stations</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container" id="ul-radios">
-                    <!-- Template repeated by 'html-injector-indexPage.js and html-templates.js' by filling in place of dummy values -->
+                    <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
+                </ul>
+                    <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-radios">
                             <li>
                                 <div class="radio-item item-with-bg">
@@ -286,7 +303,6 @@
                                 </div>
                             </li>
                     </template>
-                </ul>
             </div>
         </div>
 
@@ -294,13 +310,13 @@
 
         <!-- Start of FOOTER -->
         <footer>
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <!-- Code injected here using 'html-templates-shared.js' -->
         </footer>
         <!-- End of FOOTER -->
 
         <!-- Start of Play-bar Modal -->
         <div id="play-modal-container">
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <!-- Code injected here using 'html-templates-shared.js' -->
         </div>
         <!-- End of Play-bar Modal -->
     </body>

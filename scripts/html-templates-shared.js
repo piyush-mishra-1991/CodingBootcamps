@@ -1,3 +1,6 @@
+
+// Uses HTML templates defined above to inject in HTML code of document.
+
 // HEADER Section:
 const templateCodeHeader = `
             <div>
@@ -27,6 +30,8 @@ const templateCodeHeader = `
                 </nav>
             </div>
 `;
+const headerElement = document.getElementsByTagName('header');
+if (headerElement) headerElement[0].innerHTML += templateCodeHeader;
 
 // FOOTER Section:
 const templateCodeFooter = `
@@ -62,6 +67,8 @@ const templateCodeFooter = `
                 </ul>
             </div>
 `;
+const footerElement = document.getElementsByTagName('footer');
+if (footerElement) footerElement[0].innerHTML += templateCodeFooter;
 
 // Playbar Modal :
 const templateCodePlayBarModal = `
@@ -97,3 +104,6 @@ const templateCodePlayBarModal = `
                 <!-- Volume Mute Symbol -->
                 <i id="btn-mute" class="fas fa-volume-mute hoverable-icon"></i>
             </div>`;
+
+const plybarModalElement = document.getElementById('play-modal-container');
+if(plybarModalElement) plybarModalElement.innerHTML += templateCodePlayBarModal;

@@ -24,7 +24,6 @@
             <!-- Template generation code imports -->
                 <script src="scripts/html-templates-shared.js" defer></script>
                 <script src="scripts/html-templates-artistPage.js" defer></script>
-                <script src="scripts/html-injector-artistPage.js" defer></script>
             <!-- Navigation related -->
                 <script src="scripts/nav.js" defer></script>
                 <script src="scripts/click-open-artist.js" defer></script>
@@ -37,7 +36,7 @@
     <body>
         <!-- Start of HEADER -->
         <header>
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <!-- Code injected here using 'html-templates-shared.js' -->
         </header>
         <!-- End of HEADER -->
 
@@ -51,8 +50,29 @@
 
                 <div class="container-content translucent-bg-100 item-with-bg">
                     <ul id="related-artists" class="list-in-container playlist-ul artist-listener">
-                        <!-- Code injected here using 'html-injector-indexPage.js' -->
+                        <!-- Following Template Code injected here using 'html-templates-artistPage.js' -->
                     </ul>
+                    <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
+                    <template id="temp-related-artists">
+                            <li class="playlist-li-in-container">
+                                <div class="playlist-item item-with-bg opens-artist" data-artist-id='dummy-id'>
+                                    <div class="left-half">
+                                        <div class="text-subtitle">01</div>
+                                        <img
+                                            class="playlist-imgcontainer"
+                                            src='dummy-img-url'
+                                        />
+                                        <div>
+                                            <div class="text-title">Sonu Nigam</div>
+                                            <div class="text-subtitle num-followers">234 followers</div>
+                                        </div>
+                                    </div>
+                                    <div class="right-half">
+                                        <i class="fas fa-ellipsis-h hoverable-icon"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </template>
                 </div>
             </div>
             <div>
@@ -63,8 +83,33 @@
 
                 <div class="container-content translucent-bg-100 item-with-bg">
                     <ul id="related-songs" class="list-in-container playlist-ul playbar-listener">
-                        <!-- Code injected here using 'html-injector-indexPage.js' -->
+                        <!-- Following Template Code injected here using 'html-templates-artistPage.js' -->
                     </ul>
+                    <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
+                    <template id="temp-related-songs">
+                        <li class="playlist-li-in-container">
+                            <div class="playlist-item item-with-bg playbar-item" data-song-url=${similarSong.audioUrl}>
+                                <div class="left-half">
+                                    <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
+                                    <div class="play-icon-overlay">
+                                        <img
+                                            class="playlist-imgcontainer playbar-img"
+                                            src=${similarSong.imgUrl}
+                                        />
+                                    </div>
+                                    <div>
+                                        <div class="text-title playbar-title">${similarSong.songName}</div>
+                                        <div class="text-subtitle playbar-subtitle">
+                                            ${similarSong.songAlbum}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-half">
+                                    <i class="fas fa-ellipsis-h hoverable-icon"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </template>
                 </div>
             </div>
         </aside>
@@ -73,15 +118,73 @@
         <!-- Start of MAIN-BODY -->
 
         <div id="artist-cover" class="artist-cover translucent-bg-100 flex-row item-with-bg">
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <!-- Following Template Code injected here using 'html-templates-artistPage.js' -->
         </div>
+            <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
+            <template id="temp-artist-cover">
+                <div class="artist-imgcontainer">
+                    <img
+                        src='dummy-artist-img-url'
+                    />
+                    </div>
+                    <div class="artist-textcontent-container flex-col">
+                        <div>
+                            <div class="flex-row">
+                                <div>
+                                    <div class="container-heading">artist /  band name</div>
+                                    <div class="text-subtitle" id="short-description">short desription of artist</div>
+                                </div>
+                                <div class="text-subtitle">
+                                    <strong id="num-followers">431</strong> Followers
+                                </div>
+                            </div>
+                            <div class="text-subtitle" id="long-description">
+                                long decription of artist
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex-row buttons">
+                                <a href="" class="link">Play All</a>
+                                <a href="" class="link">Follow</a>
+                            </div>
+                            <div class="text-subtitle">
+                                <strong id="num-tracks">32</strong> Tracks |
+                                <strong id="num-albums">78</strong> Albums
+                            </div>
+                        </div>
+                    </div>
+                </template>
 
         <div id="artist-songs" class="artist-songs translucent-bg-100 item-with-bg">
             <div class="container-heading">Artist's Songs</div>
             <div class="container-content translucent-bg-100 item-with-bg">
                 <ul id="artist-songs-ul" class="span-100-ul playbar-listener">
-                    <!-- Code injected here using 'html-injector-indexPage.js' -->
+                    <!-- Following Template Code injected here using 'html-templates-artistPage.js' -->
                 </ul>
+                    <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
+                <template id="temp-artist-songs">
+                    <li class="playlist-li-in-container">
+                        <div class="playlist-item item-with-bg playbar-item" data-song-url=${song.audioUrl}>
+                            <div class="left-half">
+                                <div class="text-subtitle">${(index + 1).toString().padStart(2, '0')}</div>
+                                <div class="play-icon-overlay">
+                                    <img
+                                        class="playlist-imgcontainer playbar-img"
+                                        src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
+                                    />
+                                </div>
+                                <div>
+                                    <div class="text-title playbar-title">${song.songName}</div>
+                                    <div class="text-subtitle playbar-subtitle">${song.albumName}</div>
+                                </div>
+                            </div>
+                            <div class="right-half">
+                                <i class="fas fa-heart hoverable-icon"></i>
+                                <i class="fas fa-ellipsis-h hoverable-icon"></i>
+                            </div>
+                        </div>
+                    </li>
+                </template>
             </div>
         </div>
 
@@ -89,13 +192,13 @@
 
         <!-- Start of FOOTER -->
         <footer>
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <!-- Code injected here using 'html-templates-shared.js' -->
         </footer>
         <!-- End of FOOTER -->
 
         <!-- Start of Play-bar Modal -->
         <div id="play-modal-container">
-            <!-- Code injected here using 'html-injector-indexPage.js' -->
+            <!-- Code injected here using 'html-templates-shared.js' -->
         </div>
         <!-- End of Play-bar Modal -->
 

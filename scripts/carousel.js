@@ -9,6 +9,10 @@ const btnPrev = document.querySelector('.carousel_button-prev');
 // our shifting of carousel images will be adjusted responsively on basis of current screen size.
 const slideLength = carouselSlides[0].getBoundingClientRect().width;
 
+// removing class of 'currentSlide' from all slides except the first:
+carouselSlides.forEach(slide => slide.classList.remove('current-slide'));
+carouselSlides[0].classList.add('current-slide');
+
 // Setting the horizontal position of each slides initially by laying them out horizontally
 // on fixed multiples of slideLength (determined using slideLength * index);
 const setSlidePosition = (slide, index) => {
@@ -51,7 +55,6 @@ btnNext.addEventListener('click', e => {
 btnPrev.addEventListener('click', e => {
     const currentSlide = carouselTrack.querySelector('.current-slide');
     const prevSlide = currentSlide.previousElementSibling;
-    console.log(prevSlide);
     moveToSlide(currentSlide, prevSlide);
     updateArrowBtnVisibility(prevSlide);
 });
