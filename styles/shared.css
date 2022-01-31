@@ -175,6 +175,25 @@ a:-webkit-any-link{
 	 color: red;
      opacity: 0.8;
 }
+.fx-fade-in{
+    opacity:var(--local--pre-fade-in--opacity,1);
+    background-color: var(--local--pre-fade-in--bgcolor,var(--color-dark-400));
+    transition: var(--local--fadein--duration,0.3s) ease-in-out;
+}
+
+.fx-fade-in:hover, .fx-fade-in:focus{
+    opacity:var(--local--post-fade-in--opacity,1);
+    background-color: var(--local--post-fade-in--bgcolor,var(--color-dark-400));
+}
+.fx-magnify{
+    transform: scale(var(--local-pre-magnify--scale-x,1),var(--local-pre-magnify--scale-y,1));
+    transition: var(--local--fadein--duration,0.3s) ease-in-out;
+}
+.fx-magnify:hover{
+    transform: scale(var(--local-post-magnify--scale-x,1.02),var(--local-post-magnify--scale-y,1.02));
+}
+
+
 /*===================================================
     4.LAYOUT: Mobile first layout
 =====================================================*/
