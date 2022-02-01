@@ -2,8 +2,7 @@
     1. Imports
     2. Global Settings
     3. Utilities
-    4. Layout
-    5. Components
+    4. Body Components
 */
 
 /*===================================================
@@ -81,11 +80,13 @@
 
     /* */
     --play-modal-height: 4rem;
-    /* GLOBAL Settings*/
+    
+    /* Global Resets*/
     margin: 0;
     padding: 0;
 }
 
+/* Global Resets */
 *,
 *::before,
 *::after {
@@ -133,16 +134,17 @@ a:-webkit-any-link{
 }
 
 /*===================================================
-    3.UTILITIES:
+    3.UTILITIES: Common classes which can be used.
 =====================================================*/
+/*Background utils*/
 .translucent-bg-100{
     --bgColor-local: var(--color-dark-400-transparent-8);
 }
-
 .translucent-bg-50{
     --bgColor-local: var(--color-dark-400-transparent-7);
 }
 
+/* Settings for hoverable text icons (options on song, heart, etc.) */
 .hoverable-icon{
     cursor: var(--pointer-type-local, pointer);
     color:var(--color-unhover-local,var(--color-white-300));
@@ -152,7 +154,8 @@ a:-webkit-any-link{
     color:var(--color-hover-local,var(--color-accent-2-500));
     background-color: var(--bgColor-hover-local,transparent);
 }
-/*  Play Icon on song images */
+
+/*  Red Play Icon, visible when hovering on song images */
 .play-icon-overlay {
 	 position: relative;
      display: inline;
@@ -175,12 +178,13 @@ a:-webkit-any-link{
 	 color: red;
      opacity: 0.8;
 }
+
+/* Animation Effects Utilities */
 .fx-fade-in{
     opacity:var(--local--pre-fade-in--opacity,1);
     background-color: var(--local--pre-fade-in--bgcolor,var(--color-dark-400));
     transition: var(--local--fadein--duration,0.3s) ease-in-out;
 }
-
 .fx-fade-in:hover, .fx-fade-in:focus{
     opacity:var(--local--post-fade-in--opacity,1);
     background-color: var(--local--post-fade-in--bgcolor,var(--color-dark-400));
@@ -193,11 +197,12 @@ a:-webkit-any-link{
     transform: scale(var(--local-post-magnify--scale-x,1.02),var(--local-post-magnify--scale-y,1.02));
 }
 
+/* Image Div Utilities */
 .util-img-container{
     height:var(--local--img-container--height,100%);
     width:var(--local--img-container--width,100%);
 }
-
+/* Image Utilities */
 .util-img{
     object-fit: cover;
     object-position: center;
@@ -207,96 +212,86 @@ a:-webkit-any-link{
     border-radius: var(--local--img--border-radius,0);
 }
 
+/*Utils for containers with lists in them*/
+.container-heading{
+    font-size: var(--font-size-400);
+}
+.container-content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.list-in-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/*General classes for song lists in containers*/
+.playlist-item{
+    display: flex;
+    justify-content: space-between;
+    --bgColor-local:var(--color-grey-500-transparent-9);
+    --local--img-container--height:50px;
+    --local--img-container--width:50px;
+}
+.playlist-item .left-half{
+    display: flex;
+    justify-content: flex-start;
+}
+.playlist-item .right-half{
+    align-self: flex-start;
+}
+.playlist-item .left-half > div{
+    margin:0.5rem;
+}
+
+/* Common Text classes, for Song Name, Artist name, in respective sections*/
+.text-title{
+    font-size: var(--font-size-200);
+    font-weight: var(--font-weight-bold);
+}
+.text-subtitle, .num-text{
+    font-size: var(--font-size-100);
+}
+/*General container with background*/
+.item-with-bg{
+    background-color: var(--bgColor-local,var(--color-dark-400));
+    border-radius: var(--border-radius-local,var(--border-radius-300));
+    margin:var(--margin-local,.25rem);
+    padding:var(--padding-local,0.25rem);
+    overflow: hidden;
+}
+.scrollable-container{
+    overflow-y: auto;
+    max-height: var(--max-height-local,350px);
+}
+.flex-row{
+    display: flex;
+    justify-content: var(--flex-justify-content-local,space-between);
+    flex-wrap: var(--flex-wrap-local,nowrap);
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--flex-justify-content-local,space-between);
+    flex-wrap: var(--flex-wrap-local,nowrap);
+}
+.is-hidden{
+    display: none;
+}
 
 /*===================================================
-    4.LAYOUT: Mobile first layout
-=====================================================*/
-body{
-    min-height: 100vh;
-    display: grid;
-    gap: 1rem;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1rem 1fr 1rem ;
-    grid-template-areas:
-        "header     header          header"
-        "......     carousel        ......."
-        "......     aside           ......."
-        "......     favorites       ......."
-        "......     latest-releases ......."
-        "......     artists         ......."
-        "......     genres          ......."
-        "......     radios          ......."
-        "footer     footer          footer";
-}
-header{
-    grid-area: header;
-}
-
-.carousel-container{
-    grid-area: carousel;
-}
-.favorites-container{
-    grid-area: favorites;
-}
-.latest-releases-container{
-    grid-area: latest-releases;
-}
-.artists-container{
-    grid-area: artists;
-}
-.genres-container{
-    grid-area: genres;
-}
-.radios-container{
-    grid-area: radios;
-}
-
-aside{
-    grid-area: aside;
-    height: fit-content;
-}
-
-footer{
-    grid-area: footer;
-}
-
-@media only screen and (min-width: 950px)  {
-    body{
-        grid-template-columns: 1rem 3fr 1fr 1rem ;
-        grid-template-areas:
-            "header     header             header   header"
-            "......     carousel           aside    ......."
-            "......     favorites          aside    ......."
-            "......     latest-releases    aside    ......."
-            "......     artists            ......   ......."
-            "......     genres             ......   ......."
-            "......     radios             ......   ......."
-            "footer     footer             footer   footer";
-    }
-}
-
-/*===================================================
-    5.COMPONENTS:
-        5.1 Header Components
-        5.2 Footer Components
-        5.3 Main Body:
-            5.3.1 Common 
-            5.3.2 Utilities
-                5.3.2.1 Items
-            5.3.3 Carousel Section.
-            5.3.4 Favorites Section.
-            5.3.5 Releases Section.
-            5.3.6 Artists Section.
-            5.3.7 Genres Section.
-            5.3.8 Radio Section.
-            5.3.9 Aside Section.
-        5.4 Play Modal Area:
-        5.5 Animated Backgrounds:
+    4. BODY COMPONENTS:
+        4.1 Header Components
+        4.2 Footer Components
+        4.3 Play Modal Area:
+        4.4 Animated Backgrounds:
 
 =====================================================*/
 
 /* 
-    5.1 Header Components: 
+    4.1 Header Components: 
 */
 
 header > div{
@@ -397,7 +392,7 @@ header > div{
     }
 }
 /*
-    5.2 Footer Components:
+    4.2 Footer Components:
 */
 footer{
     display: flex;
@@ -445,329 +440,12 @@ footer{
     
 }
 
-/* 
-    5.3 Main Body:
-        5.3.1 Common:
-*/
-.container-heading{
-    font-size: var(--font-size-400);
-}
-.container-content{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-.list-in-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-/* Song Name, Artist name in respective sections use this*/
-.text-title{
-    font-size: var(--font-size-200);
-    font-weight: var(--font-weight-bold);
-}
-.text-subtitle, .num-text{
-    font-size: var(--font-size-100);
-}
-
-/* 
-    5.3 Main Body:
-        5.3.2 Utilities:
-            5.3.2.1 Items:
-*/
-.item-with-bg{
-    background-color: var(--bgColor-local,var(--color-dark-400));
-    border-radius: var(--border-radius-local,var(--border-radius-300));
-    margin:var(--margin-local,.25rem);
-    padding:var(--padding-local,0.25rem);
-    overflow: hidden;
-}
-.scrollable-container{
-    overflow-y: scroll;
-    max-height: var(--max-height-local,350px);
-}
-.flex-row{
-    display: flex;
-    justify-content: var(--flex-justify-content-local,space-between);
-    flex-wrap: var(--flex-wrap-local,nowrap);
-}
-.flex-col{
-    display: flex;
-    flex-direction: column;
-    justify-content: var(--flex-justify-content-local,space-between);
-    flex-wrap: var(--flex-wrap-local,nowrap);
-}
-.is-hidden{
-    display: none;
-}
-/* 
-    5.3 Main Body:
-        5.3.3 Carousel Section.
-*/
-.carousel-container{
-    height: 300px;
-    min-width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-.carousel{
-    position: relative;
-    height: 100%;
-    max-width:200px;
-    margin: 0 auto;
-}
-.carousel_track-container{
-    height: 100%;
-    position: relative;
-}
-.carousel_track{
-    position: relative;
-    height: 100%;
-    transition: transform 200ms ease-in-out;
-}
-.carousel-slide{
-    position: absolute;
-    top: 30px;
-    bottom: 30px;
-    width: 100%;
-    margin: 0 1rem;    
-}
-.current-slide{
-    transform: scale(1.15);
-    transition: transform 500ms ease-in-out;
-}
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.carousel-slide-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.carousel_button{
-    position: absolute;
-    z-index: 5;
-    top:50%;
-    transform: translateY(-50%);
-    background: white;
-    border: 0;
-    cursor: pointer;
-}
-
-.carousel_button-prev{
-    left:+40px;
-}
-.carousel_button-next{
-    right:+40px;
-}
-
-/* 
-    5.3 Main Body:
-        5.3.4 Favourites Section.
-*/
-.favorites-item{
-    display: flex;
-    /*--bgColor-local:var(--color-dark-400);*/
-    --bgColor-local:var(--color-grey-500-transparent-9);
-    --local--img-container--height:60px;
-    --local--img-container--width:60px;    
-}
-.favorite-item-text{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: var(--font-size-100);
-    font-style: italic;
-}
-
 /*
-    5.3 Main Body:
-        5.3.5 Latest-Releases Section.
-
-*/
-.latest-release-item{
-    display: flex;
-    justify-content: space-between;
-    --bgColor-local:var(--color-grey-500-transparent-9);
-    --border-radius-local:var(--border-radius-000);
-    --local--img-container--height:100px;
-    --local--img-container--width:100px;
-
-}
-.latest-release-textcontainer{
-    display: flex;
-    width: 150px;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.5rem;
-}
-.top-line{
-    align-self: flex-end;
-}
-.mid-line{
-    display: flex;
-    justify-content: space-between;
-}
-.bottom-line{
-    align-self: flex-start;
-}
-/*
-    5.3 Main Body:
-        5.3.6 Popular-Artists Section.
-*/
-.popular-artists-item{
-    height: fit-content;
-    width: 100px;
-    --bgColor-local:var(--color-grey-500-transparent-9);
-    --border-radius-local:var(--border-radius-400);
-    --local--img-container--height:100px;
-    --local--img-container--width:100px;
-    --local--img--border-radius:50%;
-}
-.popular-artists-item .text-title{
-    text-align: center;
-}
-/*
-    5.3 Main Body:
-        5.3.7 Genres Section.
-*/
-.genre-item{
-    width:200px;
-    height:150px;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-}
-.genre-item .text-title{
-    position: absolute;
-    text-align: center;
-    padding: .5rem 0;
-    top: 50%;
-    left: 50%;
-    width:100%;
-    transform: translate(-50%, -50%);
-    background-color: var(--color-dark-400-transparent-9);
-}
-/*
-    5.3 Main Body:
-        5.3.8 Popular-Radios Section.
-*/
-.radio-item{
-    width:120px;
-    height:120px;
-    position: relative;
-    --bgColor-local:transparent;
-    --local--img--border-radius:50%
-}
-.radio-item .text-title{
-    position: absolute;
-    text-align: center;
-    padding: 0.5rem;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    transform: translate(-50%, -50%);
-    background-color:var(--color-dark-400-transparent-9);
-}
-/*
-    5.3 Main Body:
-        5.3.9 Aside Section.
-*/
-.aside-header{
-    display: flex;
-    --bgColor-local:var(--color-dark-400-transparent-8);
-    --border-radius-local:var(--border-radius-000);
-    justify-content: space-between;
-    align-items: center;
-}
-aside ul{
-    width: 100%;
-}
-.playlist-ul{
-    display: grid;
-    grid-template-columns: 1fr;
-    max-height: 70vh;
-    overflow-y: auto;
-}
-#playlist-songs .playlist-ul{
-    max-height: 100vh;
-}
-@media only screen and (max-width: 950px) {
-    .playlist-ul{
-        grid-template-columns: repeat(3,1fr);
-        max-height: 30vh;
-    }
-}
-@media only screen and (max-width: 700px) {
-    .playlist-ul{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media only screen and (max-width: 500px) {
-    .playlist-ul{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
-/*.playlist-li-in-container{
-    width: 100%;
-}*/
-.playlist-item{
-    display: flex;
-    justify-content: space-between;
-    --bgColor-local:var(--color-grey-500-transparent-9);
-    --local--img-container--height:50px;
-    --local--img-container--width:50px;
-}
-.playlist-item .left-half{
-    display: flex;
-    justify-content: flex-start;
-}
-.playlist-item .right-half{
-    align-self: flex-start;
-}
-.playlist-item .left-half > div{
-    margin:0.5rem;
-}
-
-/* Custom Select Dropdown Menu on aside */
-select{
-    padding: .125rem .25rem .125rem 0;
-    background-color: var(--color-grey-500-transparent-9);
-    font-size: inherit;
-    font-family: inherit;
-    color: inherit;
-    border:0;
-    cursor: pointer;
-}
-.dropdown{
-    position: relative;
-    margin: 0;
-    padding:0;
-}
-.dropdown-arrow{
-    position: absolute;
-    top:0;
-    right:0;
-    height: 100%;
-    display: block;
-    background-color: blue;
-    width: 1.5rem;
-    text-align: center;
-    /* Ignore registering clicks on this arrow and let it pass to select menu underneath*/
-    pointer-events: none; 
-}
-
-/*
-    5.4 Play Modal Area:
+    4.3 Play Modal Area:
+    Playbar modal area is present at bottom of the screen with audio controls and track info.
 */
 
-/*  LOADING Icon : When music is being loaded on network */
+/*  LOADING Icon : Shows up When music is being loaded on network */
 #playbar-loading-container{
     position: absolute;
     top:50%;
@@ -793,7 +471,7 @@ select{
     cursor: pointer;
 }
 #seek-bar:hover{
-    background-color: green;
+    background-color: rgb(0, 170, 0);
 }
 #song-info-img{
     height: 100%;
@@ -856,7 +534,7 @@ select{
         "......         song-title          play-controls   ......."
         "......         song-subtitle       play-controls   .......";
 }
-
+/* Number of play control buttons visible, and track info layout depends responsively on screen sizes.*/
 @media only screen and (min-width:400px) {
 
     #play-controls-section .fa-stop-circle{
@@ -905,7 +583,8 @@ select{
 }
 
 /*
-    5.5 Animated Backgrounds:
+    4.4 Animated Backgrounds:
+    Animates a huge gradiented background right and left continuously.
 */
 body{
     background-image: var(--gradient);
@@ -919,10 +598,4 @@ body{
     100% {
         background-position: right;
     }
-}
-
-/* Hover Play Icon */
-.hover-play-overlay{
-    position: relative;
-    cursor: pointer;
 }

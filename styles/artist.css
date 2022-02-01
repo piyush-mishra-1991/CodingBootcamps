@@ -1,5 +1,10 @@
+/* CONTENTS:
+    1. Layout
+    2. Body Components
+*/
+
 /*===================================================
-    3.LAYOUT: Mobile first layout
+    1.LAYOUT: Mobile first layout
 =====================================================*/
 body{
     min-height: 100vh;
@@ -51,6 +56,10 @@ footer{
         max-height: 30vh;
     }
 }
+
+/*===================================================
+    2.Body-Components
+=====================================================*/
 
 #artist-songs-ul{
     overflow: auto;
