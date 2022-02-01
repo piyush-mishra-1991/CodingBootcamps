@@ -279,6 +279,9 @@ a:-webkit-any-link{
 .cursor-pointer{
     cursor: pointer;
 }
+.fixed-width-range{
+    width: clamp(150px, 250px , 300px);
+}
 /*===================================================
     4. BODY COMPONENTS:
         4.1 Header Components
