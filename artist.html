@@ -48,14 +48,14 @@
                     <div class="dropdown">all</div>
                 </div>
 
-                <div class="container-content translucent-bg-100 item-with-bg">
+                <div class="container-content translucent-bg-100 item-with-bg fx-magnify">
                     <ul id="related-artists" class="list-in-container playlist-ul artist-listener">
                         <!-- Following Template Code injected here using 'html-templates-artistPage.js' -->
                     </ul>
                     <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
                     <template id="temp-related-artists">
                             <li class="playlist-li-in-container">
-                                <div class="playlist-item item-with-bg opens-artist" data-artist-id='dummy-id'>
+                                <div class="playlist-item item-with-bg opens-artist fx-fade-in cursor-pointer" data-artist-id='dummy-id'>
                                     <div class="left-half">
                                         <div class="text-subtitle">01</div>
                                         <div class="util-img-container">
@@ -83,14 +83,14 @@
                     <div class="dropdown">all</div>
                 </div>
 
-                <div class="container-content translucent-bg-100 item-with-bg">
+                <div class="container-content translucent-bg-100 item-with-bg fx-magnify">
                     <ul id="related-songs" class="list-in-container playlist-ul playbar-listener">
                         <!-- Following Template Code injected here using 'html-templates-artistPage.js' -->
                     </ul>
                     <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
                     <template id="temp-related-songs">
                         <li class="playlist-li-in-container">
-                            <div class="playlist-item item-with-bg playbar-item" data-song-url=${similarSong.audioUrl}>
+                            <div class="playlist-item item-with-bg playbar-item fx-fade-in" data-song-url=${similarSong.audioUrl}>
                                 <div class="left-half">
                                     <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
                                     <div class="play-icon-overlay util-img-container">
@@ -119,7 +119,7 @@
 
         <!-- Start of MAIN-BODY -->
 
-        <div id="artist-cover" class="artist-cover translucent-bg-100 flex-row item-with-bg">
+        <div id="artist-cover" class="artist-cover translucent-bg-100 flex-row item-with-bg fx-magnify fx-fade-in">
             <!-- Following Template Code injected here using 'html-templates-artistPage.js' -->
         </div>
             <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
@@ -159,14 +159,14 @@
 
         <div id="artist-songs" class="artist-songs translucent-bg-100 item-with-bg">
             <div class="container-heading">Artist's Songs</div>
-            <div class="container-content translucent-bg-100 item-with-bg">
+            <div class="container-content translucent-bg-100 item-with-bg fx-magnify">
                 <ul id="artist-songs-ul" class="span-100-ul playbar-listener">
                     <!-- Following Template Code injected here using 'html-templates-artistPage.js' -->
                 </ul>
                     <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
                 <template id="temp-artist-songs">
                     <li class="playlist-li-in-container">
-                        <div class="playlist-item item-with-bg playbar-item" data-song-url=${song.audioUrl}>
+                        <div class="playlist-item item-with-bg playbar-item fx-fade-in" data-song-url=${song.audioUrl}>
                             <div class="left-half">
                                 <div class="text-subtitle">${(index + 1).toString().padStart(2, '0')}</div>
                                 <div class="play-icon-overlay util-img-container">

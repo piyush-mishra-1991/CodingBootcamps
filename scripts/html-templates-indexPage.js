@@ -1,3 +1,5 @@
+// Uses HTML templates and data in assets/data/sharedData.js to populate index.html page.
+
 // FAVORITES Section:
 const generatefavoriteSongsList = () => {
     

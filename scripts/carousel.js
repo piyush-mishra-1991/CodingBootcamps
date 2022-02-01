@@ -1,3 +1,7 @@
+/****************************************************************
+ * Handles Carousel related functions on index.html:
+ ****************************************************************/
+
 // Fetching DOM variables:
 const carouselTrack = document.querySelector('.carousel_track');
 const carouselSlides = Array.from(carouselTrack.children);

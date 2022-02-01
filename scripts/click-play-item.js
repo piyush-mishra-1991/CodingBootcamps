@@ -1,4 +1,9 @@
-const setUpForPlaylistItem=(e)=>{
+/****************************************************************
+ * Plays a song when clicked, and updates the song info on playbar modal at screen bottom.
+ * Uses music-player.js to work.
+ ****************************************************************/
+
+const setUpForPlaylistItem = e => {
     var elem = e.target.closest('.playbar-item');
     if (elem) {
         const audioSrc = elem.dataset.songUrl;

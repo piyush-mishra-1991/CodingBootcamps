@@ -280,7 +280,9 @@ a:-webkit-any-link{
 .is-hidden{
     display: none;
 }
-
+.cursor-pointer{
+    cursor: pointer;
+}
 /*===================================================
     4. BODY COMPONENTS:
         4.1 Header Components

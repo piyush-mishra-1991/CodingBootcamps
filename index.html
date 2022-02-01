@@ -41,7 +41,7 @@
         <!-- End of HEADER -->
 
         <!-- Start of ASIDE-SECTION-->
-        <aside class="translucent-bg-100 item-with-bg">
+        <aside class="translucent-bg-100 item-with-bg fx-magnify">
             <div>
                 <div class="aside-header item-with-bg">
                     <div class="container-heading">Playlist</div>
@@ -60,13 +60,13 @@
                 </div>
 
                 <div class="container-content item-with-bg">
-                    <ul id="playlist-songs" class="list-in-container playlist-ul playbar-listener fx-fade-in fx-magnify">
+                    <ul id="playlist-songs" class="list-in-container playlist-ul playbar-listener">
                         <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
                     </ul>
                         <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-playlist-songs">
                             <li class="playlist-li-in-container">
-                                <div class="playlist-item item-with-bg playbar-item" data-song-url='dummySongUrl'>
+                                <div class="playlist-item item-with-bg playbar-item fx-fade-in" data-song-url='dummySongUrl'>
                                     <div class="left-half">
                                         <div class="text-subtitle">dummySongNumber</div>
                                         <div class="play-icon-overlay util-img-container">
@@ -120,7 +120,7 @@
         <!-- End of Carousel Again -->
 
 
-        <div id="favorites-container" class="favorites-container translucent-bg-100 item-with-bg fx-fade-in fx-magnify">
+        <div id="favorites-container" class="favorites-container translucent-bg-100 item-with-bg fx-magnify">
             <!-- Code injected here using 'html-injector-indexPage.js' -->
             <div class="container-heading">Favorites</div>
             <div class="container-content">
@@ -132,7 +132,7 @@
                         <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                         <template id="temp-fav-songs">
                             <li>
-                                <div class="favorites-item item-with-bg playbar-item" data-song-url='dummySongUrl'>
+                                <div class="favorites-item item-with-bg playbar-item fx-fade-in" data-song-url='dummySongUrl'>
                                     <div class="play-icon-overlay util-img-container">
                                         <img
                                             class="util-img playbar-img"
@@ -147,7 +147,7 @@
                         </template>
                 </div>
 
-                <div class="translucent-bg-100 item-with-bg fx-fade-in fx-magnify">
+                <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Artists</div>
                     <ul class="favorite-list artist-listener" id="ul-fav-artists">
                         <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
@@ -156,7 +156,7 @@
                         <template id="temp-fav-artists"> 
                             <li>
                                 <a href="artist.html">
-                                    <div class="favorites-item item-with-bg opens-artist" data-artist-id='dummyArtistId'>
+                                    <div class="favorites-item item-with-bg opens-artist fx-fade-in" data-artist-id='dummyArtistId'>
                                         <div class="util-img-container">
                                             <img
                                                 class="util-img"
@@ -170,7 +170,7 @@
                         </template>
                 </div>
 
-                <div class="translucent-bg-100 item-with-bg fx-fade-in fx-magnify">
+                <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Genres</div>
                     <ul class="favorite-list" id ="ul-fav-genres">
                         <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
@@ -178,7 +178,7 @@
                     <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                         <template id ="temp-fav-genres">
                             <li>
-                                <div class="favorites-item item-with-bg">
+                                <div class="favorites-item item-with-bg fx-fade-in">
                                     <div class="util-img-container">
                                         <img
                                             class="util-img"
@@ -191,7 +191,7 @@
                         </template>
                 </div>
 
-                <div class="translucent-bg-100 item-with-bg fx-fade-in fx-magnify">
+                <div class="translucent-bg-100 item-with-bg">
                     <div class="favourite-item-heading">Radios</div>
                     <ul class="favorite-list" id="ul-fav-radios">
                     <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
@@ -199,7 +199,7 @@
                     <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                         <template id="temp-fav-radios">
                             <li>
-                                <div class="favorites-item item-with-bg">
+                                <div class="favorites-item item-with-bg fx-fade-in">
                                     <div class="util-img-container">
                                         <img
                                             class="util-img"
@@ -214,7 +214,7 @@
             </div>
         </div>
 
-        <div id="latest-releases-container" class="latest-releases-container translucent-bg-100 item-with-bg playbar-listener fx-fade-in fx-magnify">
+        <div id="latest-releases-container" class="latest-releases-container translucent-bg-100 item-with-bg playbar-listener fx-magnify">
             <!-- Code injected here using 'html-injector-indexPage.js' -->
             <div class="container-heading">Latest Releases</div>
             <div class="container-content translucent-bg-100  item-with-bg">
@@ -224,7 +224,7 @@
                     <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-latestReleases">
                         <li>
-                            <div class="latest-release-item item-with-bg playbar-item" data-song-url='dummySongURL'>
+                            <div class="latest-release-item item-with-bg playbar-item fx-fade-in" data-song-url='dummySongURL'>
                                 <div class="play-icon-overlay util-img-container">
                                     <img
                                         class="playbar-img util-img"
@@ -242,7 +242,7 @@
             </div>
         </div>
 
-        <div id="artists-container" class="artists-container translucent-bg-100 item-with-bg artist-listener fx-fade-in fx-magnify">
+        <div id="artists-container" class="artists-container translucent-bg-100 item-with-bg artist-listener fx-magnify">
             <!-- Code injected here using 'html-injector-indexPage.js' -->
             <div class="container-heading">Popular Artists</div>
             <div class="container-content item-with-bg">
@@ -252,7 +252,7 @@
                     <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-artists">
                         <li>
-                            <div class="popular-artists-item item-with-bg opens-artist" data-artist-id='dummy artist id'>
+                            <div class="popular-artists-item item-with-bg opens-artist fx-fade-in" data-artist-id='dummy artist id'>
                                 <a href="artist.html">
                                     <div class="util-img-container">
                                         <img
@@ -270,7 +270,7 @@
             </div>
         </div>
 
-        <div id="genres-container" class="genres-container translucent-bg-100 item-with-bg fx-fade-in fx-magnify">
+        <div id="genres-container" class="genres-container translucent-bg-100 item-with-bg fx-magnify">
             <div class="container-heading">Popular Genres</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container" id="ul-genres">
@@ -279,7 +279,7 @@
                     <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-genres">
                         <li>
-                            <div class="genre-item item-with-bg">
+                            <div class="genre-item item-with-bg fx-fade-in">
                               <img
                                   class="util-img"
                                   src='dummyGenreUrl'
@@ -292,7 +292,7 @@
                     </template>
             </div>
         </div>
-        <div id="radios-container" class="radios-container translucent-bg-100 item-with-bg fx-fade-in fx-magnify">
+        <div id="radios-container" class="radios-container translucent-bg-100 item-with-bg fx-magnify">
             <div class="container-heading">Popular Radio Stations</div>
             <div class="container-content item-with-bg">
                 <ul class="list-in-container" id="ul-radios">
@@ -301,7 +301,7 @@
                     <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
                     <template id="temp-radios">
                             <li>
-                                <div class="radio-item item-with-bg">
+                                <div class="radio-item item-with-bg fx-fade-in">
                                     <div class="util-img-container">
                                         <img
                                             class="util-img"

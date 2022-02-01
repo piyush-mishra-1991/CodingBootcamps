@@ -1,5 +1,5 @@
-
-// Uses HTML templates defined above to inject in HTML code of document.
+// Uses common HTML code to populate both index.html and artist.html page.
+// Header, Footer, and PlayBar Modal populated.
 
 // HEADER Section:
 const templateCodeHeader = `
@@ -106,4 +106,5 @@ const templateCodePlayBarModal = `
             </div>`;
 
 const plybarModalElement = document.getElementById('play-modal-container');
-if(plybarModalElement) plybarModalElement.innerHTML += templateCodePlayBarModal;
+if (plybarModalElement)
+    plybarModalElement.innerHTML += templateCodePlayBarModal;

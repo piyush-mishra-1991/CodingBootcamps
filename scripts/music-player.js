@@ -1,3 +1,7 @@
+/*******************************
+ * Contains Music player related functions. Utilised by click-play-item.js to pplay songs.
+ * *****************************/
+
 let defaultImgSrc = 'https://images.pexels.com/photos/5650905/pexels-photo-5650905.jpeg?auto=compress&cs=tinysrgb&h=130';
 let defaultAudioSrc = 'https://opengameart.org/sites/default/files/peaceatlast_piano_0.ogg';
 let defaultAudioTitle = 'Audio Title';
@@ -14,6 +18,7 @@ const audioTag = document.getElementById('audio-tag');
 const btnVolume = document.getElementById('btn-volume');
 const btnMute = document.getElementById('btn-mute');
 
+// Default set up of play bar.
 window.addEventListener('load', ()=> {
     setPlayBar(defaultImgSrc, defaultAudioSrc, defaultAudioTitle, defaultAudioSubtitle);
 });
@@ -27,6 +32,7 @@ const setPlayBar = (imgUrl,audioUrl,titleText,subtitleText)=>{
     subtitleElement.innerText = subtitleText;
 }
 
+// Used by click-play-items.js to play songs.
 const setAndPlay=(imgUrl,audioUrl,titleText,subtitleText)=>{
     setPlayBar(imgUrl, audioUrl, titleText, subtitleText);
     audioTag.play();
