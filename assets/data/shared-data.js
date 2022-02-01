@@ -297,14 +297,6 @@ const sharedData = {
                 radioName: 'Free-Radio',
                 imgUrl: 'https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130',
             },
-            {
-                radioName: 'Radio-Vibes',
-                imgUrl: 'https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&h=130',
-            },
-            {
-                radioName: 'Radio-AM',
-                imgUrl: 'https://images.pexels.com/photos/4480527/pexels-photo-4480527.jpeg?auto=compress&cs=tinysrgb&h=130',
-            },
         ],
     },
 

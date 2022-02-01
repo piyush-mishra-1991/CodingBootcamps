@@ -194,7 +194,7 @@ a:-webkit-any-link{
     transition: var(--local--fadein--duration,0.3s) ease-in-out;
 }
 .fx-magnify:hover{
-    transform: scale(var(--local-post-magnify--scale-x,1.02),var(--local-post-magnify--scale-y,1.02));
+    transform: scale(var(--local-post-magnify--scale-x,1.01),var(--local-post-magnify--scale-y,1.01));
 }
 
 /* Image Div Utilities */
@@ -261,10 +261,6 @@ a:-webkit-any-link{
     margin:var(--margin-local,.25rem);
     padding:var(--padding-local,0.25rem);
     overflow: hidden;
-}
-.scrollable-container{
-    overflow-y: auto;
-    max-height: var(--max-height-local,350px);
 }
 .flex-row{
     display: flex;
@@ -591,7 +587,7 @@ footer{
 body{
     background-image: var(--gradient);
     background-size: 400%;
-    animation: background-animation 20s infinite alternate;
+    animation: background-animation 17s infinite alternate;
 }
 @keyframes background-animation {
     0% {

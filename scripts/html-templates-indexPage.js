@@ -169,7 +169,6 @@ const generateCarouselSection = () =>{
 
     sharedData.carouselData.forEach(carouselItem => {
         const cloned = template.content.cloneNode(true);
-        console.log(cloned.querySelector('.carousel-slide-img'));
         cloned.querySelector('.carousel-slide-img').src = carouselItem.imgUrl;
 
         ul.appendChild(cloned);

@@ -151,7 +151,7 @@ ul{
 */
 .favorites-item{
     display: flex;
-    /*--bgColor-local:var(--color-dark-400);*/
+    align-items: center;
     --bgColor-local:var(--color-grey-500-transparent-9);
     --local--img-container--height:60px;
     --local--img-container--width:60px;    
