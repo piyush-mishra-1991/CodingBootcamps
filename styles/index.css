@@ -258,42 +258,6 @@ ul{
     2. BODY-COMPONENTS:
         2.7 Aside Section.
 */
-.aside-header{
-    display: flex;
-    --bgColor-local:var(--color-dark-400-transparent-8);
-    --border-radius-local:var(--border-radius-000);
-    justify-content: space-between;
-    align-items: center;
-}
-aside ul{
-    width: 100%;
-}
-.playlist-ul{
-    display: grid;
-    grid-template-columns: 1fr;
-    max-height: 70vh;
-    overflow-y: auto;
-}
-#playlist-songs .playlist-ul{
-    max-height: 100vh;
-}
-@media only screen and (max-width: 950px) {
-    .playlist-ul{
-        grid-template-columns: repeat(3,1fr);
-        max-height: 30vh;
-    }
-}
-@media only screen and (max-width: 700px) {
-    .playlist-ul{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media only screen and (max-width: 500px) {
-    .playlist-ul{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
-
 /* Custom Select Dropdown Menu on aside */
 select{
     padding: .125rem .25rem .125rem 0;

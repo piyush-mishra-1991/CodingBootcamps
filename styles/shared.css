@@ -279,15 +279,13 @@ a:-webkit-any-link{
 .cursor-pointer{
     cursor: pointer;
 }
-.fixed-width-range{
-    width: clamp(150px, 250px , 300px);
-}
 /*===================================================
     4. BODY COMPONENTS:
         4.1 Header Components
         4.2 Footer Components
         4.3 Play Modal Area:
         4.4 Animated Backgrounds:
+        4.5 Aside Section common props
 
 =====================================================*/
 
@@ -598,5 +596,47 @@ body{
     }
     100% {
         background-position: right;
+    }
+}
+
+/*
+    4.5 Aside Section common props:
+    Used on playlist section of index.html and related-artists and related songs section of artist.html
+*/
+
+.aside-header{
+    display: flex;
+    --bgColor-local:var(--color-dark-400-transparent-8);
+    --border-radius-local:var(--border-radius-000);
+    justify-content: space-between;
+    align-items: center;
+}
+aside ul{
+    width: 100%;
+}
+.playlist-ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+#playlist-songs .playlist-ul{
+    max-height: 100vh;
+}
+/*Responsively managing column numbers at different screen sizes*/
+@media only screen and (max-width: 950px) {
+    .playlist-ul{
+        grid-template-columns: repeat(3,1fr);
+        max-height: 30vh;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .playlist-ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width: 500px) {
+    .playlist-ul{
+        grid-template-columns: repeat(1,1fr);
     }
 }
