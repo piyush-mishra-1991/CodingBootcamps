@@ -193,6 +193,20 @@ a:-webkit-any-link{
     transform: scale(var(--local-post-magnify--scale-x,1.02),var(--local-post-magnify--scale-y,1.02));
 }
 
+.util-img-container{
+    height:var(--local--img-container--height,100%);
+    width:var(--local--img-container--width,100%);
+}
+
+.util-img{
+    object-fit: cover;
+    object-position: center;
+    height:var(--local--img--height, 100% );
+    width:var(--local--img--width, 100% );
+    overflow: hidden;
+    border-radius: var(--local--img--border-radius,0);
+}
+
 
 /*===================================================
     4.LAYOUT: Mobile first layout
@@ -562,12 +576,8 @@ ul{
     display: flex;
     /*--bgColor-local:var(--color-dark-400);*/
     --bgColor-local:var(--color-grey-500-transparent-9);
-}
-.favorite-item-img{
-    height:50px;
-    width:50px;
-    object-fit: cover;
-    object-position: center;
+    --local--img-container--height:60px;
+    --local--img-container--width:60px;    
 }
 .favorite-item-text{
     padding-left: 1rem;
@@ -586,13 +596,9 @@ ul{
     justify-content: space-between;
     --bgColor-local:var(--color-grey-500-transparent-9);
     --border-radius-local:var(--border-radius-000);
-}
-.latest-release-imgcontainer{
-    height: 100%;
-    max-width: 75px;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: center;
+    --local--img-container--height:100px;
+    --local--img-container--width:100px;
+
 }
 .latest-release-textcontainer{
     display: flex;
@@ -616,20 +622,16 @@ ul{
         5.3.6 Popular-Artists Section.
 */
 .popular-artists-item{
-    height: 130px;
+    height: fit-content;
     width: 100px;
     --bgColor-local:var(--color-grey-500-transparent-9);
     --border-radius-local:var(--border-radius-400);
+    --local--img-container--height:100px;
+    --local--img-container--width:100px;
+    --local--img--border-radius:50%;
 }
 .popular-artists-item .text-title{
     text-align: center;
-}
-.popular-artist-imgcontainer{
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
 }
 /*
     5.3 Main Body:
@@ -641,11 +643,6 @@ ul{
     padding: 0;
     position: relative;
     overflow: hidden;
-}
-.genre-imgcontainer{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 .genre-item .text-title{
     position: absolute;
@@ -666,13 +663,7 @@ ul{
     height:120px;
     position: relative;
     --bgColor-local:transparent;
-}
-.radio-imgcontainer{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    border-radius: 50%;
+    --local--img--border-radius:50%
 }
 .radio-item .text-title{
     position: absolute;
@@ -730,13 +721,8 @@ aside ul{
     display: flex;
     justify-content: space-between;
     --bgColor-local:var(--color-grey-500-transparent-9);
-}
-.playlist-imgcontainer{
-    height: 100%;
-    width: 50px;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: center;
+    --local--img-container--height:50px;
+    --local--img-container--width:50px;
 }
 .playlist-item .left-half{
     display: flex;
@@ -776,10 +762,6 @@ select{
     /* Ignore registering clicks on this arrow and let it pass to select menu underneath*/
     pointer-events: none; 
 }
-/*
-.aside-header + .container-content.list-in-container li {
-    width: 100%;
-}*/
 
 /*
     5.4 Play Modal Area:
@@ -944,16 +926,3 @@ body{
     position: relative;
     cursor: pointer;
 }
-/*
-.hover-play-overlay::after{
-    content: "<i class=\"fas fa-play hover-play-overlay-text\"></i>";
-}
-.hover-play-overlay-text{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    top: 50%;
-    z-index: 5;
-    transform: translateX(-50%) translateY(-50%);
-}*/

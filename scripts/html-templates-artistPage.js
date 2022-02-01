@@ -9,13 +9,8 @@ const generateRelatedArtistsList = artistId => {
         const cloned = template.content.cloneNode(true);
         cloned.querySelector('.playlist-item.opens-artist').dataset.artistId =
             similarArtist.artistId;
-        cloned
-            .querySelector('.left-half')
-            .querySelector('.text-subtitle').innerHTML = (index + 1)
-            .toString()
-            .padStart(2, '0');
-        cloned.querySelector('.playlist-imgcontainer').src =
-            similarArtist.imgUrl;
+        cloned.querySelector('.left-half').querySelector('.text-subtitle').innerHTML = (index + 1).toString().padStart(2, '0');
+        cloned.querySelector('.util-img').src = similarArtist.imgUrl;
         cloned.querySelector('.text-title').innerHTML = similarArtist.name;
         cloned.querySelector('.num-followers').innerHTML =
             similarArtist.numFollowers;
@@ -34,7 +29,7 @@ const generateRelatedSongsList = (artistId) => {
         const cloned = template.content.cloneNode(true);
         cloned.querySelector('.playlist-item.playbar-item').dataset.songUrl = similarSong.audioUrl;
         cloned.querySelector('.left-half').querySelector('.text-subtitle').innerHTML = (index + 1).toString().padStart(2, '0');
-        cloned.querySelector('.playlist-imgcontainer').src = similarSong.imgUrl;
+        cloned.querySelector('.util-img').src = similarSong.imgUrl;
         cloned.querySelector('.text-title.playbar-title').innerHTML = similarSong.songName;
         cloned.querySelector('.playbar-subtitle').innerHTML = similarSong.songAlbum;
         ul.appendChild(cloned);
@@ -52,7 +47,7 @@ const generateArtistSongsList = (artistId) => {
         const cloned = template.content.cloneNode(true);
         cloned.querySelector('.playlist-item.playbar-item').dataset.songUrl = song.audioUrl;
         cloned.querySelector('.left-half').querySelector('.text-subtitle').innerHTML = (index + 1).toString().padStart(2, '0');
-        cloned.querySelector('.playlist-imgcontainer').src = song.imgUrl;
+        cloned.querySelector('.util-img').src = song.imgUrl;
         cloned.querySelector('.text-title.playbar-title').innerHTML = song.songName;
         cloned.querySelector('.playbar-subtitle').innerHTML = song.albumName;
         ul.appendChild(cloned);

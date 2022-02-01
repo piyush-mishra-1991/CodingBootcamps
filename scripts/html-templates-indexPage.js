@@ -8,7 +8,7 @@ const generatefavoriteSongsList = () => {
     sharedData.favoritesData.songs.forEach(favSong => {
         const cloned = template.content.cloneNode(true);
         cloned.querySelector('.playbar-item').dataset.songUrl=favSong.audioUrl;
-        cloned.querySelector('.favorite-item-img.playbar-img').src=favSong.imgUrl;
+        cloned.querySelector('.util-img.playbar-img').src = favSong.imgUrl;
         cloned.querySelector('.favorite-item-text.playbar-title').innerHTML = favSong.songName;
         ul.appendChild(cloned);
     });
@@ -23,7 +23,7 @@ const generatefavoriteArtistsList = () => {
     sharedData.favoritesData.artists.forEach(favArtist => {
         const cloned = template.content.cloneNode(true);
         cloned.querySelector('.favorites-item.item-with-bg.opens-artist').dataset.artistId = favArtist.artistId;
-        cloned.querySelector('.favorite-item-img').src = favArtist.imgUrl;
+        cloned.querySelector('.util-img').src = favArtist.imgUrl;
         cloned.querySelector('.favorite-item-text').innerHTML = favArtist.artistName;
         ul.appendChild(cloned);
     });
@@ -37,7 +37,7 @@ const generatefavoriteGenresList = () => {
 
     sharedData.favoritesData.genres.forEach(favGenre => {
         const cloned = template.content.cloneNode(true);
-        cloned.querySelector('.favorite-item-img').src = favGenre.imgUrl;
+        cloned.querySelector('.util-img').src = favGenre.imgUrl;
         cloned.querySelector('.favorite-item-text').innerHTML = favGenre.genreName;
         ul.appendChild(cloned);
     });
@@ -51,7 +51,7 @@ const generatefavoriteRadiosList = () => {
 
     sharedData.favoritesData.radios.forEach(favRadio => {
         const cloned = template.content.cloneNode(true);
-        cloned.querySelector('.favorite-item-img').src = favRadio.imgUrl;
+        cloned.querySelector('.util-img').src = favRadio.imgUrl;
         cloned.querySelector('.favorite-item-text').innerHTML = favRadio.radioName;
         ul.appendChild(cloned);
     });
@@ -67,7 +67,7 @@ const generateLatestReleasesList = () => {
     sharedData.latestReleasesData.forEach(latestRelease => {
         const cloned = template.content.cloneNode(true);
         cloned.querySelector('.latest-release-item.playbar-item').dataset.songUrl = latestRelease.audioUrl;
-        cloned.querySelector('.latest-release-imgcontainer').src = latestRelease.imgUrl;
+        cloned.querySelector('.util-img').src = latestRelease.imgUrl;
         cloned.querySelector('.num-text').innerHTML = latestRelease.length;
         cloned.querySelector('.playbar-title').innerHTML = latestRelease.songName;
         cloned.querySelector('.playbar-subtitle').innerHTML = latestRelease.releaseDate;
@@ -89,7 +89,7 @@ const generatePopularArtistsList = () => {
         const cloned = template.content.cloneNode(true);
 
         cloned.querySelector('.popular-artists-item.opens-artist').dataset.artistId = artistData.artistId;
-        cloned.querySelector('.popular-artist-imgcontainer').src = artistData.imgUrl;
+        cloned.querySelector('.util-img').src = artistData.imgUrl;
         cloned.querySelector('.text-title').innerHTML = artistData.artistName;
 
         ul.appendChild(cloned);
@@ -107,7 +107,7 @@ const generatePopularGenresList = () => {
     sharedData.genresData.forEach(genreData => {
         const cloned = template.content.cloneNode(true);
         
-        cloned.querySelector('.genre-imgcontainer').src = genreData.imgUrl;
+        cloned.querySelector('.util-img').src = genreData.imgUrl;
         cloned.querySelector('.text-title').innerHTML = genreData.genreName;
 
         ul.appendChild(cloned);
@@ -126,7 +126,7 @@ const generateRadioList = () => {
     sharedData.radiosData.forEach(radioData => {
         const cloned = template.content.cloneNode(true);
 
-        cloned.querySelector('.radio-imgcontainer').src = radioData.imgUrl;
+        cloned.querySelector('.util-img').src = radioData.imgUrl;
         cloned.querySelector('.text-title').innerHTML = radioData.radioName;
 
         ul.appendChild(cloned);
@@ -148,7 +148,7 @@ const generatePlaylistList = () => {
         
         cloned.querySelector('.playlist-item.playbar-item').dataset.songUrl = playlistItem.audioUrl;
         cloned.querySelector('.left-half').querySelector('.text-subtitle').innerHTML = (index+1).toString().padStart(2, '0');
-        cloned.querySelector('.playlist-imgcontainer.playbar-img').src = playlistItem.imgUrl;
+        cloned.querySelector('.playbar-img').src = playlistItem.imgUrl;
         cloned.querySelector('.text-title.playbar-title').innerHTML = playlistItem.songName;
         cloned.querySelector('.text-subtitle.playbar-subtitle').innerHTML = playlistItem.artistName;
 

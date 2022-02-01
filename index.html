@@ -68,8 +68,8 @@
                                 <div class="playlist-item item-with-bg playbar-item" data-song-url='dummySongUrl'>
                                     <div class="left-half">
                                         <div class="text-subtitle">dummySongNumber</div>
-                                        <div class="play-icon-overlay">
-                                            <img class="playlist-imgcontainer playbar-img" src='dummyImgUrl'/>
+                                        <div class="play-icon-overlay util-img-container">
+                                            <img class="playbar-img util-img" src='dummyImgUrl'/>
                                         </div>
                                         <div>
                                             <div class="text-title playbar-title">'dummySongTitle'</div>
@@ -132,9 +132,9 @@
                         <template id="temp-fav-songs">
                             <li>
                                 <div class="favorites-item item-with-bg playbar-item" data-song-url='dummySongUrl'>
-                                    <div class="play-icon-overlay">
+                                    <div class="play-icon-overlay util-img-container">
                                         <img
-                                            class="favorite-item-img playbar-img"
+                                            class="util-img playbar-img"
                                             src='dummySrc'
                                         />
                                     </div>
@@ -152,14 +152,16 @@
                         <!-- Following Template Code injected here using 'html-templates-indexPage.js' -->
                     </ul>
                     <!-- Template code which is injected above by 'html-templates-indexPage.js' -->
-                    <template id="temp-fav-artists"> 
+                        <template id="temp-fav-artists"> 
                             <li>
                                 <a href="artist.html">
                                     <div class="favorites-item item-with-bg opens-artist" data-artist-id='dummyArtistId'>
-                                        <img
-                                            class="favorite-item-img"
-                                            src='dummyImgUrl'
-                                        />
+                                        <div class="util-img-container">
+                                            <img
+                                                class="util-img"
+                                                src='dummyImgUrl'
+                                            />
+                                        </div>
                                         <p class="favorite-item-text">dummyArtistName</p>
                                     </div>
                                 </a>
@@ -176,10 +178,12 @@
                         <template id ="temp-fav-genres">
                             <li>
                                 <div class="favorites-item item-with-bg">
-                                    <img
-                                        class="favorite-item-img"
-                                        src='dummyURL'
-                                    />
+                                    <div class="util-img-container">
+                                        <img
+                                            class="util-img"
+                                            src='dummyURL'
+                                        />
+                                    </div>
                                     <p class="favorite-item-text">dummyGenreTitle</p>
                                 </div>
                             </li>
@@ -195,10 +199,12 @@
                         <template id="temp-fav-radios">
                             <li>
                                 <div class="favorites-item item-with-bg">
-                                    <img
-                                        class="favorite-item-img"
-                                        src=${favRadio.imgUrl}
-                                    />
+                                    <div class="util-img-container">
+                                        <img
+                                            class="util-img"
+                                            src=${favRadio.imgUrl}
+                                        />
+                                    </div>
                                     <p class="favorite-item-text">${favRadio.radioName}</p>
                                 </div>
                             </li>
@@ -218,9 +224,9 @@
                     <template id="temp-latestReleases">
                         <li>
                             <div class="latest-release-item item-with-bg playbar-item" data-song-url='dummySongURL'>
-                                <div class="play-icon-overlay">
+                                <div class="play-icon-overlay util-img-container">
                                     <img
-                                        class="latest-release-imgcontainer playbar-img"
+                                        class="playbar-img util-img"
                                         src='dummyImageURL'
                                     />
                                 </div>
@@ -247,10 +253,12 @@
                         <li>
                             <div class="popular-artists-item item-with-bg opens-artist" data-artist-id='dummy artist id'>
                                 <a href="artist.html">
-                                    <img
-                                        class="popular-artist-imgcontainer"
-                                        src='dummy image url'
-                                    />
+                                    <div class="util-img-container">
+                                        <img
+                                            class="util-img"
+                                            src='dummy image url'
+                                        />
+                                    </div>
                                     <div class="text-title">
                                         dummyArtistName
                                     </div>
@@ -272,7 +280,7 @@
                         <li>
                             <div class="genre-item item-with-bg">
                               <img
-                                  class="genre-imgcontainer"
+                                  class="util-img"
                                   src='dummyGenreUrl'
                               />
                               <div class="text-title">
@@ -293,10 +301,12 @@
                     <template id="temp-radios">
                             <li>
                                 <div class="radio-item item-with-bg">
-                                    <img
-                                        class="radio-imgcontainer"
-                                        src='dummyImageSrc'
-                                    />
+                                    <div class="util-img-container">
+                                        <img
+                                            class="util-img"
+                                            src='dummyImageSrc'
+                                        />
+                                    </div>
                                     <div class="text-title">
                                         <p>dummyRadioName</p>
                                     </div>

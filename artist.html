@@ -58,10 +58,12 @@
                                 <div class="playlist-item item-with-bg opens-artist" data-artist-id='dummy-id'>
                                     <div class="left-half">
                                         <div class="text-subtitle">01</div>
-                                        <img
-                                            class="playlist-imgcontainer"
-                                            src='dummy-img-url'
-                                        />
+                                        <div class="util-img-container">
+                                            <img
+                                                class="util-img"
+                                                src='dummy-img-url'
+                                            />
+                                        </div>
                                         <div>
                                             <div class="text-title">Sonu Nigam</div>
                                             <div class="text-subtitle num-followers">234 followers</div>
@@ -91,9 +93,9 @@
                             <div class="playlist-item item-with-bg playbar-item" data-song-url=${similarSong.audioUrl}>
                                 <div class="left-half">
                                     <div class="text-subtitle">${(index+1).toString().padStart(2, '0')}</div>
-                                    <div class="play-icon-overlay">
+                                    <div class="play-icon-overlay util-img-container">
                                         <img
-                                            class="playlist-imgcontainer playbar-img"
+                                            class="playbar-img util-img"
                                             src=${similarSong.imgUrl}
                                         />
                                     </div>
@@ -123,7 +125,7 @@
             <!-- Template code which is injected above by 'html-templates-artistPage.js' -->
             <template id="temp-artist-cover">
                 <div class="artist-imgcontainer">
-                    <img
+                    <img class="util-img"
                         src='dummy-artist-img-url'
                     />
                     </div>
@@ -167,9 +169,9 @@
                         <div class="playlist-item item-with-bg playbar-item" data-song-url=${song.audioUrl}>
                             <div class="left-half">
                                 <div class="text-subtitle">${(index + 1).toString().padStart(2, '0')}</div>
-                                <div class="play-icon-overlay">
+                                <div class="play-icon-overlay util-img-container">
                                     <img
-                                        class="playlist-imgcontainer playbar-img"
+                                        class="playbar-img util-img"
                                         src="https://images.pexels.com/photos/534283/pexels-photo-534283.jpeg"
                                     />
                                 </div>
